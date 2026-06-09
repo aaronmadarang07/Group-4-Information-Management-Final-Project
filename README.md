@@ -1,5 +1,7 @@
 /////////////////DOWNLOAD KA MYSQL WORKBENCH SA DEVICE MO TAPOS MYSQL EXTENSION SA VISUAL STUDIO\\\\\\\\\\\\\\\\\
 
+/////////////////CLONE MO GITHUB\\\\\\\\\\\\\\\\\\\
+
 /////////////////SA MYSQL WORKBENCH MISMO ILALAGAY COMMANDS/CODES PARA CUMONNECT SA DATAGRIDVIEW NG VISUAL STUDIO(VIOLET APP)\\\\\\\\\\\\\\\\\
 
 /////////////////*TINGNAN MO PRE YUNG "What is required" SA GPT\\\\\\\\\\\\\\\\\
