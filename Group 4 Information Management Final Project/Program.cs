@@ -16,7 +16,7 @@ namespace Group_4_Information_Management_Final_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            Application.Run(new Dashboard());
         }
     }
 }

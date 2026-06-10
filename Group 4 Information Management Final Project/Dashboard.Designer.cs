@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -79,6 +79,7 @@
             this.TimeLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -100,11 +101,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(20, 20);
@@ -137,7 +139,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.pictureBox1);
@@ -151,7 +153,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label7.Location = new System.Drawing.Point(104, 41);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 65);
@@ -162,7 +164,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label3.Location = new System.Drawing.Point(104, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 21);
@@ -181,7 +183,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox3.BackColor = System.Drawing.Color.White;
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.pictureBox2);
@@ -195,7 +197,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label8.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label8.Location = new System.Drawing.Point(106, 41);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 65);
@@ -206,7 +208,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label4.Location = new System.Drawing.Point(106, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 21);
@@ -225,7 +227,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox4.BackColor = System.Drawing.Color.White;
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.pictureBox3);
@@ -239,7 +241,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label9.Location = new System.Drawing.Point(109, 41);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 65);
@@ -250,7 +252,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label5.Location = new System.Drawing.Point(109, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 21);
@@ -269,7 +271,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox5.BackColor = System.Drawing.Color.White;
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.label6);
             this.groupBox5.Controls.Add(this.pictureBox4);
@@ -283,7 +285,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label10.Location = new System.Drawing.Point(107, 41);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(112, 65);
@@ -294,7 +296,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label6.Location = new System.Drawing.Point(107, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 21);
@@ -313,7 +315,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox6.Controls.Add(this.label12);
             this.groupBox6.Controls.Add(this.AppointmentsChart);
             this.groupBox6.Location = new System.Drawing.Point(19, 268);
@@ -335,17 +337,17 @@
             // 
             // AppointmentsChart
             // 
-            this.AppointmentsChart.BackColor = System.Drawing.Color.Honeydew;
-            chartArea4.Name = "ChartArea1";
-            this.AppointmentsChart.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.AppointmentsChart.Legends.Add(legend4);
+            this.AppointmentsChart.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            chartArea1.Name = "ChartArea1";
+            this.AppointmentsChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.AppointmentsChart.Legends.Add(legend1);
             this.AppointmentsChart.Location = new System.Drawing.Point(1, 49);
             this.AppointmentsChart.Name = "AppointmentsChart";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.AppointmentsChart.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.AppointmentsChart.Series.Add(series1);
             this.AppointmentsChart.Size = new System.Drawing.Size(489, 227);
             this.AppointmentsChart.TabIndex = 0;
             this.AppointmentsChart.Text = "Appointments";
@@ -353,7 +355,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox7.Controls.Add(this.label11);
             this.groupBox7.Controls.Add(this.TodApp_DataGridView);
             this.groupBox7.Location = new System.Drawing.Point(528, 268);
@@ -414,9 +416,9 @@
             // 
             // DashBoard_GoToPatientsBtn
             // 
-            this.DashBoard_GoToPatientsBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.DashBoard_GoToPatientsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GoToPatientsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GoToPatientsBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.DashBoard_GoToPatientsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DashBoard_GoToPatientsBtn.Location = new System.Drawing.Point(19, 562);
             this.DashBoard_GoToPatientsBtn.Name = "DashBoard_GoToPatientsBtn";
             this.DashBoard_GoToPatientsBtn.Size = new System.Drawing.Size(177, 50);
@@ -427,9 +429,9 @@
             // 
             // DashBoard_GoToMedRecordsBtn
             // 
-            this.DashBoard_GoToMedRecordsBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.DashBoard_GoToMedRecordsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GoToMedRecordsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GoToMedRecordsBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.DashBoard_GoToMedRecordsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DashBoard_GoToMedRecordsBtn.Location = new System.Drawing.Point(841, 562);
             this.DashBoard_GoToMedRecordsBtn.Name = "DashBoard_GoToMedRecordsBtn";
             this.DashBoard_GoToMedRecordsBtn.Size = new System.Drawing.Size(177, 50);
@@ -440,9 +442,9 @@
             // 
             // DashBoard_GoToDoctorsBtn
             // 
-            this.DashBoard_GoToDoctorsBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.DashBoard_GoToDoctorsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GoToDoctorsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GoToDoctorsBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.DashBoard_GoToDoctorsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DashBoard_GoToDoctorsBtn.Location = new System.Drawing.Point(287, 562);
             this.DashBoard_GoToDoctorsBtn.Name = "DashBoard_GoToDoctorsBtn";
             this.DashBoard_GoToDoctorsBtn.Size = new System.Drawing.Size(177, 50);
@@ -453,9 +455,9 @@
             // 
             // DashBoard_GoToAppointmentsBtn
             // 
-            this.DashBoard_GoToAppointmentsBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.DashBoard_GoToAppointmentsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GoToAppointmentsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GoToAppointmentsBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.DashBoard_GoToAppointmentsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DashBoard_GoToAppointmentsBtn.Location = new System.Drawing.Point(570, 562);
             this.DashBoard_GoToAppointmentsBtn.Name = "DashBoard_GoToAppointmentsBtn";
             this.DashBoard_GoToAppointmentsBtn.Size = new System.Drawing.Size(177, 50);
@@ -466,7 +468,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox5.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_7__2026__06_00_31_PM;
             this.pictureBox5.Location = new System.Drawing.Point(22, 566);
             this.pictureBox5.Name = "pictureBox5";
@@ -477,7 +479,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox6.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_183656;
             this.pictureBox6.Location = new System.Drawing.Point(290, 566);
             this.pictureBox6.Name = "pictureBox6";
@@ -488,7 +490,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox7.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_181622;
             this.pictureBox7.Location = new System.Drawing.Point(573, 566);
             this.pictureBox7.Name = "pictureBox7";
@@ -499,7 +501,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox8.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox8.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_180702;
             this.pictureBox8.Location = new System.Drawing.Point(844, 566);
             this.pictureBox8.Name = "pictureBox8";
@@ -519,9 +521,9 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox9.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources._25694;
-            this.pictureBox9.Location = new System.Drawing.Point(159, 633);
+            this.pictureBox9.Location = new System.Drawing.Point(159, 638);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(43, 43);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -530,10 +532,10 @@
             // 
             // DashBoard_GobackHomeBtn
             // 
-            this.DashBoard_GobackHomeBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.DashBoard_GobackHomeBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GobackHomeBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GobackHomeBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.DashBoard_GobackHomeBtn.Location = new System.Drawing.Point(156, 629);
+            this.DashBoard_GobackHomeBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DashBoard_GobackHomeBtn.Location = new System.Drawing.Point(156, 634);
             this.DashBoard_GobackHomeBtn.Name = "DashBoard_GobackHomeBtn";
             this.DashBoard_GobackHomeBtn.Size = new System.Drawing.Size(177, 50);
             this.DashBoard_GobackHomeBtn.TabIndex = 20;
@@ -543,9 +545,9 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Black;
+            this.pictureBox10.BackColor = System.Drawing.Color.Red;
             this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
-            this.pictureBox10.Location = new System.Drawing.Point(709, 633);
+            this.pictureBox10.Location = new System.Drawing.Point(844, 638);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(43, 43);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -554,14 +556,14 @@
             // 
             // Home_ExitBtn
             // 
-            this.Home_ExitBtn.BackColor = System.Drawing.Color.Black;
+            this.Home_ExitBtn.BackColor = System.Drawing.Color.Red;
             this.Home_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home_ExitBtn.ForeColor = System.Drawing.Color.White;
-            this.Home_ExitBtn.Location = new System.Drawing.Point(706, 629);
+            this.Home_ExitBtn.Location = new System.Drawing.Point(841, 634);
             this.Home_ExitBtn.Name = "Home_ExitBtn";
             this.Home_ExitBtn.Size = new System.Drawing.Size(177, 50);
             this.Home_ExitBtn.TabIndex = 28;
-            this.Home_ExitBtn.Text = "          EXIT SYSTEM";
+            this.Home_ExitBtn.Text = "           EXIT";
             this.Home_ExitBtn.UseVisualStyleBackColor = false;
             this.Home_ExitBtn.Click += new System.EventHandler(this.Home_ExitBtn_Click);
             // 
@@ -581,8 +583,8 @@
             this.DateLabel.AutoSize = true;
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
             this.DateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.DateLabel.Location = new System.Drawing.Point(841, 34);
+            this.DateLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.DateLabel.Location = new System.Drawing.Point(57, 14);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(36, 17);
             this.DateLabel.TabIndex = 31;
@@ -593,8 +595,8 @@
             this.TimeLabel.AutoSize = true;
             this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeLabel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.TimeLabel.Location = new System.Drawing.Point(841, 57);
+            this.TimeLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.TimeLabel.Location = new System.Drawing.Point(57, 37);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(37, 17);
             this.TimeLabel.TabIndex = 32;
@@ -608,23 +610,34 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.calendar_icon_png__0;
-            this.pictureBox12.Location = new System.Drawing.Point(798, 33);
+            this.pictureBox12.Location = new System.Drawing.Point(14, 13);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(43, 43);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 33;
             this.pictureBox12.TabStop = false;
             // 
+            // groupBox8
+            // 
+            this.groupBox8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox8.Controls.Add(this.pictureBox12);
+            this.groupBox8.Controls.Add(this.DateLabel);
+            this.groupBox8.Controls.Add(this.TimeLabel);
+            this.groupBox8.Location = new System.Drawing.Point(782, 18);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(235, 69);
+            this.groupBox8.TabIndex = 34;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Enter += new System.EventHandler(this.groupBox8_Enter);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Group_4_Information_Management_Final_Project.Properties.Resources.pastel_gradient_blur_background_vector1;
+            this.BackgroundImage = global::Group_4_Information_Management_Final_Project.Properties.Resources.light_blue_background_gradient_wall_design_vector1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1034, 696);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.TimeLabel);
-            this.Controls.Add(this.DateLabel);
+            this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.Home_ExitBtn);
@@ -676,8 +689,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -730,5 +744,6 @@
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.GroupBox groupBox8;
     }
 }

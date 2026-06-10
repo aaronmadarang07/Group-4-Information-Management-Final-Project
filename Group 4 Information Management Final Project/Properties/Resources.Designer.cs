@@ -93,6 +93,16 @@ namespace Group_4_Information_Management_Final_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_Jun_10__2026__07_39_20_AM {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image Jun 10, 2026, 07_39_20 AM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChatGPT_Image_Jun_7__2026__05_35_52_PM {
             get {
                 object obj = ResourceManager.GetObject("ChatGPT Image Jun 7, 2026, 05_35_52 PM", resourceCulture);
@@ -236,6 +246,76 @@ namespace Group_4_Information_Management_Final_Project.Properties {
         internal static System.Drawing.Bitmap free_search_icon_337_thumb {
             get {
                 object obj = ResourceManager.GetObject("free-search-icon-337-thumb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap light_blue_background_gradient_wall_design_vector {
+            get {
+                object obj = ResourceManager.GetObject("light-blue-background-gradient-wall-design-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap light_blue_background_gradient_wall_design_vector1 {
+            get {
+                object obj = ResourceManager.GetObject("light-blue-background-gradient-wall-design-vector1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap light_blue_background_gradient_wall_design_vector2 {
+            get {
+                object obj = ResourceManager.GetObject("light-blue-background-gradient-wall-design-vector2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap light_blue_background_gradient_wall_design_vector3 {
+            get {
+                object obj = ResourceManager.GetObject("light-blue-background-gradient-wall-design-vector3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap light_blue_background_gradient_wall_design_vector4 {
+            get {
+                object obj = ResourceManager.GetObject("light-blue-background-gradient-wall-design-vector4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap light_blue_background_gradient_wall_design_vector5 {
+            get {
+                object obj = ResourceManager.GetObject("light-blue-background-gradient-wall-design-vector5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap light_blue_background_gradient_wall_design_vector6 {
+            get {
+                object obj = ResourceManager.GetObject("light-blue-background-gradient-wall-design-vector6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

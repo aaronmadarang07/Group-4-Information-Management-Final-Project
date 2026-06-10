@@ -76,7 +76,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Britannic Bold", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(7, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 41);
@@ -88,7 +88,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(202, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 40);
@@ -100,7 +100,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(202, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(225, 40);
@@ -112,7 +112,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(202, 89);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 40);
@@ -124,7 +124,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(202, 132);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(267, 40);
@@ -136,7 +136,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(202, 172);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 40);
@@ -146,7 +146,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_7__2026__05_35_52_PM;
+            this.pictureBox1.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_10__2026__07_39_20_AM;
             this.pictureBox1.Location = new System.Drawing.Point(30, 55);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(144, 144);
@@ -156,8 +156,9 @@
             // 
             // Home_GoToMedRecordsBtn
             // 
-            this.Home_GoToMedRecordsBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.Home_GoToMedRecordsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Home_GoToMedRecordsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_GoToMedRecordsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Home_GoToMedRecordsBtn.Location = new System.Drawing.Point(138, 502);
             this.Home_GoToMedRecordsBtn.Name = "Home_GoToMedRecordsBtn";
             this.Home_GoToMedRecordsBtn.Size = new System.Drawing.Size(177, 50);
@@ -168,8 +169,9 @@
             // 
             // Home_GoToDoctorsBtn
             // 
-            this.Home_GoToDoctorsBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.Home_GoToDoctorsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Home_GoToDoctorsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_GoToDoctorsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Home_GoToDoctorsBtn.Location = new System.Drawing.Point(758, 376);
             this.Home_GoToDoctorsBtn.Name = "Home_GoToDoctorsBtn";
             this.Home_GoToDoctorsBtn.Size = new System.Drawing.Size(177, 50);
@@ -180,8 +182,9 @@
             // 
             // Home_GoToPrescriptionsBtn
             // 
-            this.Home_GoToPrescriptionsBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.Home_GoToPrescriptionsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Home_GoToPrescriptionsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_GoToPrescriptionsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Home_GoToPrescriptionsBtn.Location = new System.Drawing.Point(758, 502);
             this.Home_GoToPrescriptionsBtn.Name = "Home_GoToPrescriptionsBtn";
             this.Home_GoToPrescriptionsBtn.Size = new System.Drawing.Size(177, 50);
@@ -192,8 +195,9 @@
             // 
             // Home_GoToAppointmentsBtn
             // 
-            this.Home_GoToAppointmentsBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.Home_GoToAppointmentsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Home_GoToAppointmentsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_GoToAppointmentsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Home_GoToAppointmentsBtn.Location = new System.Drawing.Point(453, 502);
             this.Home_GoToAppointmentsBtn.Name = "Home_GoToAppointmentsBtn";
             this.Home_GoToAppointmentsBtn.Size = new System.Drawing.Size(177, 50);
@@ -204,8 +208,9 @@
             // 
             // Home_GoToDashboardBtn
             // 
-            this.Home_GoToDashboardBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.Home_GoToDashboardBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Home_GoToDashboardBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_GoToDashboardBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Home_GoToDashboardBtn.Location = new System.Drawing.Point(453, 376);
             this.Home_GoToDashboardBtn.Name = "Home_GoToDashboardBtn";
             this.Home_GoToDashboardBtn.Size = new System.Drawing.Size(177, 50);
@@ -216,8 +221,9 @@
             // 
             // Home_GoToPatientsBtn
             // 
-            this.Home_GoToPatientsBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.Home_GoToPatientsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Home_GoToPatientsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_GoToPatientsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Home_GoToPatientsBtn.Location = new System.Drawing.Point(138, 376);
             this.Home_GoToPatientsBtn.Name = "Home_GoToPatientsBtn";
             this.Home_GoToPatientsBtn.Size = new System.Drawing.Size(177, 50);
@@ -228,7 +234,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox2.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_7__2026__06_00_31_PM;
             this.pictureBox2.Location = new System.Drawing.Point(90, 376);
             this.pictureBox2.Name = "pictureBox2";
@@ -239,7 +245,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox3.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_180702;
             this.pictureBox3.Location = new System.Drawing.Point(90, 502);
             this.pictureBox3.Name = "pictureBox3";
@@ -250,7 +256,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox4.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_181140;
             this.pictureBox4.Location = new System.Drawing.Point(405, 376);
             this.pictureBox4.Name = "pictureBox4";
@@ -261,7 +267,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox5.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_183656;
             this.pictureBox5.Location = new System.Drawing.Point(709, 376);
             this.pictureBox5.Name = "pictureBox5";
@@ -272,7 +278,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox6.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_181622;
             this.pictureBox6.Location = new System.Drawing.Point(405, 502);
             this.pictureBox6.Name = "pictureBox6";
@@ -283,7 +289,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox7.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_182823;
             this.pictureBox7.Location = new System.Drawing.Point(710, 502);
             this.pictureBox7.Name = "pictureBox7";
@@ -294,7 +300,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -310,9 +316,9 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Black;
+            this.pictureBox10.BackColor = System.Drawing.Color.Red;
             this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
-            this.pictureBox10.Location = new System.Drawing.Point(435, 627);
+            this.pictureBox10.Location = new System.Drawing.Point(834, 626);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(43, 43);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -321,14 +327,14 @@
             // 
             // Home_ExitBtn
             // 
-            this.Home_ExitBtn.BackColor = System.Drawing.Color.Black;
+            this.Home_ExitBtn.BackColor = System.Drawing.Color.Red;
             this.Home_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home_ExitBtn.ForeColor = System.Drawing.Color.White;
-            this.Home_ExitBtn.Location = new System.Drawing.Point(432, 623);
+            this.Home_ExitBtn.Location = new System.Drawing.Point(831, 622);
             this.Home_ExitBtn.Name = "Home_ExitBtn";
             this.Home_ExitBtn.Size = new System.Drawing.Size(177, 50);
             this.Home_ExitBtn.TabIndex = 26;
-            this.Home_ExitBtn.Text = "          EXIT SYSTEM";
+            this.Home_ExitBtn.Text = "           EXIT";
             this.Home_ExitBtn.UseVisualStyleBackColor = false;
             this.Home_ExitBtn.Click += new System.EventHandler(this.Home_ExitBtn_Click_1);
             // 
@@ -336,9 +342,9 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_9__2026__01_00_54_PM;
-            this.pictureBox8.Location = new System.Drawing.Point(30, 70);
+            this.pictureBox8.Location = new System.Drawing.Point(29, 36);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(220, 220);
+            this.pictureBox8.Size = new System.Drawing.Size(100, 100);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 28;
             this.pictureBox8.TabStop = false;
@@ -347,9 +353,9 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_9__2026__01_19_11_PM;
-            this.pictureBox9.Location = new System.Drawing.Point(785, 74);
+            this.pictureBox9.Location = new System.Drawing.Point(908, 36);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(220, 220);
+            this.pictureBox9.Size = new System.Drawing.Size(100, 100);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 29;
             this.pictureBox9.TabStop = false;
@@ -358,7 +364,7 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.calendar_icon_png__0;
-            this.pictureBox12.Location = new System.Drawing.Point(785, 12);
+            this.pictureBox12.Location = new System.Drawing.Point(489, 12);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(43, 43);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -371,7 +377,7 @@
             this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.TimeLabel.Location = new System.Drawing.Point(828, 36);
+            this.TimeLabel.Location = new System.Drawing.Point(532, 36);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(37, 17);
             this.TimeLabel.TabIndex = 35;
@@ -383,7 +389,7 @@
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
             this.DateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateLabel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.DateLabel.Location = new System.Drawing.Point(828, 13);
+            this.DateLabel.Location = new System.Drawing.Point(532, 13);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(36, 17);
             this.DateLabel.TabIndex = 34;
@@ -398,7 +404,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::Group_4_Information_Management_Final_Project.Properties.Resources.pastel_gradient_blur_background_vector;
+            this.BackgroundImage = global::Group_4_Information_Management_Final_Project.Properties.Resources.light_blue_background_gradient_wall_design_vector;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1034, 696);
             this.Controls.Add(this.pictureBox12);
