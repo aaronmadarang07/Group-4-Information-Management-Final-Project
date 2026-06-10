@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.TimeLabel = new System.Windows.Forms.Label();
             this.DateLabel = new System.Windows.Forms.Label();
@@ -65,8 +66,8 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.Prescription_ExitBtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -74,12 +75,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.Prescription_DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.pictureBox12);
             this.groupBox1.Controls.Add(this.TimeLabel);
@@ -105,6 +105,17 @@
             this.groupBox1.Size = new System.Drawing.Size(995, 314);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_9__2026__01_00_54_PM2;
+            this.pictureBox1.Location = new System.Drawing.Point(797, 57);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(180, 180);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 62;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox12
             // 
@@ -122,7 +133,7 @@
             this.TimeLabel.AutoSize = true;
             this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeLabel.ForeColor = System.Drawing.Color.DarkGreen;
+            this.TimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TimeLabel.Location = new System.Drawing.Point(790, 27);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(37, 17);
@@ -134,7 +145,7 @@
             this.DateLabel.AutoSize = true;
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
             this.DateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.ForeColor = System.Drawing.Color.DarkGreen;
+            this.DateLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DateLabel.Location = new System.Drawing.Point(790, 4);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(36, 17);
@@ -370,7 +381,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(15, 186);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 21);
@@ -381,7 +392,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(15, 100);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 21);
@@ -392,7 +403,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(15, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 21);
@@ -403,7 +414,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(15, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 21);
@@ -414,7 +425,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(15, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 21);
@@ -425,7 +436,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label3.Location = new System.Drawing.Point(57, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 30);
@@ -434,7 +445,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.pictureBox2);
             this.groupBox3.Controls.Add(this.PrescriptionSearch_TextBox);
@@ -450,7 +461,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label12.Location = new System.Drawing.Point(15, 6);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(146, 23);
@@ -480,7 +491,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label10.Location = new System.Drawing.Point(639, 8);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(176, 23);
@@ -533,7 +544,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox9.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources._25694;
             this.pictureBox9.Location = new System.Drawing.Point(23, 632);
             this.pictureBox9.Name = "pictureBox9";
@@ -544,9 +555,9 @@
             // 
             // Prescription_GobackHomeBtn
             // 
-            this.Prescription_GobackHomeBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.Prescription_GobackHomeBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Prescription_GobackHomeBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Prescription_GobackHomeBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.Prescription_GobackHomeBtn.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Prescription_GobackHomeBtn.Location = new System.Drawing.Point(20, 628);
             this.Prescription_GobackHomeBtn.Name = "Prescription_GobackHomeBtn";
             this.Prescription_GobackHomeBtn.Size = new System.Drawing.Size(177, 50);
@@ -557,7 +568,7 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Black;
+            this.pictureBox10.BackColor = System.Drawing.Color.Red;
             this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
             this.pictureBox10.Location = new System.Drawing.Point(841, 632);
             this.pictureBox10.Name = "pictureBox10";
@@ -568,14 +579,14 @@
             // 
             // Prescription_ExitBtn
             // 
-            this.Prescription_ExitBtn.BackColor = System.Drawing.Color.Black;
+            this.Prescription_ExitBtn.BackColor = System.Drawing.Color.Red;
             this.Prescription_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_ExitBtn.ForeColor = System.Drawing.Color.White;
             this.Prescription_ExitBtn.Location = new System.Drawing.Point(838, 628);
             this.Prescription_ExitBtn.Name = "Prescription_ExitBtn";
             this.Prescription_ExitBtn.Size = new System.Drawing.Size(177, 50);
             this.Prescription_ExitBtn.TabIndex = 42;
-            this.Prescription_ExitBtn.Text = "          EXIT SYSTEM";
+            this.Prescription_ExitBtn.Text = "           EXIT";
             this.Prescription_ExitBtn.UseVisualStyleBackColor = false;
             this.Prescription_ExitBtn.Click += new System.EventHandler(this.Prescription_ExitBtn_Click);
             // 
@@ -583,21 +594,11 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_9__2026__01_00_54_PM2;
-            this.pictureBox1.Location = new System.Drawing.Point(797, 57);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 180);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 62;
-            this.pictureBox1.TabStop = false;
-            // 
             // Prescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Group_4_Information_Management_Final_Project.Properties.Resources.pastel_gradient_blur_background_vector1;
+            this.BackgroundImage = global::Group_4_Information_Management_Final_Project.Properties.Resources.light_blue_background_gradient_wall_design_vector6;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1034, 696);
             this.Controls.Add(this.pictureBox9);
@@ -611,6 +612,7 @@
             this.Load += new System.EventHandler(this.Prescription_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -619,7 +621,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Prescription_DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -40,5 +40,10 @@ namespace Group_4_Information_Management_Final_Project
         {
             timer1.Start();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

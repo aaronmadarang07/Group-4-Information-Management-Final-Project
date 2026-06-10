@@ -90,7 +90,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Controls.Add(this.pictureBox12);
             this.groupBox1.Controls.Add(this.TimeLabel);
             this.groupBox1.Controls.Add(this.DateLabel);
@@ -142,7 +142,7 @@
             this.TimeLabel.AutoSize = true;
             this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeLabel.ForeColor = System.Drawing.Color.DarkGreen;
+            this.TimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TimeLabel.Location = new System.Drawing.Point(790, 27);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(37, 17);
@@ -154,7 +154,7 @@
             this.DateLabel.AutoSize = true;
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
             this.DateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.ForeColor = System.Drawing.Color.DarkGreen;
+            this.DateLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DateLabel.Location = new System.Drawing.Point(790, 4);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(36, 17);
@@ -204,7 +204,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label9.Location = new System.Drawing.Point(454, 59);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 21);
@@ -268,7 +268,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Location = new System.Drawing.Point(454, 100);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 21);
@@ -426,7 +426,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(15, 270);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 21);
@@ -437,7 +437,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(15, 186);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(150, 21);
@@ -448,7 +448,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(15, 96);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 21);
@@ -459,7 +459,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(15, 139);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 21);
@@ -470,7 +470,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(15, 229);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 21);
@@ -481,7 +481,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(15, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 21);
@@ -492,7 +492,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label3.Location = new System.Drawing.Point(57, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(281, 30);
@@ -512,7 +512,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.pictureBox2);
             this.groupBox3.Controls.Add(this.AppointmentSearch_TextBox);
@@ -528,7 +528,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label12.Location = new System.Drawing.Point(15, 6);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(148, 23);
@@ -558,7 +558,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label10.Location = new System.Drawing.Point(629, 8);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(188, 23);
@@ -629,7 +629,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox9.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources._25694;
             this.pictureBox9.Location = new System.Drawing.Point(23, 632);
             this.pictureBox9.Name = "pictureBox9";
@@ -641,9 +641,9 @@
             // 
             // Appointments_GobackHomeBtn
             // 
-            this.Appointments_GobackHomeBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.Appointments_GobackHomeBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Appointments_GobackHomeBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Appointments_GobackHomeBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.Appointments_GobackHomeBtn.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Appointments_GobackHomeBtn.Location = new System.Drawing.Point(20, 628);
             this.Appointments_GobackHomeBtn.Name = "Appointments_GobackHomeBtn";
             this.Appointments_GobackHomeBtn.Size = new System.Drawing.Size(177, 50);
@@ -654,7 +654,7 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Black;
+            this.pictureBox10.BackColor = System.Drawing.Color.Red;
             this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
             this.pictureBox10.Location = new System.Drawing.Point(841, 632);
             this.pictureBox10.Name = "pictureBox10";
@@ -666,14 +666,14 @@
             // 
             // Appointments_ExitBtn
             // 
-            this.Appointments_ExitBtn.BackColor = System.Drawing.Color.Black;
+            this.Appointments_ExitBtn.BackColor = System.Drawing.Color.Red;
             this.Appointments_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Appointments_ExitBtn.ForeColor = System.Drawing.Color.White;
             this.Appointments_ExitBtn.Location = new System.Drawing.Point(838, 628);
             this.Appointments_ExitBtn.Name = "Appointments_ExitBtn";
             this.Appointments_ExitBtn.Size = new System.Drawing.Size(177, 50);
             this.Appointments_ExitBtn.TabIndex = 34;
-            this.Appointments_ExitBtn.Text = "          EXIT SYSTEM";
+            this.Appointments_ExitBtn.Text = "           EXIT";
             this.Appointments_ExitBtn.UseVisualStyleBackColor = false;
             this.Appointments_ExitBtn.Click += new System.EventHandler(this.Appointments_ExitBtn_Click);
             // 
@@ -685,7 +685,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Group_4_Information_Management_Final_Project.Properties.Resources.pastel_gradient_blur_background_vector1;
+            this.BackgroundImage = global::Group_4_Information_Management_Final_Project.Properties.Resources.light_blue_background_gradient_wall_design_vector5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1034, 696);
             this.Controls.Add(this.pictureBox9);

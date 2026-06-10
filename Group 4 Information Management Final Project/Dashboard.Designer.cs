@@ -119,7 +119,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(9, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(493, 21);
@@ -130,7 +130,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label1.Location = new System.Drawing.Point(6, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(333, 40);
@@ -164,7 +164,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(104, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 21);
@@ -208,7 +208,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(106, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 21);
@@ -252,7 +252,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(109, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 21);
@@ -296,7 +296,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(107, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 21);
@@ -327,11 +327,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label12.Location = new System.Drawing.Point(20, 16);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(305, 23);
+            this.label12.Size = new System.Drawing.Size(291, 23);
             this.label12.TabIndex = 5;
             this.label12.Text = "Appointments Overview (This Week)";
             // 
@@ -367,11 +367,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label11.Location = new System.Drawing.Point(14, 16);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(178, 23);
+            this.label11.Size = new System.Drawing.Size(168, 23);
             this.label11.TabIndex = 4;
             this.label11.Text = "Today\'s Appointmets";
             // 
@@ -418,7 +418,7 @@
             // 
             this.DashBoard_GoToPatientsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GoToPatientsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GoToPatientsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DashBoard_GoToPatientsBtn.ForeColor = System.Drawing.Color.DodgerBlue;
             this.DashBoard_GoToPatientsBtn.Location = new System.Drawing.Point(19, 562);
             this.DashBoard_GoToPatientsBtn.Name = "DashBoard_GoToPatientsBtn";
             this.DashBoard_GoToPatientsBtn.Size = new System.Drawing.Size(177, 50);
@@ -431,7 +431,7 @@
             // 
             this.DashBoard_GoToMedRecordsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GoToMedRecordsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GoToMedRecordsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DashBoard_GoToMedRecordsBtn.ForeColor = System.Drawing.Color.DodgerBlue;
             this.DashBoard_GoToMedRecordsBtn.Location = new System.Drawing.Point(841, 562);
             this.DashBoard_GoToMedRecordsBtn.Name = "DashBoard_GoToMedRecordsBtn";
             this.DashBoard_GoToMedRecordsBtn.Size = new System.Drawing.Size(177, 50);
@@ -444,7 +444,7 @@
             // 
             this.DashBoard_GoToDoctorsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GoToDoctorsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GoToDoctorsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DashBoard_GoToDoctorsBtn.ForeColor = System.Drawing.Color.DodgerBlue;
             this.DashBoard_GoToDoctorsBtn.Location = new System.Drawing.Point(287, 562);
             this.DashBoard_GoToDoctorsBtn.Name = "DashBoard_GoToDoctorsBtn";
             this.DashBoard_GoToDoctorsBtn.Size = new System.Drawing.Size(177, 50);
@@ -457,7 +457,7 @@
             // 
             this.DashBoard_GoToAppointmentsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GoToAppointmentsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GoToAppointmentsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DashBoard_GoToAppointmentsBtn.ForeColor = System.Drawing.Color.DodgerBlue;
             this.DashBoard_GoToAppointmentsBtn.Location = new System.Drawing.Point(570, 562);
             this.DashBoard_GoToAppointmentsBtn.Name = "DashBoard_GoToAppointmentsBtn";
             this.DashBoard_GoToAppointmentsBtn.Size = new System.Drawing.Size(177, 50);
@@ -534,7 +534,7 @@
             // 
             this.DashBoard_GobackHomeBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GobackHomeBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GobackHomeBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DashBoard_GobackHomeBtn.ForeColor = System.Drawing.Color.DodgerBlue;
             this.DashBoard_GobackHomeBtn.Location = new System.Drawing.Point(156, 634);
             this.DashBoard_GobackHomeBtn.Name = "DashBoard_GobackHomeBtn";
             this.DashBoard_GobackHomeBtn.Size = new System.Drawing.Size(177, 50);
@@ -583,7 +583,7 @@
             this.DateLabel.AutoSize = true;
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
             this.DateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.DateLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DateLabel.Location = new System.Drawing.Point(57, 14);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(36, 17);
@@ -595,7 +595,7 @@
             this.TimeLabel.AutoSize = true;
             this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.TimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TimeLabel.Location = new System.Drawing.Point(57, 37);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(37, 17);

@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.TimeLabel = new System.Windows.Forms.Label();
+            this.DateLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PatientsForm_ClearBtn = new System.Windows.Forms.Button();
             this.PatientsForm_DeleteBtn = new System.Windows.Forms.Button();
@@ -70,11 +73,9 @@
             this.Patient_ExitBtn = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.Patient_GobackHomeBtn = new System.Windows.Forms.Button();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.TimeLabel = new System.Windows.Forms.Label();
-            this.DateLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -82,12 +83,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.PatientsList_DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Controls.Add(this.pictureBox12);
             this.groupBox1.Controls.Add(this.TimeLabel);
             this.groupBox1.Controls.Add(this.DateLabel);
@@ -119,6 +119,44 @@
             this.groupBox1.Size = new System.Drawing.Size(995, 276);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.calendar_icon_png__0;
+            this.pictureBox12.Location = new System.Drawing.Point(747, 3);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 39;
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
+            // 
+            // TimeLabel
+            // 
+            this.TimeLabel.AutoSize = true;
+            this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TimeLabel.Location = new System.Drawing.Point(790, 27);
+            this.TimeLabel.Name = "TimeLabel";
+            this.TimeLabel.Size = new System.Drawing.Size(37, 17);
+            this.TimeLabel.TabIndex = 38;
+            this.TimeLabel.Text = "Time";
+            this.TimeLabel.Click += new System.EventHandler(this.TimeLabel_Click);
+            // 
+            // DateLabel
+            // 
+            this.DateLabel.AutoSize = true;
+            this.DateLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DateLabel.Location = new System.Drawing.Point(790, 4);
+            this.DateLabel.Name = "DateLabel";
+            this.DateLabel.Size = new System.Drawing.Size(36, 17);
+            this.DateLabel.TabIndex = 37;
+            this.DateLabel.Text = "Date";
+            this.DateLabel.Click += new System.EventHandler(this.DateLabel_Click);
             // 
             // pictureBox1
             // 
@@ -248,7 +286,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label9.Location = new System.Drawing.Point(399, 185);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(97, 21);
@@ -259,7 +297,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Location = new System.Drawing.Point(399, 101);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 21);
@@ -278,7 +316,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(399, 60);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 21);
@@ -334,7 +372,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(15, 185);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 21);
@@ -345,7 +383,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(15, 101);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 21);
@@ -356,7 +394,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(15, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 21);
@@ -378,7 +416,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label3.Location = new System.Drawing.Point(57, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(207, 30);
@@ -390,7 +428,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(15, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 21);
@@ -401,7 +439,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(15, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 21);
@@ -410,7 +448,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Honeydew;
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Controls.Add(this.PatientSearch_Box);
             this.groupBox2.Controls.Add(this.label10);
@@ -444,22 +482,22 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label10.Location = new System.Drawing.Point(685, 7);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(130, 23);
+            this.label10.Size = new System.Drawing.Size(124, 23);
             this.label10.TabIndex = 7;
             this.label10.Text = "Search Patient:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label12.Location = new System.Drawing.Point(15, 6);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(107, 23);
+            this.label12.Size = new System.Drawing.Size(101, 23);
             this.label12.TabIndex = 6;
             this.label12.Text = "Patients List";
             // 
@@ -521,7 +559,7 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Black;
+            this.pictureBox10.BackColor = System.Drawing.Color.Red;
             this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
             this.pictureBox10.Location = new System.Drawing.Point(841, 632);
             this.pictureBox10.Name = "pictureBox10";
@@ -532,20 +570,20 @@
             // 
             // Patient_ExitBtn
             // 
-            this.Patient_ExitBtn.BackColor = System.Drawing.Color.Black;
+            this.Patient_ExitBtn.BackColor = System.Drawing.Color.Red;
             this.Patient_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Patient_ExitBtn.ForeColor = System.Drawing.Color.White;
             this.Patient_ExitBtn.Location = new System.Drawing.Point(838, 628);
             this.Patient_ExitBtn.Name = "Patient_ExitBtn";
             this.Patient_ExitBtn.Size = new System.Drawing.Size(177, 50);
             this.Patient_ExitBtn.TabIndex = 30;
-            this.Patient_ExitBtn.Text = "          EXIT SYSTEM";
+            this.Patient_ExitBtn.Text = "           EXIT";
             this.Patient_ExitBtn.UseVisualStyleBackColor = false;
             this.Patient_ExitBtn.Click += new System.EventHandler(this.Patient_ExitBtn_Click);
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox9.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources._25694;
             this.pictureBox9.Location = new System.Drawing.Point(23, 632);
             this.pictureBox9.Name = "pictureBox9";
@@ -556,9 +594,9 @@
             // 
             // Patient_GobackHomeBtn
             // 
-            this.Patient_GobackHomeBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.Patient_GobackHomeBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Patient_GobackHomeBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Patient_GobackHomeBtn.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.Patient_GobackHomeBtn.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Patient_GobackHomeBtn.Location = new System.Drawing.Point(20, 628);
             this.Patient_GobackHomeBtn.Name = "Patient_GobackHomeBtn";
             this.Patient_GobackHomeBtn.Size = new System.Drawing.Size(177, 50);
@@ -566,44 +604,6 @@
             this.Patient_GobackHomeBtn.Text = "             GO BACK TO             HOME";
             this.Patient_GobackHomeBtn.UseVisualStyleBackColor = false;
             this.Patient_GobackHomeBtn.Click += new System.EventHandler(this.Patient_GobackHomeBtn_Click);
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.calendar_icon_png__0;
-            this.pictureBox12.Location = new System.Drawing.Point(747, 3);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(43, 43);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 39;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
-            // 
-            // TimeLabel
-            // 
-            this.TimeLabel.AutoSize = true;
-            this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeLabel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.TimeLabel.Location = new System.Drawing.Point(790, 27);
-            this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(37, 17);
-            this.TimeLabel.TabIndex = 38;
-            this.TimeLabel.Text = "Time";
-            this.TimeLabel.Click += new System.EventHandler(this.TimeLabel_Click);
-            // 
-            // DateLabel
-            // 
-            this.DateLabel.AutoSize = true;
-            this.DateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.DateLabel.Location = new System.Drawing.Point(790, 4);
-            this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(36, 17);
-            this.DateLabel.TabIndex = 37;
-            this.DateLabel.Text = "Date";
-            this.DateLabel.Click += new System.EventHandler(this.DateLabel_Click);
             // 
             // timer1
             // 
@@ -613,7 +613,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Group_4_Information_Management_Final_Project.Properties.Resources.pastel_gradient_blur_background_vector1;
+            this.BackgroundImage = global::Group_4_Information_Management_Final_Project.Properties.Resources.light_blue_background_gradient_wall_design_vector2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1034, 696);
             this.Controls.Add(this.pictureBox9);
@@ -627,6 +627,7 @@
             this.Load += new System.EventHandler(this.Patient_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -635,7 +636,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PatientsList_DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }
