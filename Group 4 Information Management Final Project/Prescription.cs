@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Group_4_Information_Management_Final_Project
 {
@@ -15,6 +10,211 @@ namespace Group_4_Information_Management_Final_Project
         public Prescription()
         {
             InitializeComponent();
+        }
+
+        private void Prescription_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+
+            PresFrequency_ComboBox.Items.Clear();
+            PresFrequency_ComboBox.Items.Add("Once a day");
+            PresFrequency_ComboBox.Items.Add("Twice a day");
+            PresFrequency_ComboBox.Items.Add("3 times a day");
+            PresFrequency_ComboBox.Items.Add("Every 4 hours");
+            PresFrequency_ComboBox.Items.Add("Every 6 hours");
+            PresFrequency_ComboBox.Items.Add("Every 8 hours");
+            PresFrequency_ComboBox.Items.Add("Every 12 hours");
+            PresFrequency_ComboBox.Items.Add("Before meals");
+            PresFrequency_ComboBox.Items.Add("After meals");
+            PresFrequency_ComboBox.Items.Add("At bedtime");
+            PresFrequency_ComboBox.Items.Add("As needed");
+
+            LoadPrescriptions();
+
+            Prescription_UpdateBtn.Click += Prescription_UpdateBtn_Click;
+            Prescription_DeleteBtn.Click += Prescription_DeleteBtn_Click;
+            Prescription_ClearBtn.Click += Prescription_ClearBtn_Click;
+            Prescription_DataGridView.CellClick += Prescription_DataGridView_CellClick;
+        }
+
+        private void LoadPrescriptions()
+        {
+            try
+            {
+                using (var conn = DBHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string query = "SELECT * FROM prescriptions";
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
+                    Prescription_DataGridView.DataSource = table;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Prescription_AddBtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(PresPrescriptionID_TextBox.Text) ||
+                string.IsNullOrWhiteSpace(PresMedicineName_TextBox.Text) ||
+                string.IsNullOrWhiteSpace(PresDosage_TextBox.Text) ||
+                string.IsNullOrWhiteSpace(PresFrequency_ComboBox.Text) ||
+                string.IsNullOrWhiteSpace(PresDuration_TextBox.Text))
+            {
+                MessageBox.Show("Please fill up all fields!",
+                    "Validation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (var conn = DBHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string query = @"INSERT INTO prescriptions
+                    (prescription_id, medicine_name, dosage, frequency, duration)
+                    VALUES
+                    (@id, @medicine, @dosage, @frequency, @duration)";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", PresPrescriptionID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("@medicine", PresMedicineName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("@dosage", PresDosage_TextBox.Text);
+                        cmd.Parameters.AddWithValue("@frequency", PresFrequency_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("@duration", PresDuration_TextBox.Text);
+
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Prescription Added Successfully!");
+                    LoadPrescriptions();
+                    ClearFields();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Prescription_UpdateBtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(PresPrescriptionID_TextBox.Text))
+            {
+                MessageBox.Show("Please select or enter Prescription ID!",
+                    "Validation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (var conn = DBHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string query = @"UPDATE prescriptions SET
+                    medicine_name = @medicine,
+                    dosage = @dosage,
+                    frequency = @frequency,
+                    duration = @duration
+                    WHERE prescription_id = @id";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", PresPrescriptionID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("@medicine", PresMedicineName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("@dosage", PresDosage_TextBox.Text);
+                        cmd.Parameters.AddWithValue("@frequency", PresFrequency_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("@duration", PresDuration_TextBox.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Prescription Updated Successfully!");
+                    LoadPrescriptions();
+                    ClearFields();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Prescription_DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(PresPrescriptionID_TextBox.Text))
+            {
+                MessageBox.Show("Please select or enter Prescription ID!",
+                    "Validation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (var conn = DBHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string query = "DELETE FROM prescriptions WHERE prescription_id = @id";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@id", PresPrescriptionID_TextBox.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Prescription Deleted Successfully!");
+                    LoadPrescriptions();
+                    ClearFields();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Prescription_ClearBtn_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+
+        private void ClearFields()
+        {
+            PresPrescriptionID_TextBox.Clear();
+            PresMedicineName_TextBox.Clear();
+            PresDosage_TextBox.Clear();
+            PresFrequency_ComboBox.SelectedIndex = -1;
+            PresDuration_TextBox.Clear();
+        }
+
+        private void Prescription_DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = Prescription_DataGridView.Rows[e.RowIndex];
+
+                PresPrescriptionID_TextBox.Text = row.Cells["prescription_id"].Value.ToString();
+                PresMedicineName_TextBox.Text = row.Cells["medicine_name"].Value.ToString();
+                PresDosage_TextBox.Text = row.Cells["dosage"].Value.ToString();
+                PresFrequency_ComboBox.Text = row.Cells["frequency"].Value.ToString();
+                PresDuration_TextBox.Text = row.Cells["duration"].Value.ToString();
+            }
         }
 
         private void Prescription_ExitBtn_Click(object sender, EventArgs e)
@@ -32,18 +232,11 @@ namespace Group_4_Information_Management_Final_Project
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateLabel.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy");
-
             TimeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
 
-        private void Prescription_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
+        private void groupBox1_Enter(object sender, EventArgs e) { }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
+        private void PresFrequency_ComboBox_SelectedIndexChanged(object sender, EventArgs e) { }
     }
 }

@@ -62,6 +62,7 @@
             this.DoctorSearch_TextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.DoctorsList_DataGridView = new System.Windows.Forms.DataGridView();
+            this.DoctorsList_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoctorsList_DataGridView_CellClick);
             this.DL_DoctorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DL_LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DL_FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
