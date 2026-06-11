@@ -310,7 +310,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(280, 70);
+            this.groupBox1.Location = new System.Drawing.Point(280, 80);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(474, 222);
             this.groupBox1.TabIndex = 22;
@@ -407,7 +407,7 @@
             this.groupBox2.Controls.Add(this.TimeLabel);
             this.groupBox2.Controls.Add(this.pictureBox12);
             this.groupBox2.Controls.Add(this.DateLabel);
-            this.groupBox2.Location = new System.Drawing.Point(186, 54);
+            this.groupBox2.Location = new System.Drawing.Point(408, 8);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(230, 65);
             this.groupBox2.TabIndex = 37;
