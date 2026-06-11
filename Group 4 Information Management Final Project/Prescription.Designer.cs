@@ -100,9 +100,11 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(20, 20);
+            this.groupBox1.Location = new System.Drawing.Point(27, 25);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(995, 314);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1327, 386);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -110,9 +112,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_9__2026__01_00_54_PM2;
-            this.pictureBox1.Location = new System.Drawing.Point(797, 57);
+            this.pictureBox1.Location = new System.Drawing.Point(1063, 70);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 180);
+            this.pictureBox1.Size = new System.Drawing.Size(240, 222);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 62;
             this.pictureBox1.TabStop = false;
@@ -121,9 +124,10 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.calendar_icon_png__0;
-            this.pictureBox12.Location = new System.Drawing.Point(747, 3);
+            this.pictureBox12.Location = new System.Drawing.Point(996, 4);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox12.Size = new System.Drawing.Size(57, 53);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 61;
             this.pictureBox12.TabStop = false;
@@ -134,9 +138,10 @@
             this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TimeLabel.Location = new System.Drawing.Point(790, 27);
+            this.TimeLabel.Location = new System.Drawing.Point(1053, 33);
+            this.TimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(37, 17);
+            this.TimeLabel.Size = new System.Drawing.Size(47, 23);
             this.TimeLabel.TabIndex = 60;
             this.TimeLabel.Text = "Time";
             // 
@@ -146,9 +151,10 @@
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
             this.DateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DateLabel.Location = new System.Drawing.Point(790, 4);
+            this.DateLabel.Location = new System.Drawing.Point(1053, 5);
+            this.DateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(36, 17);
+            this.DateLabel.Size = new System.Drawing.Size(46, 23);
             this.DateLabel.TabIndex = 59;
             this.DateLabel.Text = "Date";
             // 
@@ -156,9 +162,10 @@
             // 
             this.pictureBox3.BackgroundImage = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_182823;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(11, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(15, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(47, 47);
+            this.pictureBox3.Size = new System.Drawing.Size(63, 58);
             this.pictureBox3.TabIndex = 43;
             this.pictureBox3.TabStop = false;
             // 
@@ -167,9 +174,10 @@
             this.Prescription_DeleteBtn.BackColor = System.Drawing.Color.OrangeRed;
             this.Prescription_DeleteBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_DeleteBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Prescription_DeleteBtn.Location = new System.Drawing.Point(591, 258);
+            this.Prescription_DeleteBtn.Location = new System.Drawing.Point(788, 318);
+            this.Prescription_DeleteBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Prescription_DeleteBtn.Name = "Prescription_DeleteBtn";
-            this.Prescription_DeleteBtn.Size = new System.Drawing.Size(120, 36);
+            this.Prescription_DeleteBtn.Size = new System.Drawing.Size(160, 44);
             this.Prescription_DeleteBtn.TabIndex = 37;
             this.Prescription_DeleteBtn.Text = "DELETE";
             this.Prescription_DeleteBtn.UseVisualStyleBackColor = false;
@@ -179,9 +187,10 @@
             this.Prescription_UpdateBtn.BackColor = System.Drawing.Color.SeaGreen;
             this.Prescription_UpdateBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_UpdateBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Prescription_UpdateBtn.Location = new System.Drawing.Point(723, 258);
+            this.Prescription_UpdateBtn.Location = new System.Drawing.Point(964, 318);
+            this.Prescription_UpdateBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Prescription_UpdateBtn.Name = "Prescription_UpdateBtn";
-            this.Prescription_UpdateBtn.Size = new System.Drawing.Size(120, 36);
+            this.Prescription_UpdateBtn.Size = new System.Drawing.Size(160, 44);
             this.Prescription_UpdateBtn.TabIndex = 36;
             this.Prescription_UpdateBtn.Text = "UPDATE";
             this.Prescription_UpdateBtn.UseVisualStyleBackColor = false;
@@ -191,9 +200,10 @@
             this.Prescription_ClearBtn.BackColor = System.Drawing.Color.Goldenrod;
             this.Prescription_ClearBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_ClearBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Prescription_ClearBtn.Location = new System.Drawing.Point(857, 258);
+            this.Prescription_ClearBtn.Location = new System.Drawing.Point(1143, 318);
+            this.Prescription_ClearBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Prescription_ClearBtn.Name = "Prescription_ClearBtn";
-            this.Prescription_ClearBtn.Size = new System.Drawing.Size(120, 36);
+            this.Prescription_ClearBtn.Size = new System.Drawing.Size(160, 44);
             this.Prescription_ClearBtn.TabIndex = 35;
             this.Prescription_ClearBtn.Text = "CLEAR";
             this.Prescription_ClearBtn.UseVisualStyleBackColor = false;
@@ -203,19 +213,22 @@
             this.Prescription_AddBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.Prescription_AddBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_AddBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Prescription_AddBtn.Location = new System.Drawing.Point(458, 258);
+            this.Prescription_AddBtn.Location = new System.Drawing.Point(611, 318);
+            this.Prescription_AddBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Prescription_AddBtn.Name = "Prescription_AddBtn";
-            this.Prescription_AddBtn.Size = new System.Drawing.Size(120, 36);
+            this.Prescription_AddBtn.Size = new System.Drawing.Size(160, 44);
             this.Prescription_AddBtn.TabIndex = 34;
             this.Prescription_AddBtn.Text = "ADD";
             this.Prescription_AddBtn.UseVisualStyleBackColor = false;
+            this.Prescription_AddBtn.Click += new System.EventHandler(this.Prescription_AddBtn_Click);
             // 
             // PresDuration_TextBox
             // 
             this.PresDuration_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PresDuration_TextBox.Location = new System.Drawing.Point(194, 227);
+            this.PresDuration_TextBox.Location = new System.Drawing.Point(259, 279);
+            this.PresDuration_TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PresDuration_TextBox.Name = "PresDuration_TextBox";
-            this.PresDuration_TextBox.Size = new System.Drawing.Size(238, 27);
+            this.PresDuration_TextBox.Size = new System.Drawing.Size(316, 32);
             this.PresDuration_TextBox.TabIndex = 31;
             // 
             // PresFrequency_ComboBox
@@ -224,157 +237,50 @@
             this.PresFrequency_ComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PresFrequency_ComboBox.FormattingEnabled = true;
             this.PresFrequency_ComboBox.Items.AddRange(new object[] {
-            "Addiction Medicine",
-            "Addiction Psychiatry",
-            "Adolescent Medicine",
-            "Aerospace Medicine",
-            "Allergy and Immunology",
-            "Anatomic Pathology",
-            "Anesthesiology",
-            "Bariatric Medicine",
-            "Blood Banking-Transfusion Medicine",
-            "Cardiac Electrophysiology",
-            "Cardiothoracic Surgery",
-            "Cardiovascular Disease (Cardiology)",
-            "Chemical Pathology",
-            "Child Abuse Pediatrics",
-            "Child and Adolescent Psychiatry",
-            "Clinical Biochemistry",
-            "Clinical Cardiac Electrophysiology",
-            "Clinical Cytogenetics",
-            "Clinical Genetics",
-            "Clinical Informatics",
-            "Clinical Laboratory Immunology",
-            "Clinical Neurophysiology",
-            "Clinical Pathology",
-            "Clinical Pharmacology",
-            "Colon and Rectal Surgery",
-            "Complex General Surgical Oncology",
-            "Congenital Cardiac Surgery",
-            "Critical Care Medicine",
-            "Cytopathology",
-            "Dermatology",
-            "Dermatopathology",
-            "Developmental-Behavioral Pediatrics",
-            "Diagnostic Radiology",
-            "Emergency Medicine",
-            "Endocrinology, Diabetes and Metabolism",
-            "Facial Plastic and Reconstructive Surgery",
-            "Family Medicine",
-            "Female Pelvic Medicine and Reconstructive Surgery",
-            "Forensic Pathology",
-            "Forensic Psychiatry",
-            "Gastroenterology",
-            "Geriatric Medicine",
-            "Geriatric Psychiatry",
-            "Hand Surgery",
-            "Head and Neck Surgery",
-            "Hematology",
-            "Hematology and Medical Oncology",
-            "Hepatology",
-            "Hospice and Palliative Medicine",
-            "Infectious Disease",
-            "Internal Medicine",
-            "Interventional Cardiology",
-            "Interventional Radiology",
-            "Laboratory Medicine",
-            "Lifestyle Medicine",
-            "Maternal-Fetal Medicine",
-            "Medical Biochemical Genetics",
-            "Medical Genetics",
-            "Medical Microbiology",
-            "Medical Oncology",
-            "Medical Toxicology",
-            "Neonatal-Perinatal Medicine",
-            "Nephrology",
-            "Neurological Surgery (Neurosurgery)",
-            "Neuropathology",
-            "Neuropsychiatry",
-            "Neuroradiology",
-            "Neurology",
-            "Nuclear Medicine",
-            "Obstetrics and Gynecology",
-            "Occupational Medicine",
-            "Ophthalmology",
-            "Oral and Maxillofacial Surgery",
-            "Orthopaedic Surgery",
-            "Otolaryngology (ENT)",
-            "Pain Medicine",
-            "Pathology",
-            "Pediatric Anesthesiology",
-            "Pediatric Cardiology",
-            "Pediatric Critical Care Medicine",
-            "Pediatric Dermatology",
-            "Pediatric Emergency Medicine",
-            "Pediatric Endocrinology",
-            "Pediatric Gastroenterology",
-            "Pediatric Hematology-Oncology",
-            "Pediatric Hospital Medicine",
-            "Pediatric Infectious Disease",
-            "Pediatric Nephrology",
-            "Pediatric Neurology",
-            "Pediatric Orthopaedic Surgery",
-            "Pediatric Otolaryngology",
-            "Pediatric Pathology",
-            "Pediatric Pulmonology",
-            "Pediatric Radiology",
-            "Pediatric Rehabilitation Medicine",
-            "Pediatric Rheumatology",
-            "Pediatric Surgery",
-            "Pediatric Transplant Hepatology",
-            "Pediatric Urology",
-            "Pediatrics",
-            "Physical Medicine and Rehabilitation",
-            "Plastic and Reconstructive Surgery",
-            "Preventive Medicine",
-            "Psychiatry",
-            "Psychology",
-            "Public Health and General Preventive Medicine",
-            "Pulmonology",
-            "Radiation Oncology",
-            "Radiology",
-            "Reproductive Endocrinology and Infertility",
-            "Rheumatology",
-            "Sleep Medicine",
-            "Spinal Cord Injury Medicine",
-            "Sports Medicine",
-            "Surgical Critical Care",
-            "Surgical Oncology",
-            "Thoracic Surgery",
-            "Transplant Hepatology",
-            "Undersea and Hyperbaric Medicine",
-            "Urogynecology",
-            "Urology",
-            "Vascular and Interventional Radiology",
-            "Vascular Neurology",
-            "Vascular Surgery"});
-            this.PresFrequency_ComboBox.Location = new System.Drawing.Point(194, 182);
+            "Once a day",
+            "Twice a day",
+            "3 times a day",
+            "Every 4 hours",
+            "Every 6 hours",
+            "Every 8 hours",
+            "Every 12 hours",
+            "Before meals",
+            "After meals",
+            "At bedtime",
+            "As needed"
+});
+            this.PresFrequency_ComboBox.Location = new System.Drawing.Point(259, 224);
+            this.PresFrequency_ComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PresFrequency_ComboBox.Name = "PresFrequency_ComboBox";
-            this.PresFrequency_ComboBox.Size = new System.Drawing.Size(238, 28);
+            this.PresFrequency_ComboBox.Size = new System.Drawing.Size(316, 33);
             this.PresFrequency_ComboBox.TabIndex = 30;
+            this.PresFrequency_ComboBox.SelectedIndexChanged += new System.EventHandler(this.PresFrequency_ComboBox_SelectedIndexChanged);
             // 
             // PresDosage_TextBox
             // 
             this.PresDosage_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PresDosage_TextBox.Location = new System.Drawing.Point(194, 142);
+            this.PresDosage_TextBox.Location = new System.Drawing.Point(259, 175);
+            this.PresDosage_TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PresDosage_TextBox.Name = "PresDosage_TextBox";
-            this.PresDosage_TextBox.Size = new System.Drawing.Size(238, 27);
+            this.PresDosage_TextBox.Size = new System.Drawing.Size(316, 32);
             this.PresDosage_TextBox.TabIndex = 29;
             // 
             // PresMedicineName_TextBox
             // 
             this.PresMedicineName_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PresMedicineName_TextBox.Location = new System.Drawing.Point(194, 99);
+            this.PresMedicineName_TextBox.Location = new System.Drawing.Point(259, 122);
+            this.PresMedicineName_TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PresMedicineName_TextBox.Name = "PresMedicineName_TextBox";
-            this.PresMedicineName_TextBox.Size = new System.Drawing.Size(238, 27);
+            this.PresMedicineName_TextBox.Size = new System.Drawing.Size(316, 32);
             this.PresMedicineName_TextBox.TabIndex = 28;
             // 
             // PresPrescriptionID_TextBox
             // 
             this.PresPrescriptionID_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PresPrescriptionID_TextBox.Location = new System.Drawing.Point(194, 58);
+            this.PresPrescriptionID_TextBox.Location = new System.Drawing.Point(259, 71);
+            this.PresPrescriptionID_TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PresPrescriptionID_TextBox.Name = "PresPrescriptionID_TextBox";
-            this.PresPrescriptionID_TextBox.Size = new System.Drawing.Size(238, 25);
+            this.PresPrescriptionID_TextBox.Size = new System.Drawing.Size(316, 29);
             this.PresPrescriptionID_TextBox.TabIndex = 27;
             // 
             // label6
@@ -382,9 +288,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(15, 186);
+            this.label6.Location = new System.Drawing.Point(20, 229);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 21);
+            this.label6.Size = new System.Drawing.Size(111, 28);
             this.label6.TabIndex = 25;
             this.label6.Text = "Frequency:";
             // 
@@ -393,9 +300,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(15, 100);
+            this.label5.Location = new System.Drawing.Point(20, 123);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 21);
+            this.label5.Size = new System.Drawing.Size(160, 28);
             this.label5.TabIndex = 24;
             this.label5.Text = "Medicine Name:";
             // 
@@ -404,9 +312,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(15, 143);
+            this.label4.Location = new System.Drawing.Point(20, 176);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 21);
+            this.label4.Size = new System.Drawing.Size(85, 28);
             this.label4.TabIndex = 23;
             this.label4.Text = "Dosage:";
             // 
@@ -415,9 +324,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(15, 228);
+            this.label2.Location = new System.Drawing.Point(20, 281);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 21);
+            this.label2.Size = new System.Drawing.Size(96, 28);
             this.label2.TabIndex = 22;
             this.label2.Text = "Duration:";
             // 
@@ -426,9 +336,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(15, 59);
+            this.label1.Location = new System.Drawing.Point(20, 73);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 21);
+            this.label1.Size = new System.Drawing.Size(151, 28);
             this.label1.TabIndex = 21;
             this.label1.Text = "Prescription ID:";
             // 
@@ -437,9 +348,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(57, 10);
+            this.label3.Location = new System.Drawing.Point(76, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 30);
+            this.label3.Size = new System.Drawing.Size(185, 37);
             this.label3.TabIndex = 19;
             this.label3.Text = "Prescriptions";
             // 
@@ -451,9 +363,11 @@
             this.groupBox3.Controls.Add(this.PrescriptionSearch_TextBox);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.Prescription_DataGridView);
-            this.groupBox3.Location = new System.Drawing.Point(20, 355);
+            this.groupBox3.Location = new System.Drawing.Point(27, 437);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(995, 255);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(1327, 314);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             // 
@@ -462,9 +376,10 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(15, 6);
+            this.label12.Location = new System.Drawing.Point(20, 7);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(146, 23);
+            this.label12.Size = new System.Drawing.Size(191, 30);
             this.label12.TabIndex = 33;
             this.label12.Text = "Prescriptions List";
             // 
@@ -472,9 +387,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.free_search_icon_337_thumb;
-            this.pictureBox2.Location = new System.Drawing.Point(610, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(813, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(40, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 32;
             this.pictureBox2.TabStop = false;
@@ -482,9 +398,10 @@
             // PrescriptionSearch_TextBox
             // 
             this.PrescriptionSearch_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrescriptionSearch_TextBox.Location = new System.Drawing.Point(814, 8);
+            this.PrescriptionSearch_TextBox.Location = new System.Drawing.Point(1085, 10);
+            this.PrescriptionSearch_TextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PrescriptionSearch_TextBox.Name = "PrescriptionSearch_TextBox";
-            this.PrescriptionSearch_TextBox.Size = new System.Drawing.Size(163, 25);
+            this.PrescriptionSearch_TextBox.Size = new System.Drawing.Size(216, 29);
             this.PrescriptionSearch_TextBox.TabIndex = 31;
             // 
             // label10
@@ -492,9 +409,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label10.Location = new System.Drawing.Point(639, 8);
+            this.label10.Location = new System.Drawing.Point(852, 10);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(176, 23);
+            this.label10.Size = new System.Drawing.Size(230, 30);
             this.label10.TabIndex = 30;
             this.label10.Text = "Search Prescriptions:";
             // 
@@ -510,45 +428,53 @@
             this.Prescription_Dosage,
             this.Prescription_Frequency,
             this.Prescription_Duration});
-            this.Prescription_DataGridView.Location = new System.Drawing.Point(18, 38);
+            this.Prescription_DataGridView.Location = new System.Drawing.Point(24, 47);
+            this.Prescription_DataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Prescription_DataGridView.Name = "Prescription_DataGridView";
             this.Prescription_DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.Prescription_DataGridView.RowHeadersVisible = false;
-            this.Prescription_DataGridView.Size = new System.Drawing.Size(959, 197);
+            this.Prescription_DataGridView.RowHeadersWidth = 51;
+            this.Prescription_DataGridView.Size = new System.Drawing.Size(1279, 242);
             this.Prescription_DataGridView.TabIndex = 0;
             // 
             // Prescription_PrescriptionID
             // 
             this.Prescription_PrescriptionID.HeaderText = "Prescription ID";
+            this.Prescription_PrescriptionID.MinimumWidth = 6;
             this.Prescription_PrescriptionID.Name = "Prescription_PrescriptionID";
             // 
             // Prescription_MedicineName
             // 
             this.Prescription_MedicineName.HeaderText = "Medicine Name";
+            this.Prescription_MedicineName.MinimumWidth = 6;
             this.Prescription_MedicineName.Name = "Prescription_MedicineName";
             // 
             // Prescription_Dosage
             // 
-            this.Prescription_Dosage.HeaderText = "Doctor";
+            this.Prescription_Dosage.HeaderText = "Dosage";
+            this.Prescription_Dosage.MinimumWidth = 6;
             this.Prescription_Dosage.Name = "Prescription_Dosage";
             // 
             // Prescription_Frequency
             // 
             this.Prescription_Frequency.HeaderText = "Frequency";
+            this.Prescription_Frequency.MinimumWidth = 6;
             this.Prescription_Frequency.Name = "Prescription_Frequency";
             // 
             // Prescription_Duration
             // 
             this.Prescription_Duration.HeaderText = "Duration";
+            this.Prescription_Duration.MinimumWidth = 6;
             this.Prescription_Duration.Name = "Prescription_Duration";
             // 
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox9.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources._25694;
-            this.pictureBox9.Location = new System.Drawing.Point(23, 632);
+            this.pictureBox9.Location = new System.Drawing.Point(31, 778);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox9.Size = new System.Drawing.Size(57, 53);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 45;
             this.pictureBox9.TabStop = false;
@@ -558,9 +484,10 @@
             this.Prescription_GobackHomeBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Prescription_GobackHomeBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_GobackHomeBtn.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.Prescription_GobackHomeBtn.Location = new System.Drawing.Point(20, 628);
+            this.Prescription_GobackHomeBtn.Location = new System.Drawing.Point(27, 773);
+            this.Prescription_GobackHomeBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Prescription_GobackHomeBtn.Name = "Prescription_GobackHomeBtn";
-            this.Prescription_GobackHomeBtn.Size = new System.Drawing.Size(177, 50);
+            this.Prescription_GobackHomeBtn.Size = new System.Drawing.Size(236, 62);
             this.Prescription_GobackHomeBtn.TabIndex = 44;
             this.Prescription_GobackHomeBtn.Text = "             GO BACK TO             HOME";
             this.Prescription_GobackHomeBtn.UseVisualStyleBackColor = false;
@@ -570,9 +497,10 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Red;
             this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
-            this.pictureBox10.Location = new System.Drawing.Point(841, 632);
+            this.pictureBox10.Location = new System.Drawing.Point(1121, 778);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox10.Size = new System.Drawing.Size(57, 53);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 43;
             this.pictureBox10.TabStop = false;
@@ -582,9 +510,10 @@
             this.Prescription_ExitBtn.BackColor = System.Drawing.Color.Red;
             this.Prescription_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_ExitBtn.ForeColor = System.Drawing.Color.White;
-            this.Prescription_ExitBtn.Location = new System.Drawing.Point(838, 628);
+            this.Prescription_ExitBtn.Location = new System.Drawing.Point(1117, 773);
+            this.Prescription_ExitBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Prescription_ExitBtn.Name = "Prescription_ExitBtn";
-            this.Prescription_ExitBtn.Size = new System.Drawing.Size(177, 50);
+            this.Prescription_ExitBtn.Size = new System.Drawing.Size(236, 62);
             this.Prescription_ExitBtn.TabIndex = 42;
             this.Prescription_ExitBtn.Text = "           EXIT";
             this.Prescription_ExitBtn.UseVisualStyleBackColor = false;
@@ -596,17 +525,18 @@
             // 
             // Prescription
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Group_4_Information_Management_Final_Project.Properties.Resources.light_blue_background_gradient_wall_design_vector6;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1034, 696);
+            this.ClientSize = new System.Drawing.Size(1379, 857);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.Prescription_GobackHomeBtn);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.Prescription_ExitBtn);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Prescription";
             this.Text = "Prescription";
             this.Load += new System.EventHandler(this.Prescription_Load);
