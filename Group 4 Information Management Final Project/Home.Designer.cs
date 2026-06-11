@@ -79,10 +79,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Britannic Bold", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(7, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 52);
+            this.label1.Size = new System.Drawing.Size(189, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "FANTASTIC";
             // 
@@ -92,10 +91,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(269, 5);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(202, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 50);
+            this.label3.Size = new System.Drawing.Size(113, 40);
             this.label3.TabIndex = 2;
             this.label3.Text = "Clinic";
             // 
@@ -105,10 +103,9 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(269, 54);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(202, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(284, 50);
+            this.label4.Size = new System.Drawing.Size(225, 40);
             this.label4.TabIndex = 3;
             this.label4.Text = "Appointment";
             // 
@@ -118,10 +115,9 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(269, 110);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(202, 89);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 50);
+            this.label5.Size = new System.Drawing.Size(74, 40);
             this.label5.TabIndex = 4;
             this.label5.Text = "and";
             // 
@@ -131,10 +127,9 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(269, 162);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(202, 132);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(340, 50);
+            this.label6.Size = new System.Drawing.Size(267, 40);
             this.label6.TabIndex = 5;
             this.label6.Text = "Medical Record";
             // 
@@ -144,10 +139,9 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(269, 212);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(202, 172);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 50);
+            this.label7.Size = new System.Drawing.Size(132, 40);
             this.label7.TabIndex = 6;
             this.label7.Text = "System";
             // 
@@ -155,10 +149,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_10__2026__07_39_20_AM;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 68);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 55);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 177);
+            this.pictureBox1.Size = new System.Drawing.Size(144, 144);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -168,10 +161,9 @@
             this.Home_GoToMedRecordsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Home_GoToMedRecordsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home_GoToMedRecordsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Home_GoToMedRecordsBtn.Location = new System.Drawing.Point(184, 618);
-            this.Home_GoToMedRecordsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Home_GoToMedRecordsBtn.Location = new System.Drawing.Point(138, 502);
             this.Home_GoToMedRecordsBtn.Name = "Home_GoToMedRecordsBtn";
-            this.Home_GoToMedRecordsBtn.Size = new System.Drawing.Size(236, 62);
+            this.Home_GoToMedRecordsBtn.Size = new System.Drawing.Size(177, 50);
             this.Home_GoToMedRecordsBtn.TabIndex = 8;
             this.Home_GoToMedRecordsBtn.Text = "MEDICAL RECORDS";
             this.Home_GoToMedRecordsBtn.UseVisualStyleBackColor = false;
@@ -182,10 +174,9 @@
             this.Home_GoToDoctorsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Home_GoToDoctorsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home_GoToDoctorsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Home_GoToDoctorsBtn.Location = new System.Drawing.Point(1011, 463);
-            this.Home_GoToDoctorsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Home_GoToDoctorsBtn.Location = new System.Drawing.Point(758, 376);
             this.Home_GoToDoctorsBtn.Name = "Home_GoToDoctorsBtn";
-            this.Home_GoToDoctorsBtn.Size = new System.Drawing.Size(236, 62);
+            this.Home_GoToDoctorsBtn.Size = new System.Drawing.Size(177, 50);
             this.Home_GoToDoctorsBtn.TabIndex = 9;
             this.Home_GoToDoctorsBtn.Text = "DOCTORS";
             this.Home_GoToDoctorsBtn.UseVisualStyleBackColor = false;
@@ -196,10 +187,9 @@
             this.Home_GoToPrescriptionsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Home_GoToPrescriptionsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home_GoToPrescriptionsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Home_GoToPrescriptionsBtn.Location = new System.Drawing.Point(1011, 618);
-            this.Home_GoToPrescriptionsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Home_GoToPrescriptionsBtn.Location = new System.Drawing.Point(758, 502);
             this.Home_GoToPrescriptionsBtn.Name = "Home_GoToPrescriptionsBtn";
-            this.Home_GoToPrescriptionsBtn.Size = new System.Drawing.Size(236, 62);
+            this.Home_GoToPrescriptionsBtn.Size = new System.Drawing.Size(177, 50);
             this.Home_GoToPrescriptionsBtn.TabIndex = 11;
             this.Home_GoToPrescriptionsBtn.Text = "PRESCRIPTIONS";
             this.Home_GoToPrescriptionsBtn.UseVisualStyleBackColor = false;
@@ -210,10 +200,9 @@
             this.Home_GoToAppointmentsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Home_GoToAppointmentsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home_GoToAppointmentsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Home_GoToAppointmentsBtn.Location = new System.Drawing.Point(604, 618);
-            this.Home_GoToAppointmentsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Home_GoToAppointmentsBtn.Location = new System.Drawing.Point(453, 502);
             this.Home_GoToAppointmentsBtn.Name = "Home_GoToAppointmentsBtn";
-            this.Home_GoToAppointmentsBtn.Size = new System.Drawing.Size(236, 62);
+            this.Home_GoToAppointmentsBtn.Size = new System.Drawing.Size(177, 50);
             this.Home_GoToAppointmentsBtn.TabIndex = 12;
             this.Home_GoToAppointmentsBtn.Text = "APPOINTMENTS";
             this.Home_GoToAppointmentsBtn.UseVisualStyleBackColor = false;
@@ -224,10 +213,9 @@
             this.Home_GoToDashboardBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Home_GoToDashboardBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home_GoToDashboardBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Home_GoToDashboardBtn.Location = new System.Drawing.Point(604, 463);
-            this.Home_GoToDashboardBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Home_GoToDashboardBtn.Location = new System.Drawing.Point(453, 376);
             this.Home_GoToDashboardBtn.Name = "Home_GoToDashboardBtn";
-            this.Home_GoToDashboardBtn.Size = new System.Drawing.Size(236, 62);
+            this.Home_GoToDashboardBtn.Size = new System.Drawing.Size(177, 50);
             this.Home_GoToDashboardBtn.TabIndex = 13;
             this.Home_GoToDashboardBtn.Text = "DASHBOARD";
             this.Home_GoToDashboardBtn.UseVisualStyleBackColor = false;
@@ -238,10 +226,9 @@
             this.Home_GoToPatientsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Home_GoToPatientsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home_GoToPatientsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Home_GoToPatientsBtn.Location = new System.Drawing.Point(184, 463);
-            this.Home_GoToPatientsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Home_GoToPatientsBtn.Location = new System.Drawing.Point(138, 376);
             this.Home_GoToPatientsBtn.Name = "Home_GoToPatientsBtn";
-            this.Home_GoToPatientsBtn.Size = new System.Drawing.Size(236, 62);
+            this.Home_GoToPatientsBtn.Size = new System.Drawing.Size(177, 50);
             this.Home_GoToPatientsBtn.TabIndex = 14;
             this.Home_GoToPatientsBtn.Text = "PATIENTS";
             this.Home_GoToPatientsBtn.UseVisualStyleBackColor = false;
@@ -251,10 +238,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox2.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_7__2026__06_00_31_PM;
-            this.pictureBox2.Location = new System.Drawing.Point(120, 463);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(90, 376);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(67, 62);
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
@@ -263,10 +249,9 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox3.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_180702;
-            this.pictureBox3.Location = new System.Drawing.Point(120, 618);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(90, 502);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(67, 62);
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
@@ -275,10 +260,9 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox4.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_181140;
-            this.pictureBox4.Location = new System.Drawing.Point(540, 463);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(405, 376);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(67, 62);
+            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
@@ -287,10 +271,9 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox5.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_183656;
-            this.pictureBox5.Location = new System.Drawing.Point(945, 463);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Location = new System.Drawing.Point(709, 376);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(67, 62);
+            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
@@ -299,10 +282,9 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox6.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_181622;
-            this.pictureBox6.Location = new System.Drawing.Point(540, 618);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Location = new System.Drawing.Point(405, 502);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(67, 62);
+            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
@@ -311,10 +293,9 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox7.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_182823;
-            this.pictureBox7.Location = new System.Drawing.Point(947, 618);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Location = new System.Drawing.Point(710, 502);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(67, 62);
+            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 20;
             this.pictureBox7.TabStop = false;
@@ -329,11 +310,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(373, 86);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(280, 94);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(632, 273);
+            this.groupBox1.Size = new System.Drawing.Size(474, 222);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             // 
@@ -341,10 +320,9 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Red;
             this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
-            this.pictureBox10.Location = new System.Drawing.Point(1112, 770);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Location = new System.Drawing.Point(834, 626);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(57, 53);
+            this.pictureBox10.Size = new System.Drawing.Size(43, 43);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 27;
             this.pictureBox10.TabStop = false;
@@ -354,10 +332,9 @@
             this.Home_ExitBtn.BackColor = System.Drawing.Color.Red;
             this.Home_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home_ExitBtn.ForeColor = System.Drawing.Color.White;
-            this.Home_ExitBtn.Location = new System.Drawing.Point(1108, 766);
-            this.Home_ExitBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Home_ExitBtn.Location = new System.Drawing.Point(831, 622);
             this.Home_ExitBtn.Name = "Home_ExitBtn";
-            this.Home_ExitBtn.Size = new System.Drawing.Size(236, 62);
+            this.Home_ExitBtn.Size = new System.Drawing.Size(177, 50);
             this.Home_ExitBtn.TabIndex = 26;
             this.Home_ExitBtn.Text = "           EXIT";
             this.Home_ExitBtn.UseVisualStyleBackColor = false;
@@ -367,10 +344,9 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_9__2026__01_00_54_PM;
-            this.pictureBox8.Location = new System.Drawing.Point(39, 44);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Location = new System.Drawing.Point(29, 36);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(133, 123);
+            this.pictureBox8.Size = new System.Drawing.Size(100, 100);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 28;
             this.pictureBox8.TabStop = false;
@@ -379,10 +355,9 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_9__2026__01_19_11_PM;
-            this.pictureBox9.Location = new System.Drawing.Point(1211, 44);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Location = new System.Drawing.Point(908, 36);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(133, 123);
+            this.pictureBox9.Size = new System.Drawing.Size(100, 100);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 29;
             this.pictureBox9.TabStop = false;
@@ -391,10 +366,9 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.calendar_icon_png__0;
-            this.pictureBox12.Location = new System.Drawing.Point(20, 12);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox12.Location = new System.Drawing.Point(15, 10);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(57, 53);
+            this.pictureBox12.Size = new System.Drawing.Size(43, 43);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 36;
             this.pictureBox12.TabStop = false;
@@ -405,10 +379,9 @@
             this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TimeLabel.Location = new System.Drawing.Point(77, 42);
-            this.TimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TimeLabel.Location = new System.Drawing.Point(58, 34);
             this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(47, 23);
+            this.TimeLabel.Size = new System.Drawing.Size(37, 17);
             this.TimeLabel.TabIndex = 35;
             this.TimeLabel.Text = "Time";
             // 
@@ -418,10 +391,9 @@
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
             this.DateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DateLabel.Location = new System.Drawing.Point(77, 14);
-            this.DateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DateLabel.Location = new System.Drawing.Point(58, 11);
             this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(46, 23);
+            this.DateLabel.Size = new System.Drawing.Size(36, 17);
             this.DateLabel.TabIndex = 34;
             this.DateLabel.Text = "Date";
             // 
@@ -435,22 +407,20 @@
             this.groupBox2.Controls.Add(this.TimeLabel);
             this.groupBox2.Controls.Add(this.pictureBox12);
             this.groupBox2.Controls.Add(this.DateLabel);
-            this.groupBox2.Location = new System.Drawing.Point(248, 66);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(422, 16);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(307, 80);
+            this.groupBox2.Size = new System.Drawing.Size(230, 65);
             this.groupBox2.TabIndex = 37;
             this.groupBox2.TabStop = false;
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Group_4_Information_Management_Final_Project.Properties.Resources.light_blue_background_gradient_wall_design_vector;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1379, 857);
+            this.ClientSize = new System.Drawing.Size(1034, 696);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
@@ -469,7 +439,6 @@
             this.Controls.Add(this.Home_GoToPrescriptionsBtn);
             this.Controls.Add(this.Home_GoToDoctorsBtn);
             this.Controls.Add(this.Home_GoToMedRecordsBtn);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Home";
             this.Text = "Fantastic 4 Clinic Appointment and Medical Record System";
             this.Load += new System.EventHandler(this.Home_Load);

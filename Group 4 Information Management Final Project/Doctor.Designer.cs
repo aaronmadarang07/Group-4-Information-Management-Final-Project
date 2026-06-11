@@ -62,7 +62,11 @@
             this.DoctorSearch_TextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.DoctorsList_DataGridView = new System.Windows.Forms.DataGridView();
-            this.DoctorsList_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoctorsList_DataGridView_CellClick);
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.Doctor_GobackHomeBtn = new System.Windows.Forms.Button();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.Doctor_ExitBtn = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.DL_DoctorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DL_LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DL_FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,11 +75,6 @@
             this.DL_Availability = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DL_StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DL_EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.Doctor_GobackHomeBtn = new System.Windows.Forms.Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.Doctor_ExitBtn = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -682,7 +681,6 @@
             this.DoctorsList_DataGridView.AllowUserToOrderColumns = true;
             this.DoctorsList_DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DoctorsList_DataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.DoctorsList_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DoctorsList_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DL_DoctorID,
             this.DL_LastName,
@@ -698,46 +696,7 @@
             this.DoctorsList_DataGridView.RowHeadersVisible = false;
             this.DoctorsList_DataGridView.Size = new System.Drawing.Size(959, 197);
             this.DoctorsList_DataGridView.TabIndex = 0;
-            // 
-            // DL_DoctorID
-            // 
-            this.DL_DoctorID.HeaderText = "Doctor ID";
-            this.DL_DoctorID.Name = "DL_DoctorID";
-            // 
-            // DL_LastName
-            // 
-            this.DL_LastName.HeaderText = "Last Name";
-            this.DL_LastName.Name = "DL_LastName";
-            // 
-            // DL_FirstName
-            // 
-            this.DL_FirstName.HeaderText = "First Name";
-            this.DL_FirstName.Name = "DL_FirstName";
-            // 
-            // DL_Specialty
-            // 
-            this.DL_Specialty.HeaderText = "Specialty";
-            this.DL_Specialty.Name = "DL_Specialty";
-            // 
-            // DL_ContactNumber
-            // 
-            this.DL_ContactNumber.HeaderText = "Contact Number";
-            this.DL_ContactNumber.Name = "DL_ContactNumber";
-            // 
-            // DL_Availability
-            // 
-            this.DL_Availability.HeaderText = "Availability";
-            this.DL_Availability.Name = "DL_Availability";
-            // 
-            // DL_StartTime
-            // 
-            this.DL_StartTime.HeaderText = "Start Time";
-            this.DL_StartTime.Name = "DL_StartTime";
-            // 
-            // DL_EndTime
-            // 
-            this.DL_EndTime.HeaderText = "End Time";
-            this.DL_EndTime.Name = "DL_EndTime";
+            this.DoctorsList_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoctorsList_DataGridView_CellClick);
             // 
             // pictureBox9
             // 
@@ -793,6 +752,56 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // DL_DoctorID
+            // 
+            this.DL_DoctorID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.DL_DoctorID.DataPropertyName = "DL_DoctorID";
+            this.DL_DoctorID.HeaderText = "Doctor ID";
+            this.DL_DoctorID.Name = "DL_DoctorID";
+            this.DL_DoctorID.Width = 78;
+            // 
+            // DL_LastName
+            // 
+            this.DL_LastName.DataPropertyName = "DL_LastName";
+            this.DL_LastName.HeaderText = "Last Name";
+            this.DL_LastName.Name = "DL_LastName";
+            // 
+            // DL_FirstName
+            // 
+            this.DL_FirstName.DataPropertyName = "DL_FirstName";
+            this.DL_FirstName.HeaderText = "First Name";
+            this.DL_FirstName.Name = "DL_FirstName";
+            // 
+            // DL_Specialty
+            // 
+            this.DL_Specialty.DataPropertyName = "DL_Specialty";
+            this.DL_Specialty.HeaderText = "Specialty";
+            this.DL_Specialty.Name = "DL_Specialty";
+            // 
+            // DL_ContactNumber
+            // 
+            this.DL_ContactNumber.DataPropertyName = "DL_ContactNumber";
+            this.DL_ContactNumber.HeaderText = "Contact Number";
+            this.DL_ContactNumber.Name = "DL_ContactNumber";
+            // 
+            // DL_Availability
+            // 
+            this.DL_Availability.DataPropertyName = "DL_Availability";
+            this.DL_Availability.HeaderText = "Availability";
+            this.DL_Availability.Name = "DL_Availability";
+            // 
+            // DL_StartTime
+            // 
+            this.DL_StartTime.DataPropertyName = "DL_StartTime";
+            this.DL_StartTime.HeaderText = "Start Time";
+            this.DL_StartTime.Name = "DL_StartTime";
+            // 
+            // DL_EndTime
+            // 
+            this.DL_EndTime.DataPropertyName = "DL_EndTime";
+            this.DL_EndTime.HeaderText = "End Time";
+            this.DL_EndTime.Name = "DL_EndTime";
+            // 
             // Doctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -847,19 +856,11 @@
         private System.Windows.Forms.Button DoctorsForm_DeleteBtn;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView DoctorsList_DataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DL_DoctorID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DL_LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DL_FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DL_Specialty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DL_ContactNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DL_Availability;
         private System.Windows.Forms.ComboBox EndTime_ComboBox;
         private System.Windows.Forms.ComboBox StartTime_ComboBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DL_StartTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DL_EndTime;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox DoctorSearch_TextBox;
         private System.Windows.Forms.Label label10;
@@ -872,5 +873,13 @@
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DL_DoctorID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DL_LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DL_FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DL_Specialty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DL_ContactNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DL_Availability;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DL_StartTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DL_EndTime;
     }
 }
