@@ -15,6 +15,9 @@ namespace Group_4_Information_Management_Final_Project
         private void Appointments_Load(object sender, EventArgs e)
         {
             timer1.Start();
+
+            AppointmentList_DataGridView.AutoGenerateColumns = true;
+
             LoadAppointments();
         }
 
@@ -25,22 +28,30 @@ namespace Group_4_Information_Management_Final_Project
                 using (var conn = DBHelper.GetConnection())
                 {
                     conn.Open();
-                    string sql = @"SELECT appointment_id, patient_name, doctor_name, 
-                                          appointment_date, appointment_time, schedule, 
-                                          status, remarks 
-                                   FROM appointments_tbl";
 
-                    if (!string.IsNullOrEmpty(search))
-                        sql += " WHERE appointment_id LIKE @s OR patient_name LIKE @s OR doctor_name LIKE @s";
-
-                    using (var adapter = new MySqlDataAdapter(sql, conn))
+                    using (MySqlCommand cmd = new MySqlCommand("GetAppointments", conn))
                     {
-                        if (!string.IsNullOrEmpty(search))
-                            adapter.SelectCommand.Parameters.AddWithValue("@s", "%" + search + "%");
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-                        var table = new DataTable();
-                        adapter.Fill(table);
-                        AppointmentList_DataGridView.DataSource = table;
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable table = new DataTable();
+                            adapter.Fill(table);
+
+                            if (!string.IsNullOrWhiteSpace(search))
+                            {
+                                DataView view = table.DefaultView;
+                                view.RowFilter =
+                                    $"appointment_id LIKE '%{search.Replace("'", "''")}%' OR " +
+                                    $"patient_name LIKE '%{search.Replace("'", "''")}%' OR " +
+                                    $"doctor_name LIKE '%{search.Replace("'", "''")}%'";
+                                AppointmentList_DataGridView.DataSource = view;
+                            }
+                            else
+                            {
+                                AppointmentList_DataGridView.DataSource = table;
+                            }
+                        }
                     }
                 }
             }
@@ -73,21 +84,18 @@ namespace Group_4_Information_Management_Final_Project
                 {
                     conn.Open();
 
-                    string sql = @"INSERT INTO appointments_tbl 
-                          (appointment_id, patient_name, doctor_name, appointment_date, 
-                           appointment_time, schedule, status, remarks)
-                          VALUES (@id, @patient, @doctor, @date, @time, @schedule, @status, @remarks)";
-
-                    using (var cmd = new MySqlCommand(sql, conn))
+                    using (MySqlCommand cmd = new MySqlCommand("AddAppointment", conn))
                     {
-                        cmd.Parameters.AddWithValue("@id", AppID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@patient", AppPatientName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@doctor", AppDoctorID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@date", AppDate_DateTimePicker.Value.ToString("yyyy-MM-dd"));
-                        cmd.Parameters.AddWithValue("@time", AppStartTime_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@schedule", AppSchedule_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@status", AppStatus_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@remarks", AppRemarks_TextBox.Text);
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("p_appointment_id", AppID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_patient_name", AppPatientName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_doctor_name", AppDoctorID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_appointment_date", AppDate_DateTimePicker.Value.Date);
+                        cmd.Parameters.AddWithValue("p_appointment_time", AppStartTime_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_schedule", AppSchedule_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_status", AppStatus_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_remarks", AppRemarks_TextBox.Text);
 
                         cmd.ExecuteNonQuery();
                     }
@@ -119,13 +127,16 @@ namespace Group_4_Information_Management_Final_Project
                     using (var conn = DBHelper.GetConnection())
                     {
                         conn.Open();
+
                         string sql = "DELETE FROM appointments_tbl WHERE appointment_id = @id";
+
                         using (var cmd = new MySqlCommand(sql, conn))
                         {
                             cmd.Parameters.AddWithValue("@id", AppID_TextBox.Text);
                             cmd.ExecuteNonQuery();
                         }
                     }
+
                     MessageBox.Show("Appointment deleted successfully!");
                     LoadAppointments();
                     ClearFields();
@@ -150,6 +161,7 @@ namespace Group_4_Information_Management_Final_Project
                 using (var conn = DBHelper.GetConnection())
                 {
                     conn.Open();
+
                     string sql = @"UPDATE appointments_tbl SET 
                                    patient_name = @patient,
                                    doctor_name = @doctor,
@@ -165,14 +177,15 @@ namespace Group_4_Information_Management_Final_Project
                         cmd.Parameters.AddWithValue("@patient", AppPatientName_TextBox.Text);
                         cmd.Parameters.AddWithValue("@doctor", AppDoctorID_TextBox.Text);
                         cmd.Parameters.AddWithValue("@date", AppDate_DateTimePicker.Value.ToString("yyyy-MM-dd"));
-                        cmd.Parameters.AddWithValue("@time", AppStartTime_ComboBox.SelectedItem?.ToString() ?? "");
-                        cmd.Parameters.AddWithValue("@schedule", AppSchedule_ComboBox.SelectedItem?.ToString() ?? "");
-                        cmd.Parameters.AddWithValue("@status", AppStatus_ComboBox.SelectedItem?.ToString() ?? "");
+                        cmd.Parameters.AddWithValue("@time", AppStartTime_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("@schedule", AppSchedule_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("@status", AppStatus_ComboBox.Text);
                         cmd.Parameters.AddWithValue("@remarks", AppRemarks_TextBox.Text);
                         cmd.Parameters.AddWithValue("@id", AppID_TextBox.Text);
                         cmd.ExecuteNonQuery();
                     }
                 }
+
                 MessageBox.Show("Appointment updated successfully!");
                 LoadAppointments();
             }
@@ -196,7 +209,7 @@ namespace Group_4_Information_Management_Final_Project
             AppDate_DateTimePicker.Value = DateTime.Now;
             AppStartTime_ComboBox.SelectedIndex = -1;
             AppSchedule_ComboBox.SelectedIndex = -1;
-            AppStatus_ComboBox.SelectedIndex = 0;
+            AppStatus_ComboBox.SelectedIndex = -1;
         }
 
         private void AppointmentList_DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -204,17 +217,18 @@ namespace Group_4_Information_Management_Final_Project
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = AppointmentList_DataGridView.Rows[e.RowIndex];
-                AppID_TextBox.Text = row.Cells[0].Value?.ToString();
-                AppPatientName_TextBox.Text = row.Cells[1].Value?.ToString();
-                AppDoctorID_TextBox.Text = row.Cells[2].Value?.ToString();
 
-                if (DateTime.TryParse(row.Cells[3].Value?.ToString(), out DateTime date))
+                AppID_TextBox.Text = row.Cells["appointment_id"].Value?.ToString();
+                AppPatientName_TextBox.Text = row.Cells["patient_name"].Value?.ToString();
+                AppDoctorID_TextBox.Text = row.Cells["doctor_name"].Value?.ToString();
+
+                if (DateTime.TryParse(row.Cells["appointment_date"].Value?.ToString(), out DateTime date))
                     AppDate_DateTimePicker.Value = date;
 
-                AppStartTime_ComboBox.Text = row.Cells[4].Value?.ToString();
-                AppSchedule_ComboBox.Text = row.Cells[5].Value?.ToString();
-                AppStatus_ComboBox.Text = row.Cells[6].Value?.ToString();
-                AppRemarks_TextBox.Text = row.Cells[7].Value?.ToString();
+                AppStartTime_ComboBox.Text = row.Cells["appointment_time"].Value?.ToString();
+                AppSchedule_ComboBox.Text = row.Cells["schedule"].Value?.ToString();
+                AppStatus_ComboBox.Text = row.Cells["status"].Value?.ToString();
+                AppRemarks_TextBox.Text = row.Cells["remarks"].Value?.ToString();
             }
         }
 
@@ -245,6 +259,5 @@ namespace Group_4_Information_Management_Final_Project
         private void pictureBox10_Click(object sender, EventArgs e) { }
         private void pictureBox9_Click(object sender, EventArgs e) { }
         private void groupBox1_Enter(object sender, EventArgs e) { }
-
-        }
     }
+}

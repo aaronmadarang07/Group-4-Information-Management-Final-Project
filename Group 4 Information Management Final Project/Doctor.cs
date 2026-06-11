@@ -15,6 +15,18 @@ namespace Group_4_Information_Management_Final_Project
         private void Doctor_Load(object sender, EventArgs e)
         {
             timer1.Start();
+
+            DoctorsList_DataGridView.AutoGenerateColumns = false;
+
+            DL_DoctorID.DataPropertyName = "doctor_id";
+            DL_LastName.DataPropertyName = "last_name";
+            DL_FirstName.DataPropertyName = "first_name";
+            DL_Specialty.DataPropertyName = "specialty";
+            DL_ContactNumber.DataPropertyName = "contact_number";
+            DL_Availability.DataPropertyName = "availability";
+            DL_StartTime.DataPropertyName = "start_time";
+            DL_EndTime.DataPropertyName = "end_time";
+
             LoadDoctors();
         }
 
@@ -26,13 +38,16 @@ namespace Group_4_Information_Management_Final_Project
                 {
                     conn.Open();
 
-                    string query = "SELECT * FROM doctors";
-
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+                    using (MySqlCommand cmd = new MySqlCommand("GetDoctors", conn))
                     {
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
-                        DoctorsList_DataGridView.DataSource = table;
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable table = new DataTable();
+                            adapter.Fill(table);
+                            DoctorsList_DataGridView.DataSource = table;
+                        }
                     }
                 }
             }
@@ -66,21 +81,19 @@ namespace Group_4_Information_Management_Final_Project
                 {
                     conn.Open();
 
-                    string query = @"INSERT INTO doctors
-            (doctor_id, last_name, first_name, specialty, contact_number, availability, start_time, end_time)
-            VALUES
-            (@id, @lname, @fname, @specialty, @contact, @availability, @start, @end)";
-
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    using (MySqlCommand cmd = new MySqlCommand("AddDoctor", conn))
                     {
-                        cmd.Parameters.AddWithValue("@id", DoctorID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@lname", DoctorLastName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@fname", DoctorFirstName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@specialty", DoctorSpecialty_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@contact", ContactNumber_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@availability", Schedule_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@start", StartTime_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@end", EndTime_ComboBox.Text);
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("p_doctor_id", DoctorID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_last_name", DoctorLastName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_first_name", DoctorFirstName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_specialty", DoctorSpecialty_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_contact_number", ContactNumber_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_availability", Schedule_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_start_time", StartTime_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_end_time", EndTime_ComboBox.Text);
+
                         cmd.ExecuteNonQuery();
                     }
 
@@ -187,14 +200,14 @@ namespace Group_4_Information_Management_Final_Project
             {
                 DataGridViewRow row = DoctorsList_DataGridView.Rows[e.RowIndex];
 
-                DoctorID_TextBox.Text = row.Cells["doctor_id"].Value.ToString();
-                DoctorLastName_TextBox.Text = row.Cells["last_name"].Value.ToString();
-                DoctorFirstName_TextBox.Text = row.Cells["first_name"].Value.ToString();
-                DoctorSpecialty_ComboBox.Text = row.Cells["specialty"].Value.ToString();
-                ContactNumber_TextBox.Text = row.Cells["contact_number"].Value.ToString();
-                Schedule_ComboBox.Text = row.Cells["availability"].Value.ToString();
-                StartTime_ComboBox.Text = row.Cells["start_time"].Value.ToString();
-                EndTime_ComboBox.Text = row.Cells["end_time"].Value.ToString();
+                DoctorID_TextBox.Text = row.Cells["DL_DoctorID"].Value.ToString();
+                DoctorLastName_TextBox.Text = row.Cells["DL_LastName"].Value.ToString();
+                DoctorFirstName_TextBox.Text = row.Cells["DL_FirstName"].Value.ToString();
+                DoctorSpecialty_ComboBox.Text = row.Cells["DL_Specialty"].Value.ToString();
+                ContactNumber_TextBox.Text = row.Cells["DL_ContactNumber"].Value.ToString();
+                Schedule_ComboBox.Text = row.Cells["DL_Availability"].Value.ToString();
+                StartTime_ComboBox.Text = row.Cells["DL_StartTime"].Value.ToString();
+                EndTime_ComboBox.Text = row.Cells["DL_EndTime"].Value.ToString();
             }
         }
 

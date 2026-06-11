@@ -15,6 +15,16 @@ namespace Group_4_Information_Management_Final_Project
         private void MedicalRecord_Load(object sender, EventArgs e)
         {
             timer1.Start();
+
+            MedRec_DataGridView.AutoGenerateColumns = false;
+
+            MedRec_RecordID.DataPropertyName = "record_id";
+            MedRec_Appointment.DataPropertyName = "appointment";
+            MedRec_Doctor.DataPropertyName = "doctor";
+            MedRec_VisitDate.DataPropertyName = "visit_date";
+            MedRec_Diagnosis.DataPropertyName = "diagnosis";
+            MedRec_Notes.DataPropertyName = "notes";
+
             LoadMedicalRecords();
 
             MedRec_AddBtn.Click += MedRec_AddBtn_Click;
@@ -32,13 +42,17 @@ namespace Group_4_Information_Management_Final_Project
                 {
                     conn.Open();
 
-                    string query = "SELECT * FROM medical_records";
+                    using (MySqlCommand cmd = new MySqlCommand("GetMedicalRecords", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-
-                    MedRec_DataGridView.DataSource = dt;
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+                            MedRec_DataGridView.DataSource = dt;
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -56,15 +70,37 @@ namespace Group_4_Information_Management_Final_Project
                 string.IsNullOrWhiteSpace(MedRecNotes_TextBox.Text))
             {
                 MessageBox.Show("Please fill up all fields!",
-                                "Validation Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                    "Validation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
+                using (MySqlConnection conn = DBHelper.GetConnection())
+                {
+                    conn.Open();
 
+                    using (MySqlCommand cmd = new MySqlCommand("AddMedicalRecord", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_appointment", MedRecAppointment_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_doctor", MedRecDoctor_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_visit_date", MedRecVisitDate_DateTimePicker.Value.Date);
+                        cmd.Parameters.AddWithValue("p_diagnosis", MedRecDiagnosis_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_notes", MedRecNotes_TextBox.Text);
+
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Medical Record Added Successfully!");
+
+                    LoadMedicalRecords();
+                    ClearFields();
+                }
             }
             catch (Exception ex)
             {
@@ -159,17 +195,17 @@ namespace Group_4_Information_Management_Final_Project
             {
                 DataGridViewRow row = MedRec_DataGridView.Rows[e.RowIndex];
 
-                MedRecRecordID_TextBox.Text = row.Cells["record_id"].Value.ToString();
-                MedRecAppointment_TextBox.Text = row.Cells["appointment"].Value.ToString();
-                MedRecDoctor_TextBox.Text = row.Cells["doctor"].Value.ToString();
+                MedRecRecordID_TextBox.Text = row.Cells["MedRec_RecordID"].Value?.ToString();
+                MedRecAppointment_TextBox.Text = row.Cells["MedRec_Appointment"].Value?.ToString();
+                MedRecDoctor_TextBox.Text = row.Cells["MedRec_Doctor"].Value?.ToString();
 
-                if (DateTime.TryParse(row.Cells["visit_date"].Value.ToString(), out DateTime visitDate))
+                if (DateTime.TryParse(row.Cells["MedRec_VisitDate"].Value?.ToString(), out DateTime visitDate))
                 {
                     MedRecVisitDate_DateTimePicker.Value = visitDate;
                 }
 
-                MedRecDiagnosis_TextBox.Text = row.Cells["diagnosis"].Value.ToString();
-                MedRecNotes_TextBox.Text = row.Cells["notes"].Value.ToString();
+                MedRecDiagnosis_TextBox.Text = row.Cells["MedRec_Diagnosis"].Value?.ToString();
+                MedRecNotes_TextBox.Text = row.Cells["MedRec_Notes"].Value?.ToString();
             }
         }
 
@@ -197,9 +233,6 @@ namespace Group_4_Information_Management_Final_Project
         private void pictureBox9_Click(object sender, EventArgs e) { }
         private void pictureBox10_Click(object sender, EventArgs e) { }
 
-        private void MedRec_AddBtn_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        private void MedRec_AddBtn_Click_1(object sender, EventArgs e) { }
     }
 }
