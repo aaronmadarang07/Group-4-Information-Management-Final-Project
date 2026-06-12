@@ -193,14 +193,14 @@ namespace Group_4_Information_Management_Final_Project
             {
                 DataGridViewRow row = DoctorsList_DataGridView.Rows[e.RowIndex];
 
-                DoctorID_TextBox.Text = row.Cells["DL_DoctorID"].Value.ToString();
-                DoctorLastName_TextBox.Text = row.Cells["DL_LastName"].Value.ToString();
-                DoctorFirstName_TextBox.Text = row.Cells["DL_FirstName"].Value.ToString();
-                DoctorSpecialty_ComboBox.Text = row.Cells["DL_Specialty"].Value.ToString();
-                ContactNumber_TextBox.Text = row.Cells["DL_ContactNumber"].Value.ToString();
-                Schedule_ComboBox.Text = row.Cells["DL_Availability"].Value.ToString();
-                StartTime_ComboBox.Text = row.Cells["DL_StartTime"].Value.ToString();
-                EndTime_ComboBox.Text = row.Cells["DL_EndTime"].Value.ToString();
+                DoctorID_TextBox.Text = row.Cells["DL_DoctorID"].Value?.ToString();
+                DoctorLastName_TextBox.Text = row.Cells["DL_LastName"].Value?.ToString();
+                DoctorFirstName_TextBox.Text = row.Cells["DL_FirstName"].Value?.ToString();
+                DoctorSpecialty_ComboBox.Text = row.Cells["DL_Specialty"].Value?.ToString();
+                ContactNumber_TextBox.Text = row.Cells["DL_ContactNumber"].Value?.ToString();
+                Schedule_ComboBox.Text = row.Cells["DL_Availability"].Value?.ToString();
+                StartTime_ComboBox.Text = row.Cells["DL_StartTime"].Value?.ToString();
+                EndTime_ComboBox.Text = row.Cells["DL_EndTime"].Value?.ToString();
             }
         }
 

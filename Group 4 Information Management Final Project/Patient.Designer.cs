@@ -279,7 +279,7 @@
             // 
             // PatientAddress_TextBox
             // 
-            this.PatientAddress_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PatientAddress_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatientAddress_TextBox.Location = new System.Drawing.Point(552, 101);
             this.PatientAddress_TextBox.Multiline = true;
             this.PatientAddress_TextBox.Name = "PatientAddress_TextBox";
@@ -310,10 +310,10 @@
             // 
             // PatientContactNumber_TextBox
             // 
-            this.PatientContactNumber_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PatientContactNumber_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatientContactNumber_TextBox.Location = new System.Drawing.Point(552, 56);
             this.PatientContactNumber_TextBox.Name = "PatientContactNumber_TextBox";
-            this.PatientContactNumber_TextBox.Size = new System.Drawing.Size(238, 25);
+            this.PatientContactNumber_TextBox.Size = new System.Drawing.Size(238, 27);
             this.PatientContactNumber_TextBox.TabIndex = 27;
             // 
             // label7
@@ -366,10 +366,10 @@
             // 
             // PatientID_TextBox
             // 
-            this.PatientID_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PatientID_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatientID_TextBox.Location = new System.Drawing.Point(143, 58);
             this.PatientID_TextBox.Name = "PatientID_TextBox";
-            this.PatientID_TextBox.Size = new System.Drawing.Size(238, 25);
+            this.PatientID_TextBox.Size = new System.Drawing.Size(238, 27);
             this.PatientID_TextBox.TabIndex = 21;
             // 
             // label6
@@ -584,41 +584,49 @@
             // 
             // PL_PatientID
             // 
+            this.PL_PatientID.DataPropertyName = "patient_id";
             this.PL_PatientID.HeaderText = "Patient ID";
             this.PL_PatientID.Name = "PL_PatientID";
             // 
             // PL_LastName
             // 
+            this.PL_LastName.DataPropertyName = "last_name";
             this.PL_LastName.HeaderText = "Last Name";
             this.PL_LastName.Name = "PL_LastName";
             // 
             // PL_FirstName
             // 
+            this.PL_FirstName.DataPropertyName = "first_name";
             this.PL_FirstName.HeaderText = "First Name";
             this.PL_FirstName.Name = "PL_FirstName";
             // 
             // PL_DateOfBirth
             // 
+            this.PL_DateOfBirth.DataPropertyName = "date_of_birth";
             this.PL_DateOfBirth.HeaderText = "Date Of Birth";
             this.PL_DateOfBirth.Name = "PL_DateOfBirth";
             // 
             // PL_Gender
             // 
+            this.PL_Gender.DataPropertyName = "gender";
             this.PL_Gender.HeaderText = "Gender";
             this.PL_Gender.Name = "PL_Gender";
             // 
             // PL_ContactNumber
             // 
+            this.PL_ContactNumber.DataPropertyName = "contact_number";
             this.PL_ContactNumber.HeaderText = "Contact Number";
             this.PL_ContactNumber.Name = "PL_ContactNumber";
             // 
             // PL_BloodType
             // 
+            this.PL_BloodType.DataPropertyName = "blood_type";
             this.PL_BloodType.HeaderText = "Blood Type";
             this.PL_BloodType.Name = "PL_BloodType";
             // 
             // PL_Address
             // 
+            this.PL_Address.DataPropertyName = "address";
             this.PL_Address.HeaderText = "Address";
             this.PL_Address.Name = "PL_Address";
             // 

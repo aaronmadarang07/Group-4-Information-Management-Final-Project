@@ -19,8 +19,9 @@ namespace Group_4_Information_Management_Final_Project
             MedRec_DataGridView.AutoGenerateColumns = false;
 
             MedRec_RecordID.DataPropertyName = "record_id";
-            MedRec_Appointment.DataPropertyName = "appointment";
-            MedRec_Doctor.DataPropertyName = "doctor";
+            MedRec_AppointmentID.DataPropertyName = "appointment_ID";
+            MedRec_PatientName.DataPropertyName = "patient_name";
+            MedRec_DoctorName.DataPropertyName = "doctor_name";
             MedRec_VisitDate.DataPropertyName = "visit_date";
             MedRec_Diagnosis.DataPropertyName = "diagnosis";
             MedRec_Notes.DataPropertyName = "notes";
@@ -228,5 +229,10 @@ namespace Group_4_Information_Management_Final_Project
         private void pictureBox10_Click(object sender, EventArgs e) { }
 
         private void MedRec_AddBtn_Click_1(object sender, EventArgs e) { }
+
+        private void MedRec_DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -62,11 +62,6 @@
             this.DoctorSearch_TextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.DoctorsList_DataGridView = new System.Windows.Forms.DataGridView();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.Doctor_GobackHomeBtn = new System.Windows.Forms.Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.Doctor_ExitBtn = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.DL_DoctorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DL_LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DL_FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +70,11 @@
             this.DL_Availability = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DL_StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DL_EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.Doctor_GobackHomeBtn = new System.Windows.Forms.Button();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.Doctor_ExitBtn = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -527,10 +527,10 @@
             // 
             // DoctorID_TextBox
             // 
-            this.DoctorID_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DoctorID_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DoctorID_TextBox.Location = new System.Drawing.Point(194, 58);
             this.DoctorID_TextBox.Name = "DoctorID_TextBox";
-            this.DoctorID_TextBox.Size = new System.Drawing.Size(238, 25);
+            this.DoctorID_TextBox.Size = new System.Drawing.Size(238, 27);
             this.DoctorID_TextBox.TabIndex = 27;
             // 
             // label7
@@ -698,6 +698,56 @@
             this.DoctorsList_DataGridView.TabIndex = 0;
             this.DoctorsList_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoctorsList_DataGridView_CellClick);
             // 
+            // DL_DoctorID
+            // 
+            this.DL_DoctorID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.DL_DoctorID.DataPropertyName = "DL_DoctorID";
+            this.DL_DoctorID.HeaderText = "Doctor ID";
+            this.DL_DoctorID.Name = "DL_DoctorID";
+            this.DL_DoctorID.Width = 78;
+            // 
+            // DL_LastName
+            // 
+            this.DL_LastName.DataPropertyName = "DL_LastName";
+            this.DL_LastName.HeaderText = "Last Name";
+            this.DL_LastName.Name = "DL_LastName";
+            // 
+            // DL_FirstName
+            // 
+            this.DL_FirstName.DataPropertyName = "DL_FirstName";
+            this.DL_FirstName.HeaderText = "First Name";
+            this.DL_FirstName.Name = "DL_FirstName";
+            // 
+            // DL_Specialty
+            // 
+            this.DL_Specialty.DataPropertyName = "DL_Specialty";
+            this.DL_Specialty.HeaderText = "Specialty";
+            this.DL_Specialty.Name = "DL_Specialty";
+            // 
+            // DL_ContactNumber
+            // 
+            this.DL_ContactNumber.DataPropertyName = "DL_ContactNumber";
+            this.DL_ContactNumber.HeaderText = "Contact Number";
+            this.DL_ContactNumber.Name = "DL_ContactNumber";
+            // 
+            // DL_Availability
+            // 
+            this.DL_Availability.DataPropertyName = "DL_Availability";
+            this.DL_Availability.HeaderText = "Availability";
+            this.DL_Availability.Name = "DL_Availability";
+            // 
+            // DL_StartTime
+            // 
+            this.DL_StartTime.DataPropertyName = "DL_StartTime";
+            this.DL_StartTime.HeaderText = "Start Time";
+            this.DL_StartTime.Name = "DL_StartTime";
+            // 
+            // DL_EndTime
+            // 
+            this.DL_EndTime.DataPropertyName = "DL_EndTime";
+            this.DL_EndTime.HeaderText = "End Time";
+            this.DL_EndTime.Name = "DL_EndTime";
+            // 
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Honeydew;
@@ -751,56 +801,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // DL_DoctorID
-            // 
-            this.DL_DoctorID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.DL_DoctorID.DataPropertyName = "DL_DoctorID";
-            this.DL_DoctorID.HeaderText = "Doctor ID";
-            this.DL_DoctorID.Name = "DL_DoctorID";
-            this.DL_DoctorID.Width = 78;
-            // 
-            // DL_LastName
-            // 
-            this.DL_LastName.DataPropertyName = "DL_LastName";
-            this.DL_LastName.HeaderText = "Last Name";
-            this.DL_LastName.Name = "DL_LastName";
-            // 
-            // DL_FirstName
-            // 
-            this.DL_FirstName.DataPropertyName = "DL_FirstName";
-            this.DL_FirstName.HeaderText = "First Name";
-            this.DL_FirstName.Name = "DL_FirstName";
-            // 
-            // DL_Specialty
-            // 
-            this.DL_Specialty.DataPropertyName = "DL_Specialty";
-            this.DL_Specialty.HeaderText = "Specialty";
-            this.DL_Specialty.Name = "DL_Specialty";
-            // 
-            // DL_ContactNumber
-            // 
-            this.DL_ContactNumber.DataPropertyName = "DL_ContactNumber";
-            this.DL_ContactNumber.HeaderText = "Contact Number";
-            this.DL_ContactNumber.Name = "DL_ContactNumber";
-            // 
-            // DL_Availability
-            // 
-            this.DL_Availability.DataPropertyName = "DL_Availability";
-            this.DL_Availability.HeaderText = "Availability";
-            this.DL_Availability.Name = "DL_Availability";
-            // 
-            // DL_StartTime
-            // 
-            this.DL_StartTime.DataPropertyName = "DL_StartTime";
-            this.DL_StartTime.HeaderText = "Start Time";
-            this.DL_StartTime.Name = "DL_StartTime";
-            // 
-            // DL_EndTime
-            // 
-            this.DL_EndTime.DataPropertyName = "DL_EndTime";
-            this.DL_EndTime.HeaderText = "End Time";
-            this.DL_EndTime.Name = "DL_EndTime";
             // 
             // Doctor
             // 
