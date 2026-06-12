@@ -24,6 +24,7 @@ namespace Group_4_Information_Management_Final_Project
             PL_Gender.DataPropertyName = "gender";
             PL_ContactNumber.DataPropertyName = "contact_number";
             PL_BloodType.DataPropertyName = "blood_type";
+            PL_Address.DataPropertyName = "address";
 
             LoadPatients();
         }
@@ -60,6 +61,9 @@ namespace Group_4_Information_Management_Final_Project
             PatientID_TextBox.Clear();
             PatientLastName_TextBox.Clear();
             PatientFirstName_TextBox.Clear();
+
+            PatientDOB_DateTimePicker1.Value = DateTime.Today;
+
             PatientGender_ComboBox.SelectedIndex = -1;
             PatientContactNumber_TextBox.Clear();
             PatientAddress_TextBox.Clear();
@@ -195,6 +199,7 @@ namespace Group_4_Information_Management_Final_Project
                 PatientGender_ComboBox.Text = row.Cells["PL_Gender"].Value?.ToString();
                 PatientContactNumber_TextBox.Text = row.Cells["PL_ContactNumber"].Value?.ToString();
                 PatientBloodType_ComboBox.Text = row.Cells["PL_BloodType"].Value?.ToString();
+                PatientAddress_TextBox.Text = row.Cells["PL_Address"].Value?.ToString();
             }
         }
 

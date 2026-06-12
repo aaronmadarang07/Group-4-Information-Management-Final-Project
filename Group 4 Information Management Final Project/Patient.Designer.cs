@@ -62,6 +62,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.PatientsList_DataGridView = new System.Windows.Forms.DataGridView();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.Patient_ExitBtn = new System.Windows.Forms.Button();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.Patient_GobackHomeBtn = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.PL_PatientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PL_LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PL_FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,11 +74,7 @@
             this.PL_Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PL_ContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PL_BloodType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.Patient_ExitBtn = new System.Windows.Forms.Button();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.Patient_GobackHomeBtn = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.PL_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -517,7 +518,8 @@
             this.PL_DateOfBirth,
             this.PL_Gender,
             this.PL_ContactNumber,
-            this.PL_BloodType});
+            this.PL_BloodType,
+            this.PL_Address});
             this.PatientsList_DataGridView.Location = new System.Drawing.Point(18, 38);
             this.PatientsList_DataGridView.Name = "PatientsList_DataGridView";
             this.PatientsList_DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -526,41 +528,6 @@
             this.PatientsList_DataGridView.Size = new System.Drawing.Size(959, 236);
             this.PatientsList_DataGridView.TabIndex = 0;
             this.PatientsList_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PatientsList_DataGridView_CellClick);
-            // 
-            // PL_PatientID
-            // 
-            this.PL_PatientID.HeaderText = "Patient ID";
-            this.PL_PatientID.Name = "PL_PatientID";
-            // 
-            // PL_LastName
-            // 
-            this.PL_LastName.HeaderText = "Last Name";
-            this.PL_LastName.Name = "PL_LastName";
-            // 
-            // PL_FirstName
-            // 
-            this.PL_FirstName.HeaderText = "First Name";
-            this.PL_FirstName.Name = "PL_FirstName";
-            // 
-            // PL_DateOfBirth
-            // 
-            this.PL_DateOfBirth.HeaderText = "Date Of Birth";
-            this.PL_DateOfBirth.Name = "PL_DateOfBirth";
-            // 
-            // PL_Gender
-            // 
-            this.PL_Gender.HeaderText = "Gender";
-            this.PL_Gender.Name = "PL_Gender";
-            // 
-            // PL_ContactNumber
-            // 
-            this.PL_ContactNumber.HeaderText = "Contact Number";
-            this.PL_ContactNumber.Name = "PL_ContactNumber";
-            // 
-            // PL_BloodType
-            // 
-            this.PL_BloodType.HeaderText = "Blood Type";
-            this.PL_BloodType.Name = "PL_BloodType";
             // 
             // pictureBox10
             // 
@@ -613,6 +580,46 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // PL_PatientID
+            // 
+            this.PL_PatientID.HeaderText = "Patient ID";
+            this.PL_PatientID.Name = "PL_PatientID";
+            // 
+            // PL_LastName
+            // 
+            this.PL_LastName.HeaderText = "Last Name";
+            this.PL_LastName.Name = "PL_LastName";
+            // 
+            // PL_FirstName
+            // 
+            this.PL_FirstName.HeaderText = "First Name";
+            this.PL_FirstName.Name = "PL_FirstName";
+            // 
+            // PL_DateOfBirth
+            // 
+            this.PL_DateOfBirth.HeaderText = "Date Of Birth";
+            this.PL_DateOfBirth.Name = "PL_DateOfBirth";
+            // 
+            // PL_Gender
+            // 
+            this.PL_Gender.HeaderText = "Gender";
+            this.PL_Gender.Name = "PL_Gender";
+            // 
+            // PL_ContactNumber
+            // 
+            this.PL_ContactNumber.HeaderText = "Contact Number";
+            this.PL_ContactNumber.Name = "PL_ContactNumber";
+            // 
+            // PL_BloodType
+            // 
+            this.PL_BloodType.HeaderText = "Blood Type";
+            this.PL_BloodType.Name = "PL_BloodType";
+            // 
+            // PL_Address
+            // 
+            this.PL_Address.HeaderText = "Address";
+            this.PL_Address.Name = "PL_Address";
             // 
             // Patient
             // 
@@ -673,13 +680,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView PatientsList_DataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PL_PatientID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PL_LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PL_FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PL_DateOfBirth;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PL_Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PL_ContactNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PL_BloodType;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox PatientSearch_Box;
         private System.Windows.Forms.Label label10;
@@ -692,5 +692,13 @@
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PL_PatientID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PL_LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PL_FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PL_DateOfBirth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PL_Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PL_ContactNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PL_BloodType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PL_Address;
     }
 }
