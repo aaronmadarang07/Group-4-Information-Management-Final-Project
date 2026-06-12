@@ -248,5 +248,10 @@ namespace Group_4_Information_Management_Final_Project
         private void pictureBox12_Click(object sender, EventArgs e) { }
         private void TimeLabel_Click(object sender, EventArgs e) { }
         private void DateLabel_Click(object sender, EventArgs e) { }
+
+        private void PatientsList_DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

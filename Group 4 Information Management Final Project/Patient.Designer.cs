@@ -528,6 +528,7 @@
             this.PatientsList_DataGridView.Size = new System.Drawing.Size(959, 236);
             this.PatientsList_DataGridView.TabIndex = 0;
             this.PatientsList_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PatientsList_DataGridView_CellClick);
+            this.PatientsList_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PatientsList_DataGridView_CellContentClick);
             // 
             // pictureBox10
             // 
