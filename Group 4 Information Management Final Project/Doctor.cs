@@ -110,70 +110,63 @@ namespace Group_4_Information_Management_Final_Project
 
         private void DoctorsForm_UpdateBtn_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(DoctorID_TextBox.Text))
+            {
+                MessageBox.Show("Please select a doctor to update.");
+                return;
+            }
             try
             {
                 using (var conn = DBHelper.GetConnection())
                 {
                     conn.Open();
-
-                    string query = @"UPDATE doctors SET
-                    last_name=@lname,
-                    first_name=@fname,
-                    specialty=@specialty,
-                    contact_number=@contact,
-                    availability=@availability,
-                    start_time=@start,
-                    end_time=@end
-                    WHERE doctor_id=@id";
-
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    using (MySqlCommand cmd = new MySqlCommand("UpdateDoctor", conn))
                     {
-                        cmd.Parameters.AddWithValue("@id", DoctorID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@lname", DoctorLastName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@fname", DoctorFirstName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@specialty", DoctorSpecialty_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@contact", ContactNumber_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@availability", Schedule_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@start", StartTime_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@end", EndTime_ComboBox.Text);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("p_doctor_id", DoctorID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_last_name", DoctorLastName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_first_name", DoctorFirstName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_specialty", DoctorSpecialty_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_contact_number", ContactNumber_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_availability", Schedule_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_start_time", StartTime_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_end_time", EndTime_ComboBox.Text);
                         cmd.ExecuteNonQuery();
                     }
-
-                    MessageBox.Show("Doctor Updated Successfully!");
-                    LoadDoctors();
-                    ClearFields();
                 }
+                MessageBox.Show("Doctor Updated Successfully!");
+                LoadDoctors();
+                ClearFields();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void DoctorsForm_DeleteBtn_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrWhiteSpace(DoctorID_TextBox.Text))
             {
-                using (var conn = DBHelper.GetConnection())
+                MessageBox.Show("Please select a doctor to delete.");
+                return;
+            }
+            if (MessageBox.Show("Are you sure?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
                 {
-                    conn.Open();
-
-                    string query = "DELETE FROM doctors WHERE doctor_id=@id";
-
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    using (var conn = DBHelper.GetConnection())
                     {
-                        cmd.Parameters.AddWithValue("@id", DoctorID_TextBox.Text);
-                        cmd.ExecuteNonQuery();
+                        conn.Open();
+                        using (MySqlCommand cmd = new MySqlCommand("DeleteDoctor", conn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("p_doctor_id", DoctorID_TextBox.Text);
+                            cmd.ExecuteNonQuery();
+                        }
                     }
-
                     MessageBox.Show("Doctor Deleted Successfully!");
                     LoadDoctors();
                     ClearFields();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
             }
         }
 

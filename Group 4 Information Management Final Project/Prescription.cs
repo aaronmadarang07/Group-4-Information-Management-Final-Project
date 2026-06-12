@@ -44,20 +44,19 @@ namespace Group_4_Information_Management_Final_Project
                 using (var conn = DBHelper.GetConnection())
                 {
                     conn.Open();
-
-                    string query = "SELECT * FROM prescriptions";
-
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
-
-                    Prescription_DataGridView.DataSource = table;
+                    using (MySqlCommand cmd = new MySqlCommand("GetPrescriptions", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable table = new DataTable();
+                            adapter.Fill(table);
+                            Prescription_DataGridView.DataSource = table;
+                        }
+                    }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void Prescription_AddBtn_Click(object sender, EventArgs e)
@@ -68,124 +67,89 @@ namespace Group_4_Information_Management_Final_Project
                 string.IsNullOrWhiteSpace(PresFrequency_ComboBox.Text) ||
                 string.IsNullOrWhiteSpace(PresDuration_TextBox.Text))
             {
-                MessageBox.Show("Please fill up all fields!",
-                    "Validation Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill up all fields!", "Validation Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             try
             {
                 using (var conn = DBHelper.GetConnection())
                 {
                     conn.Open();
-
-                    string query = @"INSERT INTO prescriptions
-                    (prescription_id, medicine_name, dosage, frequency, duration)
-                    VALUES
-                    (@id, @medicine, @dosage, @frequency, @duration)";
-
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    using (MySqlCommand cmd = new MySqlCommand("AddPrescription", conn))
                     {
-                        cmd.Parameters.AddWithValue("@id", PresPrescriptionID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@medicine", PresMedicineName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@dosage", PresDosage_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@frequency", PresFrequency_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@duration", PresDuration_TextBox.Text);
-
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("p_prescription_id", PresPrescriptionID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_medicine_name", PresMedicineName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_dosage", PresDosage_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_frequency", PresFrequency_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_duration", PresDuration_TextBox.Text);
                         cmd.ExecuteNonQuery();
                     }
-
-                    MessageBox.Show("Prescription Added Successfully!");
-                    LoadPrescriptions();
-                    ClearFields();
                 }
+                MessageBox.Show("Prescription Added Successfully!");
+                LoadPrescriptions();
+                ClearFields();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void Prescription_UpdateBtn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(PresPrescriptionID_TextBox.Text))
             {
-                MessageBox.Show("Please select or enter Prescription ID!",
-                    "Validation Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a prescription to update.");
                 return;
             }
-
             try
             {
                 using (var conn = DBHelper.GetConnection())
                 {
                     conn.Open();
-
-                    string query = @"UPDATE prescriptions SET
-                    medicine_name = @medicine,
-                    dosage = @dosage,
-                    frequency = @frequency,
-                    duration = @duration
-                    WHERE prescription_id = @id";
-
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    using (MySqlCommand cmd = new MySqlCommand("UpdatePrescription", conn))
                     {
-                        cmd.Parameters.AddWithValue("@id", PresPrescriptionID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@medicine", PresMedicineName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@dosage", PresDosage_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@frequency", PresFrequency_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@duration", PresDuration_TextBox.Text);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("p_prescription_id", PresPrescriptionID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_medicine_name", PresMedicineName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_dosage", PresDosage_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_frequency", PresFrequency_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_duration", PresDuration_TextBox.Text);
                         cmd.ExecuteNonQuery();
                     }
-
-                    MessageBox.Show("Prescription Updated Successfully!");
-                    LoadPrescriptions();
-                    ClearFields();
                 }
+                MessageBox.Show("Prescription Updated Successfully!");
+                LoadPrescriptions();
+                ClearFields();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void Prescription_DeleteBtn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(PresPrescriptionID_TextBox.Text))
             {
-                MessageBox.Show("Please select or enter Prescription ID!",
-                    "Validation Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a prescription to delete.");
                 return;
             }
-
-            try
+            if (MessageBox.Show("Are you sure?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                using (var conn = DBHelper.GetConnection())
+                try
                 {
-                    conn.Open();
-
-                    string query = "DELETE FROM prescriptions WHERE prescription_id = @id";
-
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    using (var conn = DBHelper.GetConnection())
                     {
-                        cmd.Parameters.AddWithValue("@id", PresPrescriptionID_TextBox.Text);
-                        cmd.ExecuteNonQuery();
+                        conn.Open();
+                        using (MySqlCommand cmd = new MySqlCommand("DeletePrescription", conn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("p_prescription_id", PresPrescriptionID_TextBox.Text);
+                            cmd.ExecuteNonQuery();
+                        }
                     }
-
                     MessageBox.Show("Prescription Deleted Successfully!");
                     LoadPrescriptions();
                     ClearFields();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
             }
         }
 

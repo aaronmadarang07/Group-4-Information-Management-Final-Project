@@ -65,6 +65,10 @@ namespace Group_4_Information_Management_Final_Project
             PatientAddress_TextBox.Clear();
             PatientBloodType_ComboBox.SelectedIndex = -1;
         }
+        private void PatientsForm_ClearBtn_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
 
         private void PatientsForm_AddBtn_Click(object sender, EventArgs e)
         {
@@ -114,6 +118,107 @@ namespace Group_4_Information_Management_Final_Project
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void PatientsForm_UpdateBtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(PatientID_TextBox.Text))
+            {
+                MessageBox.Show("Please select a patient to update.");
+                return;
+            }
+            try
+            {
+                using (var conn = DBHelper.GetConnection())
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand("UpdatePatient", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("p_patient_id", PatientID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_last_name", PatientLastName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_first_name", PatientFirstName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_date_of_birth", PatientDOB_DateTimePicker1.Value.Date);
+                        cmd.Parameters.AddWithValue("p_gender", PatientGender_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_contact_number", PatientContactNumber_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_address", PatientAddress_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_blood_type", PatientBloodType_ComboBox.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                MessageBox.Show("Patient Updated Successfully!");
+                LoadPatients();
+                ClearFields();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void PatientsForm_DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(PatientID_TextBox.Text))
+            {
+                MessageBox.Show("Please select a patient to delete.");
+                return;
+            }
+            if (MessageBox.Show("Are you sure?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    using (var conn = DBHelper.GetConnection())
+                    {
+                        conn.Open();
+                        using (MySqlCommand cmd = new MySqlCommand("DeletePatient", conn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("p_patient_id", PatientID_TextBox.Text);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    MessageBox.Show("Patient Deleted Successfully!");
+                    LoadPatients();
+                    ClearFields();
+                }
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
+            }
+        }
+
+        private void PatientsList_DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = PatientsList_DataGridView.Rows[e.RowIndex];
+                PatientID_TextBox.Text = row.Cells["PL_PatientID"].Value?.ToString();
+                PatientLastName_TextBox.Text = row.Cells["PL_LastName"].Value?.ToString();
+                PatientFirstName_TextBox.Text = row.Cells["PL_FirstName"].Value?.ToString();
+                if (DateTime.TryParse(row.Cells["PL_DateOfBirth"].Value?.ToString(), out DateTime dob))
+                    PatientDOB_DateTimePicker1.Value = dob;
+                PatientGender_ComboBox.Text = row.Cells["PL_Gender"].Value?.ToString();
+                PatientContactNumber_TextBox.Text = row.Cells["PL_ContactNumber"].Value?.ToString();
+                PatientBloodType_ComboBox.Text = row.Cells["PL_BloodType"].Value?.ToString();
+            }
+        }
+
+        private void PatientSearch_Box_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var conn = DBHelper.GetConnection())
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand("SearchPatients", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("p_search", PatientSearch_Box.Text);
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable table = new DataTable();
+                            adapter.Fill(table);
+                            PatientsList_DataGridView.DataSource = table;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void Patient_ExitBtn_Click(object sender, EventArgs e)

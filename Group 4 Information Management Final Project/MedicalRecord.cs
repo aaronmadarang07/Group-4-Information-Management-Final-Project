@@ -110,67 +110,61 @@ namespace Group_4_Information_Management_Final_Project
 
         private void MedRec_UpdateBtn_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(MedRecRecordID_TextBox.Text))
+            {
+                MessageBox.Show("Please select a record to update.");
+                return;
+            }
             try
             {
                 using (MySqlConnection conn = DBHelper.GetConnection())
                 {
                     conn.Open();
-
-                    string query = @"UPDATE medical_records SET
-                    appointment = @appointment,
-                    doctor = @doctor,
-                    visit_date = @date,
-                    diagnosis = @diagnosis,
-                    notes = @notes
-                    WHERE record_id = @id";
-
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-
-                    cmd.Parameters.AddWithValue("@id", MedRecRecordID_TextBox.Text);
-                    cmd.Parameters.AddWithValue("@appointment", MedRecAppointment_TextBox.Text);
-                    cmd.Parameters.AddWithValue("@doctor", MedRecDoctor_TextBox.Text);
-                    cmd.Parameters.AddWithValue("@date", MedRecVisitDate_DateTimePicker.Value.Date);
-                    cmd.Parameters.AddWithValue("@diagnosis", MedRecDiagnosis_TextBox.Text);
-                    cmd.Parameters.AddWithValue("@notes", MedRecNotes_TextBox.Text);
-
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Medical Record Updated Successfully!");
-
-                    LoadMedicalRecords();
-                    ClearFields();
+                    using (MySqlCommand cmd = new MySqlCommand("UpdateMedicalRecord", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_appointment", MedRecAppointment_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_doctor", MedRecDoctor_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_visit_date", MedRecVisitDate_DateTimePicker.Value.Date);
+                        cmd.Parameters.AddWithValue("p_diagnosis", MedRecDiagnosis_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_notes", MedRecNotes_TextBox.Text);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
+                MessageBox.Show("Medical Record Updated Successfully!");
+                LoadMedicalRecords();
+                ClearFields();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void MedRec_DeleteBtn_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrWhiteSpace(MedRecRecordID_TextBox.Text))
             {
-                using (MySqlConnection conn = DBHelper.GetConnection())
+                MessageBox.Show("Please select a record to delete.");
+                return;
+            }
+            if (MessageBox.Show("Are you sure?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
                 {
-                    conn.Open();
-
-                    string query = "DELETE FROM medical_records WHERE record_id = @id";
-
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@id", MedRecRecordID_TextBox.Text);
-
-                    cmd.ExecuteNonQuery();
-
+                    using (MySqlConnection conn = DBHelper.GetConnection())
+                    {
+                        conn.Open();
+                        using (MySqlCommand cmd = new MySqlCommand("DeleteMedicalRecord", conn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
                     MessageBox.Show("Medical Record Deleted Successfully!");
-
                     LoadMedicalRecords();
                     ClearFields();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
             }
         }
 

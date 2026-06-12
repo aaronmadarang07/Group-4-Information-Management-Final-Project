@@ -179,6 +179,7 @@
             this.PatientsForm_ClearBtn.TabIndex = 34;
             this.PatientsForm_ClearBtn.Text = "CLEAR";
             this.PatientsForm_ClearBtn.UseVisualStyleBackColor = false;
+            this.PatientsForm_ClearBtn.Click += new System.EventHandler(this.PatientsForm_ClearBtn_Click);
             // 
             // PatientsForm_DeleteBtn
             // 
@@ -191,6 +192,7 @@
             this.PatientsForm_DeleteBtn.TabIndex = 33;
             this.PatientsForm_DeleteBtn.Text = "DELETE";
             this.PatientsForm_DeleteBtn.UseVisualStyleBackColor = false;
+            this.PatientsForm_DeleteBtn.Click += new System.EventHandler(this.PatientsForm_DeleteBtn_Click);
             // 
             // PatientsForm_UpdateBtn
             // 
@@ -203,6 +205,7 @@
             this.PatientsForm_UpdateBtn.TabIndex = 32;
             this.PatientsForm_UpdateBtn.Text = "UPDATE";
             this.PatientsForm_UpdateBtn.UseVisualStyleBackColor = false;
+            this.PatientsForm_UpdateBtn.Click += new System.EventHandler(this.PatientsForm_UpdateBtn_Click);
             // 
             // PatientsForm_AddBtn
             // 
@@ -478,6 +481,7 @@
             this.PatientSearch_Box.Name = "PatientSearch_Box";
             this.PatientSearch_Box.Size = new System.Drawing.Size(163, 25);
             this.PatientSearch_Box.TabIndex = 28;
+            this.PatientSearch_Box.TextChanged += new System.EventHandler(this.PatientSearch_Box_TextChanged);
             // 
             // label10
             // 
@@ -521,6 +525,7 @@
             this.PatientsList_DataGridView.RowHeadersWidth = 50;
             this.PatientsList_DataGridView.Size = new System.Drawing.Size(959, 236);
             this.PatientsList_DataGridView.TabIndex = 0;
+            this.PatientsList_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PatientsList_DataGridView_CellClick);
             // 
             // PL_PatientID
             // 

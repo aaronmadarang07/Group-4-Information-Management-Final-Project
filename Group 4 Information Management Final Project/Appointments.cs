@@ -118,33 +118,25 @@ namespace Group_4_Information_Management_Final_Project
                 MessageBox.Show("Please select an appointment to delete.");
                 return;
             }
-
-            if (MessageBox.Show("Are you sure you want to delete this appointment?",
-                "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
                 {
                     using (var conn = DBHelper.GetConnection())
                     {
                         conn.Open();
-
-                        string sql = "DELETE FROM appointments_tbl WHERE appointment_id = @id";
-
-                        using (var cmd = new MySqlCommand(sql, conn))
+                        using (MySqlCommand cmd = new MySqlCommand("DeleteAppointment", conn))
                         {
-                            cmd.Parameters.AddWithValue("@id", AppID_TextBox.Text);
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("p_appointment_id", AppID_TextBox.Text);
                             cmd.ExecuteNonQuery();
                         }
                     }
-
                     MessageBox.Show("Appointment deleted successfully!");
                     LoadAppointments();
                     ClearFields();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("DB Error: " + ex.Message);
-                }
+                catch (Exception ex) { MessageBox.Show("DB Error: " + ex.Message); }
             }
         }
 
@@ -155,44 +147,29 @@ namespace Group_4_Information_Management_Final_Project
                 MessageBox.Show("Please select an appointment to update.");
                 return;
             }
-
             try
             {
                 using (var conn = DBHelper.GetConnection())
                 {
                     conn.Open();
-
-                    string sql = @"UPDATE appointments_tbl SET 
-                                   patient_name = @patient,
-                                   doctor_name = @doctor,
-                                   appointment_date = @date,
-                                   appointment_time = @time,
-                                   schedule = @schedule,
-                                   status = @status,
-                                   remarks = @remarks
-                                   WHERE appointment_id = @id";
-
-                    using (var cmd = new MySqlCommand(sql, conn))
+                    using (MySqlCommand cmd = new MySqlCommand("UpdateAppointment", conn))
                     {
-                        cmd.Parameters.AddWithValue("@patient", AppPatientName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@doctor", AppDoctorID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@date", AppDate_DateTimePicker.Value.ToString("yyyy-MM-dd"));
-                        cmd.Parameters.AddWithValue("@time", AppStartTime_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@schedule", AppSchedule_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@status", AppStatus_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("@remarks", AppRemarks_TextBox.Text);
-                        cmd.Parameters.AddWithValue("@id", AppID_TextBox.Text);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("p_appointment_id", AppID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_patient_name", AppPatientName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_doctor_name", AppDoctorID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_appointment_date", AppDate_DateTimePicker.Value.Date);
+                        cmd.Parameters.AddWithValue("p_appointment_time", AppStartTime_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_schedule", AppSchedule_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_status", AppStatus_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_remarks", AppRemarks_TextBox.Text);
                         cmd.ExecuteNonQuery();
                     }
                 }
-
                 MessageBox.Show("Appointment updated successfully!");
                 LoadAppointments();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("DB Error: " + ex.Message);
-            }
+            catch (Exception ex) { MessageBox.Show("DB Error: " + ex.Message); }
         }
 
         private void Appointment_ClearBtn_Click(object sender, EventArgs e)
