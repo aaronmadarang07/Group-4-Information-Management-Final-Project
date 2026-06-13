@@ -55,7 +55,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PrescriptionSearch_TextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.Prescription_DataGridView = new System.Windows.Forms.DataGridView();
+            this.PrescriptionList_DataGridView = new System.Windows.Forms.DataGridView();
             this.Prescription_PrescriptionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prescription_MedicineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prescription_Dosage = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Prescription_DataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrescriptionList_DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
@@ -197,6 +197,7 @@
             this.Prescription_ClearBtn.TabIndex = 35;
             this.Prescription_ClearBtn.Text = "CLEAR";
             this.Prescription_ClearBtn.UseVisualStyleBackColor = false;
+            this.Prescription_ClearBtn.Click += new System.EventHandler(this.Prescription_ClearBtn_Click_1);
             // 
             // Prescription_AddBtn
             // 
@@ -339,7 +340,7 @@
             this.groupBox3.Controls.Add(this.pictureBox2);
             this.groupBox3.Controls.Add(this.PrescriptionSearch_TextBox);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.Prescription_DataGridView);
+            this.groupBox3.Controls.Add(this.PrescriptionList_DataGridView);
             this.groupBox3.Location = new System.Drawing.Point(20, 355);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(995, 255);
@@ -387,52 +388,56 @@
             this.label10.TabIndex = 30;
             this.label10.Text = "Search Prescriptions:";
             // 
-            // Prescription_DataGridView
+            // PrescriptionList_DataGridView
             // 
-            this.Prescription_DataGridView.AllowUserToOrderColumns = true;
-            this.Prescription_DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Prescription_DataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.Prescription_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Prescription_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PrescriptionList_DataGridView.AllowUserToOrderColumns = true;
+            this.PrescriptionList_DataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.PrescriptionList_DataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.PrescriptionList_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Prescription_PrescriptionID,
             this.Prescription_MedicineName,
             this.Prescription_Dosage,
             this.Prescription_Frequency,
             this.Prescription_Duration});
-            this.Prescription_DataGridView.Location = new System.Drawing.Point(18, 38);
-            this.Prescription_DataGridView.Name = "Prescription_DataGridView";
-            this.Prescription_DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.Prescription_DataGridView.RowHeadersVisible = false;
-            this.Prescription_DataGridView.RowHeadersWidth = 51;
-            this.Prescription_DataGridView.Size = new System.Drawing.Size(959, 197);
-            this.Prescription_DataGridView.TabIndex = 0;
+            this.PrescriptionList_DataGridView.Location = new System.Drawing.Point(18, 38);
+            this.PrescriptionList_DataGridView.Name = "PrescriptionList_DataGridView";
+            this.PrescriptionList_DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.PrescriptionList_DataGridView.RowHeadersVisible = false;
+            this.PrescriptionList_DataGridView.RowHeadersWidth = 51;
+            this.PrescriptionList_DataGridView.Size = new System.Drawing.Size(959, 197);
+            this.PrescriptionList_DataGridView.TabIndex = 0;
             // 
             // Prescription_PrescriptionID
             // 
+            this.Prescription_PrescriptionID.DataPropertyName = "prescription _id";
             this.Prescription_PrescriptionID.HeaderText = "Prescription ID";
             this.Prescription_PrescriptionID.MinimumWidth = 6;
             this.Prescription_PrescriptionID.Name = "Prescription_PrescriptionID";
             // 
             // Prescription_MedicineName
             // 
+            this.Prescription_MedicineName.DataPropertyName = "medicine_name";
             this.Prescription_MedicineName.HeaderText = "Medicine Name";
             this.Prescription_MedicineName.MinimumWidth = 6;
             this.Prescription_MedicineName.Name = "Prescription_MedicineName";
             // 
             // Prescription_Dosage
             // 
+            this.Prescription_Dosage.DataPropertyName = "dosage";
             this.Prescription_Dosage.HeaderText = "Dosage";
             this.Prescription_Dosage.MinimumWidth = 6;
             this.Prescription_Dosage.Name = "Prescription_Dosage";
             // 
             // Prescription_Frequency
             // 
+            this.Prescription_Frequency.DataPropertyName = "frequency";
             this.Prescription_Frequency.HeaderText = "Frequency";
             this.Prescription_Frequency.MinimumWidth = 6;
             this.Prescription_Frequency.Name = "Prescription_Frequency";
             // 
             // Prescription_Duration
             // 
+            this.Prescription_Duration.DataPropertyName = "duration";
             this.Prescription_Duration.HeaderText = "Duration";
             this.Prescription_Duration.MinimumWidth = 6;
             this.Prescription_Duration.Name = "Prescription_Duration";
@@ -467,7 +472,7 @@
             this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
             this.pictureBox10.Location = new System.Drawing.Point(841, 632);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox10.Size = new System.Drawing.Size(42, 42);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 43;
             this.pictureBox10.TabStop = false;
@@ -481,7 +486,7 @@
             this.Prescription_ExitBtn.Name = "Prescription_ExitBtn";
             this.Prescription_ExitBtn.Size = new System.Drawing.Size(177, 50);
             this.Prescription_ExitBtn.TabIndex = 42;
-            this.Prescription_ExitBtn.Text = "           EXIT";
+            this.Prescription_ExitBtn.Text = "      EXIT";
             this.Prescription_ExitBtn.UseVisualStyleBackColor = false;
             this.Prescription_ExitBtn.Click += new System.EventHandler(this.Prescription_ExitBtn_Click);
             // 
@@ -513,7 +518,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Prescription_DataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrescriptionList_DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
@@ -543,13 +548,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox PrescriptionSearch_TextBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView Prescription_DataGridView;
+        private System.Windows.Forms.DataGridView PrescriptionList_DataGridView;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_PrescriptionID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_MedicineName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_Dosage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_Frequency;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_Duration;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button Prescription_GobackHomeBtn;
         private System.Windows.Forms.PictureBox pictureBox10;
@@ -559,5 +559,10 @@
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_PrescriptionID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_MedicineName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_Dosage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_Frequency;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_Duration;
     }
 }

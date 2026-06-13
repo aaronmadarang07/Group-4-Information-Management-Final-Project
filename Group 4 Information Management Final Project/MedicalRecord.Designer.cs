@@ -36,6 +36,7 @@
             this.MedRecNotes_TextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.MedRecDiagnosis_TextBox = new System.Windows.Forms.TextBox();
             this.MedRecVisitDate_DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -64,10 +65,8 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.MedRec_ExitBtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label7 = new System.Windows.Forms.Label();
             this.MedRec_RecordID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_AppointmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MedRec_PatientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_DoctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_VisitDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_Diagnosis = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -183,6 +182,18 @@
             this.label8.TabIndex = 50;
             this.label8.Text = "Doctor ID, Doctor Name";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(16, 108);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(171, 26);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "(Appointment ID, Patient Name, \r\nand Time)";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
             // MedRecDiagnosis_TextBox
             // 
             this.MedRecDiagnosis_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -221,6 +232,7 @@
             this.MedRec_DeleteBtn.TabIndex = 37;
             this.MedRec_DeleteBtn.Text = "DELETE";
             this.MedRec_DeleteBtn.UseVisualStyleBackColor = false;
+            this.MedRec_DeleteBtn.Click += new System.EventHandler(this.MedRec_DeleteBtn_Click_1);
             // 
             // MedRec_UpdateBtn
             // 
@@ -233,6 +245,7 @@
             this.MedRec_UpdateBtn.TabIndex = 36;
             this.MedRec_UpdateBtn.Text = "UPDATE";
             this.MedRec_UpdateBtn.UseVisualStyleBackColor = false;
+            this.MedRec_UpdateBtn.Click += new System.EventHandler(this.MedRec_UpdateBtn_Click_1);
             // 
             // MedRec_ClearBtn
             // 
@@ -245,6 +258,7 @@
             this.MedRec_ClearBtn.TabIndex = 35;
             this.MedRec_ClearBtn.Text = "CLEAR";
             this.MedRec_ClearBtn.UseVisualStyleBackColor = false;
+            this.MedRec_ClearBtn.Click += new System.EventHandler(this.MedRec_ClearBtn_Click_1);
             // 
             // MedRec_AddBtn
             // 
@@ -425,7 +439,6 @@
             this.MedRec_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MedRec_RecordID,
             this.MedRec_AppointmentID,
-            this.MedRec_PatientName,
             this.MedRec_DoctorName,
             this.MedRec_VisitDate,
             this.MedRec_Diagnosis,
@@ -470,7 +483,7 @@
             this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
             this.pictureBox10.Location = new System.Drawing.Point(841, 632);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox10.Size = new System.Drawing.Size(42, 42);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 39;
             this.pictureBox10.TabStop = false;
@@ -485,7 +498,7 @@
             this.MedRec_ExitBtn.Name = "MedRec_ExitBtn";
             this.MedRec_ExitBtn.Size = new System.Drawing.Size(177, 50);
             this.MedRec_ExitBtn.TabIndex = 38;
-            this.MedRec_ExitBtn.Text = "           EXIT";
+            this.MedRec_ExitBtn.Text = "      EXIT";
             this.MedRec_ExitBtn.UseVisualStyleBackColor = false;
             this.MedRec_ExitBtn.Click += new System.EventHandler(this.MedRec_ExitBtn_Click);
             // 
@@ -493,55 +506,44 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(16, 108);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(171, 26);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "(Appointment ID, Patient Name, \r\nand Time)";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
             // MedRec_RecordID
             // 
+            this.MedRec_RecordID.DataPropertyName = "record_id";
             this.MedRec_RecordID.HeaderText = "Record ID";
             this.MedRec_RecordID.MinimumWidth = 6;
             this.MedRec_RecordID.Name = "MedRec_RecordID";
             // 
             // MedRec_AppointmentID
             // 
-            this.MedRec_AppointmentID.HeaderText = "Appointment";
+            this.MedRec_AppointmentID.DataPropertyName = "appointment_id";
+            this.MedRec_AppointmentID.HeaderText = "Appointment ID";
             this.MedRec_AppointmentID.MinimumWidth = 6;
             this.MedRec_AppointmentID.Name = "MedRec_AppointmentID";
             // 
-            // MedRec_PatientName
-            // 
-            this.MedRec_PatientName.HeaderText = "Patient";
-            this.MedRec_PatientName.Name = "MedRec_PatientName";
-            // 
             // MedRec_DoctorName
             // 
+            this.MedRec_DoctorName.DataPropertyName = "doctor_name";
             this.MedRec_DoctorName.HeaderText = "Doctor";
             this.MedRec_DoctorName.MinimumWidth = 6;
             this.MedRec_DoctorName.Name = "MedRec_DoctorName";
             // 
             // MedRec_VisitDate
             // 
+            this.MedRec_VisitDate.DataPropertyName = "visit_date";
             this.MedRec_VisitDate.HeaderText = "Visit Date";
             this.MedRec_VisitDate.MinimumWidth = 6;
             this.MedRec_VisitDate.Name = "MedRec_VisitDate";
             // 
             // MedRec_Diagnosis
             // 
+            this.MedRec_Diagnosis.DataPropertyName = "diagnosis";
             this.MedRec_Diagnosis.HeaderText = "Diagnosis";
             this.MedRec_Diagnosis.MinimumWidth = 6;
             this.MedRec_Diagnosis.Name = "MedRec_Diagnosis";
             // 
             // MedRec_Notes
             // 
+            this.MedRec_Notes.DataPropertyName = "notes";
             this.MedRec_Notes.HeaderText = "Notes";
             this.MedRec_Notes.MinimumWidth = 6;
             this.MedRec_Notes.Name = "MedRec_Notes";
@@ -617,7 +619,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn MedRec_RecordID;
         private System.Windows.Forms.DataGridViewTextBoxColumn MedRec_AppointmentID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MedRec_PatientName;
         private System.Windows.Forms.DataGridViewTextBoxColumn MedRec_DoctorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn MedRec_VisitDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn MedRec_Diagnosis;

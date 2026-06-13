@@ -779,7 +779,7 @@
             this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
             this.pictureBox10.Location = new System.Drawing.Point(841, 632);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox10.Size = new System.Drawing.Size(42, 42);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 39;
             this.pictureBox10.TabStop = false;
@@ -794,7 +794,7 @@
             this.Doctor_ExitBtn.Name = "Doctor_ExitBtn";
             this.Doctor_ExitBtn.Size = new System.Drawing.Size(177, 50);
             this.Doctor_ExitBtn.TabIndex = 38;
-            this.Doctor_ExitBtn.Text = "           EXIT";
+            this.Doctor_ExitBtn.Text = "      EXIT";
             this.Doctor_ExitBtn.UseVisualStyleBackColor = false;
             this.Doctor_ExitBtn.Click += new System.EventHandler(this.Appointments_ExitBtn_Click);
             // 

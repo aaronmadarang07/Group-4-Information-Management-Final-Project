@@ -16,7 +16,17 @@ namespace Group_4_Information_Management_Final_Project
         {
             timer1.Start();
 
-            AppointmentList_DataGridView.AutoGenerateColumns = true;
+            AppointmentList_DataGridView.AutoGenerateColumns = false;
+            AppointmentList_DataGridView.CellClick += AppointmentList_DataGridView_CellClick;
+
+            App_AppointmentID.DataPropertyName = "appointment_id";
+            App_PatientName.DataPropertyName = "patient_name";
+            App_DoctorName.DataPropertyName = "doctor_name";
+            App_AppointmentDate.DataPropertyName = "appointment_date";
+            App_AppointmentTime.DataPropertyName = "appointment_time";
+            App_Schedule.DataPropertyName = "schedule";
+            App_Status.DataPropertyName = "status";
+            App_Remarks.DataPropertyName = "remarks";
 
             LoadAppointments();
         }
@@ -195,17 +205,17 @@ namespace Group_4_Information_Management_Final_Project
             {
                 DataGridViewRow row = AppointmentList_DataGridView.Rows[e.RowIndex];
 
-                AppID_TextBox.Text = row.Cells["appointment_id"].Value?.ToString();
-                AppPatientName_TextBox.Text = row.Cells["patient_name"].Value?.ToString();
-                AppDoctorID_TextBox.Text = row.Cells["doctor_name"].Value?.ToString();
+                AppID_TextBox.Text = row.Cells["App_AppointmentID"].Value?.ToString();
+                AppPatientName_TextBox.Text = row.Cells["App_PatientName"].Value?.ToString();
+                AppDoctorID_TextBox.Text = row.Cells["App_DoctorName"].Value?.ToString();
 
-                if (DateTime.TryParse(row.Cells["appointment_date"].Value?.ToString(), out DateTime date))
+                if (DateTime.TryParse(row.Cells["App_AppointmentDate"].Value?.ToString(), out DateTime date))
                     AppDate_DateTimePicker.Value = date;
 
-                AppStartTime_ComboBox.Text = row.Cells["appointment_time"].Value?.ToString();
-                AppSchedule_ComboBox.Text = row.Cells["schedule"].Value?.ToString();
-                AppStatus_ComboBox.Text = row.Cells["status"].Value?.ToString();
-                AppRemarks_TextBox.Text = row.Cells["remarks"].Value?.ToString();
+                AppStartTime_ComboBox.Text = row.Cells["App_AppointmentTime"].Value?.ToString();
+                AppSchedule_ComboBox.Text = row.Cells["App_Schedule"].Value?.ToString();
+                AppStatus_ComboBox.Text = row.Cells["App_Status"].Value?.ToString();
+                AppRemarks_TextBox.Text = row.Cells["App_Remarks"].Value?.ToString();
             }
         }
 
@@ -236,5 +246,10 @@ namespace Group_4_Information_Management_Final_Project
         private void pictureBox10_Click(object sender, EventArgs e) { }
         private void pictureBox9_Click(object sender, EventArgs e) { }
         private void groupBox1_Enter(object sender, EventArgs e) { }
+
+        private void AppointmentList_DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }

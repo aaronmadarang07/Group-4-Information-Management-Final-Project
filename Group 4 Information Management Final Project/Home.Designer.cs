@@ -238,9 +238,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox2.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.ChatGPT_Image_Jun_7__2026__06_00_31_PM;
-            this.pictureBox2.Location = new System.Drawing.Point(90, 376);
+            this.pictureBox2.Location = new System.Drawing.Point(91, 377);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
@@ -249,9 +249,9 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox3.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_180702;
-            this.pictureBox3.Location = new System.Drawing.Point(90, 502);
+            this.pictureBox3.Location = new System.Drawing.Point(91, 503);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
@@ -260,9 +260,9 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox4.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_181140;
-            this.pictureBox4.Location = new System.Drawing.Point(405, 376);
+            this.pictureBox4.Location = new System.Drawing.Point(406, 377);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(48, 48);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
@@ -271,9 +271,9 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox5.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_183656;
-            this.pictureBox5.Location = new System.Drawing.Point(709, 376);
+            this.pictureBox5.Location = new System.Drawing.Point(711, 377);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
@@ -282,9 +282,9 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox6.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_181622;
-            this.pictureBox6.Location = new System.Drawing.Point(405, 502);
+            this.pictureBox6.Location = new System.Drawing.Point(406, 503);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox6.Size = new System.Drawing.Size(48, 48);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
@@ -293,16 +293,16 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox7.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.Copilot_20260607_182823;
-            this.pictureBox7.Location = new System.Drawing.Point(710, 502);
+            this.pictureBox7.Location = new System.Drawing.Point(711, 503);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox7.Size = new System.Drawing.Size(48, 48);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 20;
             this.pictureBox7.TabStop = false;
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.groupBox1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -315,6 +315,7 @@
             this.groupBox1.Size = new System.Drawing.Size(474, 222);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // pictureBox10
             // 
@@ -322,7 +323,7 @@
             this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
             this.pictureBox10.Location = new System.Drawing.Point(834, 626);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox10.Size = new System.Drawing.Size(42, 42);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 27;
             this.pictureBox10.TabStop = false;
@@ -336,7 +337,7 @@
             this.Home_ExitBtn.Name = "Home_ExitBtn";
             this.Home_ExitBtn.Size = new System.Drawing.Size(177, 50);
             this.Home_ExitBtn.TabIndex = 26;
-            this.Home_ExitBtn.Text = "           EXIT";
+            this.Home_ExitBtn.Text = "      EXIT";
             this.Home_ExitBtn.UseVisualStyleBackColor = false;
             this.Home_ExitBtn.Click += new System.EventHandler(this.Home_ExitBtn_Click_1);
             // 

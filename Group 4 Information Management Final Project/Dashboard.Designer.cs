@@ -57,10 +57,6 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.TodApp_DataGridView = new System.Windows.Forms.DataGridView();
-            this.TA_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TA_Patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TA_Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TA_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DashBoard_GoToPatientsBtn = new System.Windows.Forms.Button();
             this.DashBoard_GoToMedRecordsBtn = new System.Windows.Forms.Button();
             this.DashBoard_GoToDoctorsBtn = new System.Windows.Forms.Button();
@@ -80,6 +76,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.TA_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TA_Patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TA_Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TA_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -393,26 +393,7 @@
             this.TodApp_DataGridView.RowHeadersWidth = 50;
             this.TodApp_DataGridView.Size = new System.Drawing.Size(455, 208);
             this.TodApp_DataGridView.TabIndex = 0;
-            // 
-            // TA_Time
-            // 
-            this.TA_Time.HeaderText = "Time";
-            this.TA_Time.Name = "TA_Time";
-            // 
-            // TA_Patient
-            // 
-            this.TA_Patient.HeaderText = "Patient";
-            this.TA_Patient.Name = "TA_Patient";
-            // 
-            // TA_Doctor
-            // 
-            this.TA_Doctor.HeaderText = "Doctor";
-            this.TA_Doctor.Name = "TA_Doctor";
-            // 
-            // TA_Status
-            // 
-            this.TA_Status.HeaderText = "Status";
-            this.TA_Status.Name = "TA_Status";
+            this.TodApp_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TodApp_DataGridView_CellContentClick);
             // 
             // DashBoard_GoToPatientsBtn
             // 
@@ -523,7 +504,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox9.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources._25694;
-            this.pictureBox9.Location = new System.Drawing.Point(159, 638);
+            this.pictureBox9.Location = new System.Drawing.Point(23, 634);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(43, 43);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -535,7 +516,7 @@
             this.DashBoard_GobackHomeBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GobackHomeBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DashBoard_GobackHomeBtn.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.DashBoard_GobackHomeBtn.Location = new System.Drawing.Point(156, 634);
+            this.DashBoard_GobackHomeBtn.Location = new System.Drawing.Point(20, 630);
             this.DashBoard_GobackHomeBtn.Name = "DashBoard_GobackHomeBtn";
             this.DashBoard_GobackHomeBtn.Size = new System.Drawing.Size(177, 50);
             this.DashBoard_GobackHomeBtn.TabIndex = 20;
@@ -549,7 +530,7 @@
             this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
             this.pictureBox10.Location = new System.Drawing.Point(844, 638);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox10.Size = new System.Drawing.Size(42, 42);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 29;
             this.pictureBox10.TabStop = false;
@@ -563,7 +544,7 @@
             this.Home_ExitBtn.Name = "Home_ExitBtn";
             this.Home_ExitBtn.Size = new System.Drawing.Size(177, 50);
             this.Home_ExitBtn.TabIndex = 28;
-            this.Home_ExitBtn.Text = "           EXIT";
+            this.Home_ExitBtn.Text = "      EXIT";
             this.Home_ExitBtn.UseVisualStyleBackColor = false;
             this.Home_ExitBtn.Click += new System.EventHandler(this.Home_ExitBtn_Click);
             // 
@@ -629,6 +610,30 @@
             this.groupBox8.TabIndex = 34;
             this.groupBox8.TabStop = false;
             this.groupBox8.Enter += new System.EventHandler(this.groupBox8_Enter);
+            // 
+            // TA_Time
+            // 
+            this.TA_Time.DataPropertyName = "time";
+            this.TA_Time.HeaderText = "Time";
+            this.TA_Time.Name = "TA_Time";
+            // 
+            // TA_Patient
+            // 
+            this.TA_Patient.DataPropertyName = "patient";
+            this.TA_Patient.HeaderText = "Patient";
+            this.TA_Patient.Name = "TA_Patient";
+            // 
+            // TA_Doctor
+            // 
+            this.TA_Doctor.DataPropertyName = "doctor";
+            this.TA_Doctor.HeaderText = "Doctor";
+            this.TA_Doctor.Name = "TA_Doctor";
+            // 
+            // TA_Status
+            // 
+            this.TA_Status.DataPropertyName = "status";
+            this.TA_Status.HeaderText = "Status";
+            this.TA_Status.Name = "TA_Status";
             // 
             // Dashboard
             // 
@@ -728,10 +733,6 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.DataGridView TodApp_DataGridView;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TA_Time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TA_Patient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TA_Doctor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TA_Status;
         private System.Windows.Forms.DataVisualization.Charting.Chart AppointmentsChart;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TabPage tabPage2;
@@ -745,5 +746,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TA_Time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TA_Patient;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TA_Doctor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TA_Status;
     }
 }

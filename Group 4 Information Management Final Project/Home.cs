@@ -80,5 +80,10 @@ namespace Group_4_Information_Management_Final_Project
 
             TimeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

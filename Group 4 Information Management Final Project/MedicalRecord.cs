@@ -19,9 +19,8 @@ namespace Group_4_Information_Management_Final_Project
             MedRec_DataGridView.AutoGenerateColumns = false;
 
             MedRec_RecordID.DataPropertyName = "record_id";
-            MedRec_AppointmentID.DataPropertyName = "appointment_ID";
-            MedRec_PatientName.DataPropertyName = "patient_name";
-            MedRec_DoctorName.DataPropertyName = "doctor_name";
+            MedRec_AppointmentID.DataPropertyName = "appointment";
+            MedRec_DoctorName.DataPropertyName = "doctor";
             MedRec_VisitDate.DataPropertyName = "visit_date";
             MedRec_Diagnosis.DataPropertyName = "diagnosis";
             MedRec_Notes.DataPropertyName = "notes";
@@ -191,8 +190,8 @@ namespace Group_4_Information_Management_Final_Project
                 DataGridViewRow row = MedRec_DataGridView.Rows[e.RowIndex];
 
                 MedRecRecordID_TextBox.Text = row.Cells["MedRec_RecordID"].Value?.ToString();
-                MedRecAppointment_TextBox.Text = row.Cells["MedRec_Appointment"].Value?.ToString();
-                MedRecDoctor_TextBox.Text = row.Cells["MedRec_Doctor"].Value?.ToString();
+                MedRecAppointment_TextBox.Text = row.Cells["MedRec_AppointmentID"].Value?.ToString();
+                MedRecDoctor_TextBox.Text = row.Cells["MedRec_DoctorName"].Value?.ToString();
 
                 if (DateTime.TryParse(row.Cells["MedRec_VisitDate"].Value?.ToString(), out DateTime visitDate))
                 {
@@ -231,6 +230,21 @@ namespace Group_4_Information_Management_Final_Project
         private void MedRec_AddBtn_Click_1(object sender, EventArgs e) { }
 
         private void MedRec_DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void MedRec_DeleteBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MedRec_UpdateBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MedRec_ClearBtn_Click_1(object sender, EventArgs e)
         {
 
         }

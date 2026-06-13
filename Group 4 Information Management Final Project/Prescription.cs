@@ -16,25 +16,20 @@ namespace Group_4_Information_Management_Final_Project
         {
             timer1.Start();
 
-            PresFrequency_ComboBox.Items.Clear();
-            PresFrequency_ComboBox.Items.Add("Once a day");
-            PresFrequency_ComboBox.Items.Add("Twice a day");
-            PresFrequency_ComboBox.Items.Add("3 times a day");
-            PresFrequency_ComboBox.Items.Add("Every 4 hours");
-            PresFrequency_ComboBox.Items.Add("Every 6 hours");
-            PresFrequency_ComboBox.Items.Add("Every 8 hours");
-            PresFrequency_ComboBox.Items.Add("Every 12 hours");
-            PresFrequency_ComboBox.Items.Add("Before meals");
-            PresFrequency_ComboBox.Items.Add("After meals");
-            PresFrequency_ComboBox.Items.Add("At bedtime");
-            PresFrequency_ComboBox.Items.Add("As needed");
+            PrescriptionList_DataGridView.AutoGenerateColumns = false;
+
+            Prescription_PrescriptionID.DataPropertyName = "prescription_id";
+            Prescription_MedicineName.DataPropertyName = "medicine_name";
+            Prescription_Dosage.DataPropertyName = "dosage";
+            Prescription_Frequency.DataPropertyName = "frequency";
+            Prescription_Duration.DataPropertyName = "duration";
 
             LoadPrescriptions();
 
             Prescription_UpdateBtn.Click += Prescription_UpdateBtn_Click;
             Prescription_DeleteBtn.Click += Prescription_DeleteBtn_Click;
             Prescription_ClearBtn.Click += Prescription_ClearBtn_Click;
-            Prescription_DataGridView.CellClick += Prescription_DataGridView_CellClick;
+            PrescriptionList_DataGridView.CellClick += Prescription_DataGridView_CellClick;
         }
 
         private void LoadPrescriptions()
@@ -51,7 +46,7 @@ namespace Group_4_Information_Management_Final_Project
                         {
                             DataTable table = new DataTable();
                             adapter.Fill(table);
-                            Prescription_DataGridView.DataSource = table;
+                            PrescriptionList_DataGridView.DataSource = table;
                         }
                     }
                 }
@@ -171,13 +166,13 @@ namespace Group_4_Information_Management_Final_Project
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = Prescription_DataGridView.Rows[e.RowIndex];
+                DataGridViewRow row = PrescriptionList_DataGridView.Rows[e.RowIndex];
 
-                PresPrescriptionID_TextBox.Text = row.Cells["prescription_id"].Value.ToString();
-                PresMedicineName_TextBox.Text = row.Cells["medicine_name"].Value.ToString();
-                PresDosage_TextBox.Text = row.Cells["dosage"].Value.ToString();
-                PresFrequency_ComboBox.Text = row.Cells["frequency"].Value.ToString();
-                PresDuration_TextBox.Text = row.Cells["duration"].Value.ToString();
+                PresPrescriptionID_TextBox.Text = row.Cells["Prescription_PrescriptionID"].Value.ToString();
+                PresMedicineName_TextBox.Text = row.Cells["Prescription_MedicineName"].Value.ToString();
+                PresDosage_TextBox.Text = row.Cells["Prescription_Dosage"].Value.ToString();
+                PresFrequency_ComboBox.Text = row.Cells["Prescription_Frequency"].Value.ToString();
+                PresDuration_TextBox.Text = row.Cells["Prescription_Duration"].Value.ToString();
             }
         }
 
@@ -202,5 +197,10 @@ namespace Group_4_Information_Management_Final_Project
         private void groupBox1_Enter(object sender, EventArgs e) { }
 
         private void PresFrequency_ComboBox_SelectedIndexChanged(object sender, EventArgs e) { }
+
+        private void Prescription_ClearBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

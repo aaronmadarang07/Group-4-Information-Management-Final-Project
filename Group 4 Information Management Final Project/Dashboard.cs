@@ -22,7 +22,17 @@ namespace Group_4_Information_Management_Final_Project
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            TodApp_DataGridView.AutoGenerateColumns = false;
+
+            TA_Time.DataPropertyName = "time";
+            TA_Patient.DataPropertyName = "patient";
+            TA_Doctor.DataPropertyName = "doctor";
+            TA_Status.DataPropertyName = "status";
+
             LoadAppointmentsChart();
+            LoadDashboardStats();
+            LoadTodaysAppointments();
+
             timer1.Start();
         }
 
@@ -86,13 +96,13 @@ namespace Group_4_Information_Management_Final_Project
                 {
                     conn.Open();
 
-                    string sql = @"SELECT a.appointment_date AS Time,
-                                  p.name AS Patient,
-                                  d.name AS Doctor,
-                                  a.status AS Status
-                           FROM appointments a
-                           JOIN patients p ON a.patient_id = p.id
-                           JOIN doctors d ON a.doctor_id = d.id";
+                    string sql = @"
+                    SELECT 
+                    appointment_time AS Time,
+                    patient_name AS Patient,
+                    doctor_name AS Doctor,
+                    status AS Status
+                    FROM appointments";
 
                     using (var adapter = new MySqlDataAdapter(sql, conn))
                     {
@@ -155,6 +165,11 @@ namespace Group_4_Information_Management_Final_Project
         }
 
         private void groupBox8_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TodApp_DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
