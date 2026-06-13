@@ -110,9 +110,16 @@ namespace Group_4_Information_Management_Final_Project
 
         private void DoctorsForm_UpdateBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(DoctorID_TextBox.Text))
+            if (string.IsNullOrWhiteSpace(DoctorID_TextBox.Text) ||
+                string.IsNullOrWhiteSpace(DoctorLastName_TextBox.Text) ||
+                string.IsNullOrWhiteSpace(DoctorFirstName_TextBox.Text) ||
+                string.IsNullOrWhiteSpace(DoctorSpecialty_ComboBox.Text) ||
+                string.IsNullOrWhiteSpace(ContactNumber_TextBox.Text) ||
+                string.IsNullOrWhiteSpace(Schedule_ComboBox.Text) ||
+                string.IsNullOrWhiteSpace(StartTime_ComboBox.Text) ||
+                string.IsNullOrWhiteSpace(EndTime_ComboBox.Text))
             {
-                MessageBox.Show("Please select a doctor to update.");
+                MessageBox.Show("Please complete all required fields.");
                 return;
             }
             try

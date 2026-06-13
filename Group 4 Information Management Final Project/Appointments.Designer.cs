@@ -130,7 +130,7 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.calendar_icon_png__0;
-            this.pictureBox12.Location = new System.Drawing.Point(747, 3);
+            this.pictureBox12.Location = new System.Drawing.Point(788, 7);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(43, 43);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -143,7 +143,7 @@
             this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TimeLabel.Location = new System.Drawing.Point(790, 27);
+            this.TimeLabel.Location = new System.Drawing.Point(831, 31);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(37, 17);
             this.TimeLabel.TabIndex = 57;
@@ -155,7 +155,7 @@
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
             this.DateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DateLabel.Location = new System.Drawing.Point(790, 4);
+            this.DateLabel.Location = new System.Drawing.Point(831, 8);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(36, 17);
             this.DateLabel.TabIndex = 56;
@@ -213,7 +213,7 @@
             // 
             // AppRemarks_TextBox
             // 
-            this.AppRemarks_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AppRemarks_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AppRemarks_TextBox.Location = new System.Drawing.Point(536, 99);
             this.AppRemarks_TextBox.Multiline = true;
             this.AppRemarks_TextBox.Name = "AppRemarks_TextBox";
@@ -420,10 +420,10 @@
             // 
             // AppID_TextBox
             // 
-            this.AppID_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AppID_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AppID_TextBox.Location = new System.Drawing.Point(194, 58);
             this.AppID_TextBox.Name = "AppID_TextBox";
-            this.AppID_TextBox.Size = new System.Drawing.Size(238, 25);
+            this.AppID_TextBox.Size = new System.Drawing.Size(238, 27);
             this.AppID_TextBox.TabIndex = 27;
             // 
             // label7
@@ -665,12 +665,12 @@
             // 
             this.Appointments_GobackHomeBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Appointments_GobackHomeBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Appointments_GobackHomeBtn.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.Appointments_GobackHomeBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Appointments_GobackHomeBtn.Location = new System.Drawing.Point(20, 628);
             this.Appointments_GobackHomeBtn.Name = "Appointments_GobackHomeBtn";
             this.Appointments_GobackHomeBtn.Size = new System.Drawing.Size(177, 50);
             this.Appointments_GobackHomeBtn.TabIndex = 36;
-            this.Appointments_GobackHomeBtn.Text = "             GO BACK TO             HOME";
+            this.Appointments_GobackHomeBtn.Text = "         MAIN MENU";
             this.Appointments_GobackHomeBtn.UseVisualStyleBackColor = false;
             this.Appointments_GobackHomeBtn.Click += new System.EventHandler(this.Appointments_GobackHomeBtn_Click);
             // 

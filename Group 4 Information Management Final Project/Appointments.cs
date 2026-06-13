@@ -99,8 +99,8 @@ namespace Group_4_Information_Management_Final_Project
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.AddWithValue("p_appointment_id", AppID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_patient_name", AppPatientName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_doctor_name", AppDoctorID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_patient_id", AppPatientName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_doctor_id", AppDoctorID_TextBox.Text);
                         cmd.Parameters.AddWithValue("p_appointment_date", AppDate_DateTimePicker.Value.Date);
                         cmd.Parameters.AddWithValue("p_appointment_time", AppStartTime_ComboBox.Text);
                         cmd.Parameters.AddWithValue("p_schedule", AppSchedule_ComboBox.Text);
@@ -166,8 +166,8 @@ namespace Group_4_Information_Management_Final_Project
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("p_appointment_id", AppID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_patient_name", AppPatientName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_doctor_name", AppDoctorID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_patient_id", AppPatientName_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_doctor_id", AppDoctorID_TextBox.Text);
                         cmd.Parameters.AddWithValue("p_appointment_date", AppDate_DateTimePicker.Value.Date);
                         cmd.Parameters.AddWithValue("p_appointment_time", AppStartTime_ComboBox.Text);
                         cmd.Parameters.AddWithValue("p_schedule", AppSchedule_ComboBox.Text);

@@ -125,7 +125,7 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.calendar_icon_png__0;
-            this.pictureBox12.Location = new System.Drawing.Point(747, 3);
+            this.pictureBox12.Location = new System.Drawing.Point(788, 7);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(43, 43);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -138,7 +138,7 @@
             this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TimeLabel.Location = new System.Drawing.Point(790, 27);
+            this.TimeLabel.Location = new System.Drawing.Point(831, 31);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(37, 17);
             this.TimeLabel.TabIndex = 44;
@@ -150,7 +150,7 @@
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
             this.DateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DateLabel.Location = new System.Drawing.Point(790, 4);
+            this.DateLabel.Location = new System.Drawing.Point(831, 8);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(36, 17);
             this.DateLabel.TabIndex = 43;
@@ -764,12 +764,12 @@
             // 
             this.Doctor_GobackHomeBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Doctor_GobackHomeBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Doctor_GobackHomeBtn.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.Doctor_GobackHomeBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Doctor_GobackHomeBtn.Location = new System.Drawing.Point(20, 628);
             this.Doctor_GobackHomeBtn.Name = "Doctor_GobackHomeBtn";
             this.Doctor_GobackHomeBtn.Size = new System.Drawing.Size(177, 50);
             this.Doctor_GobackHomeBtn.TabIndex = 40;
-            this.Doctor_GobackHomeBtn.Text = "             GO BACK TO             HOME";
+            this.Doctor_GobackHomeBtn.Text = "         MAIN MENU";
             this.Doctor_GobackHomeBtn.UseVisualStyleBackColor = false;
             this.Doctor_GobackHomeBtn.Click += new System.EventHandler(this.Appointments_GobackHomeBtn_Click);
             // 
@@ -788,7 +788,7 @@
             // Doctor_ExitBtn
             // 
             this.Doctor_ExitBtn.BackColor = System.Drawing.Color.Red;
-            this.Doctor_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Doctor_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Doctor_ExitBtn.ForeColor = System.Drawing.Color.White;
             this.Doctor_ExitBtn.Location = new System.Drawing.Point(838, 628);
             this.Doctor_ExitBtn.Name = "Doctor_ExitBtn";

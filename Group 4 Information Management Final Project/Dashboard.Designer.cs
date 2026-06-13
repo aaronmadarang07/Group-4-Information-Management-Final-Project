@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,6 +57,10 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.TodApp_DataGridView = new System.Windows.Forms.DataGridView();
+            this.TA_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TA_Patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TA_Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TA_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DashBoard_GoToPatientsBtn = new System.Windows.Forms.Button();
             this.DashBoard_GoToMedRecordsBtn = new System.Windows.Forms.Button();
             this.DashBoard_GoToDoctorsBtn = new System.Windows.Forms.Button();
@@ -76,10 +80,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.TA_Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TA_Patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TA_Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TA_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -338,16 +338,16 @@
             // AppointmentsChart
             // 
             this.AppointmentsChart.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            chartArea1.Name = "ChartArea1";
-            this.AppointmentsChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.AppointmentsChart.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.AppointmentsChart.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.AppointmentsChart.Legends.Add(legend4);
             this.AppointmentsChart.Location = new System.Drawing.Point(1, 49);
             this.AppointmentsChart.Name = "AppointmentsChart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.AppointmentsChart.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.AppointmentsChart.Series.Add(series4);
             this.AppointmentsChart.Size = new System.Drawing.Size(489, 227);
             this.AppointmentsChart.TabIndex = 0;
             this.AppointmentsChart.Text = "Appointments";
@@ -395,11 +395,35 @@
             this.TodApp_DataGridView.TabIndex = 0;
             this.TodApp_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TodApp_DataGridView_CellContentClick);
             // 
+            // TA_Time
+            // 
+            this.TA_Time.DataPropertyName = "time";
+            this.TA_Time.HeaderText = "Time";
+            this.TA_Time.Name = "TA_Time";
+            // 
+            // TA_Patient
+            // 
+            this.TA_Patient.DataPropertyName = "patient";
+            this.TA_Patient.HeaderText = "Patient";
+            this.TA_Patient.Name = "TA_Patient";
+            // 
+            // TA_Doctor
+            // 
+            this.TA_Doctor.DataPropertyName = "doctor";
+            this.TA_Doctor.HeaderText = "Doctor";
+            this.TA_Doctor.Name = "TA_Doctor";
+            // 
+            // TA_Status
+            // 
+            this.TA_Status.DataPropertyName = "status";
+            this.TA_Status.HeaderText = "Status";
+            this.TA_Status.Name = "TA_Status";
+            // 
             // DashBoard_GoToPatientsBtn
             // 
             this.DashBoard_GoToPatientsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GoToPatientsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GoToPatientsBtn.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.DashBoard_GoToPatientsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DashBoard_GoToPatientsBtn.Location = new System.Drawing.Point(19, 562);
             this.DashBoard_GoToPatientsBtn.Name = "DashBoard_GoToPatientsBtn";
             this.DashBoard_GoToPatientsBtn.Size = new System.Drawing.Size(177, 50);
@@ -412,7 +436,7 @@
             // 
             this.DashBoard_GoToMedRecordsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GoToMedRecordsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GoToMedRecordsBtn.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.DashBoard_GoToMedRecordsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DashBoard_GoToMedRecordsBtn.Location = new System.Drawing.Point(841, 562);
             this.DashBoard_GoToMedRecordsBtn.Name = "DashBoard_GoToMedRecordsBtn";
             this.DashBoard_GoToMedRecordsBtn.Size = new System.Drawing.Size(177, 50);
@@ -425,7 +449,7 @@
             // 
             this.DashBoard_GoToDoctorsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GoToDoctorsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GoToDoctorsBtn.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.DashBoard_GoToDoctorsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DashBoard_GoToDoctorsBtn.Location = new System.Drawing.Point(287, 562);
             this.DashBoard_GoToDoctorsBtn.Name = "DashBoard_GoToDoctorsBtn";
             this.DashBoard_GoToDoctorsBtn.Size = new System.Drawing.Size(177, 50);
@@ -438,7 +462,7 @@
             // 
             this.DashBoard_GoToAppointmentsBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GoToAppointmentsBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GoToAppointmentsBtn.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.DashBoard_GoToAppointmentsBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DashBoard_GoToAppointmentsBtn.Location = new System.Drawing.Point(570, 562);
             this.DashBoard_GoToAppointmentsBtn.Name = "DashBoard_GoToAppointmentsBtn";
             this.DashBoard_GoToAppointmentsBtn.Size = new System.Drawing.Size(177, 50);
@@ -515,12 +539,12 @@
             // 
             this.DashBoard_GobackHomeBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DashBoard_GobackHomeBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashBoard_GobackHomeBtn.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.DashBoard_GobackHomeBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DashBoard_GobackHomeBtn.Location = new System.Drawing.Point(20, 630);
             this.DashBoard_GobackHomeBtn.Name = "DashBoard_GobackHomeBtn";
             this.DashBoard_GobackHomeBtn.Size = new System.Drawing.Size(177, 50);
             this.DashBoard_GobackHomeBtn.TabIndex = 20;
-            this.DashBoard_GobackHomeBtn.Text = "             GO BACK TO             HOME";
+            this.DashBoard_GobackHomeBtn.Text = "         MAIN MENU";
             this.DashBoard_GobackHomeBtn.UseVisualStyleBackColor = false;
             this.DashBoard_GobackHomeBtn.Click += new System.EventHandler(this.DashBoard_GobackHomeBtn_Click);
             // 
@@ -538,7 +562,7 @@
             // Home_ExitBtn
             // 
             this.Home_ExitBtn.BackColor = System.Drawing.Color.Red;
-            this.Home_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home_ExitBtn.ForeColor = System.Drawing.Color.White;
             this.Home_ExitBtn.Location = new System.Drawing.Point(841, 634);
             this.Home_ExitBtn.Name = "Home_ExitBtn";
@@ -610,30 +634,6 @@
             this.groupBox8.TabIndex = 34;
             this.groupBox8.TabStop = false;
             this.groupBox8.Enter += new System.EventHandler(this.groupBox8_Enter);
-            // 
-            // TA_Time
-            // 
-            this.TA_Time.DataPropertyName = "time";
-            this.TA_Time.HeaderText = "Time";
-            this.TA_Time.Name = "TA_Time";
-            // 
-            // TA_Patient
-            // 
-            this.TA_Patient.DataPropertyName = "patient";
-            this.TA_Patient.HeaderText = "Patient";
-            this.TA_Patient.Name = "TA_Patient";
-            // 
-            // TA_Doctor
-            // 
-            this.TA_Doctor.DataPropertyName = "doctor";
-            this.TA_Doctor.HeaderText = "Doctor";
-            this.TA_Doctor.Name = "TA_Doctor";
-            // 
-            // TA_Status
-            // 
-            this.TA_Status.DataPropertyName = "status";
-            this.TA_Status.HeaderText = "Status";
-            this.TA_Status.Name = "TA_Status";
             // 
             // Dashboard
             // 

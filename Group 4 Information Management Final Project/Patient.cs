@@ -126,9 +126,15 @@ namespace Group_4_Information_Management_Final_Project
 
         private void PatientsForm_UpdateBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(PatientID_TextBox.Text))
+            if (string.IsNullOrWhiteSpace(PatientID_TextBox.Text) ||
+            string.IsNullOrWhiteSpace(PatientLastName_TextBox.Text) ||
+            string.IsNullOrWhiteSpace(PatientFirstName_TextBox.Text) ||
+            string.IsNullOrWhiteSpace(PatientGender_ComboBox.Text) ||
+            string.IsNullOrWhiteSpace(PatientContactNumber_TextBox.Text) ||
+            string.IsNullOrWhiteSpace(PatientAddress_TextBox.Text) ||
+            string.IsNullOrWhiteSpace(PatientBloodType_ComboBox.Text))
             {
-                MessageBox.Show("Please select a patient to update.");
+                MessageBox.Show("Please complete all required fields.");
                 return;
             }
             try

@@ -60,17 +60,17 @@
             this.MedRecSearch_TextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.MedRec_DataGridView = new System.Windows.Forms.DataGridView();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.MedRec_GobackHomeBtn = new System.Windows.Forms.Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.MedRec_ExitBtn = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.MedRec_RecordID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_AppointmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_DoctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_VisitDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_Diagnosis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.MedRec_GobackHomeBtn = new System.Windows.Forms.Button();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.MedRec_ExitBtn = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -120,7 +120,7 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.calendar_icon_png__0;
-            this.pictureBox12.Location = new System.Drawing.Point(747, 3);
+            this.pictureBox12.Location = new System.Drawing.Point(788, 7);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(43, 43);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -132,8 +132,8 @@
             this.TimeLabel.AutoSize = true;
             this.TimeLabel.BackColor = System.Drawing.Color.Transparent;
             this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.TimeLabel.Location = new System.Drawing.Point(790, 27);
+            this.TimeLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TimeLabel.Location = new System.Drawing.Point(831, 31);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(37, 17);
             this.TimeLabel.TabIndex = 54;
@@ -144,8 +144,8 @@
             this.DateLabel.AutoSize = true;
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
             this.DateLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.DateLabel.Location = new System.Drawing.Point(790, 4);
+            this.DateLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DateLabel.Location = new System.Drawing.Point(831, 8);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(36, 17);
             this.DateLabel.TabIndex = 53;
@@ -189,9 +189,9 @@
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(16, 108);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(171, 26);
+            this.label7.Size = new System.Drawing.Size(169, 13);
             this.label7.TabIndex = 49;
-            this.label7.Text = "(Appointment ID, Patient Name, \r\nand Time)";
+            this.label7.Text = "(Appointment ID, Patient Name)";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // MedRecDiagnosis_TextBox
@@ -452,60 +452,6 @@
             this.MedRec_DataGridView.TabIndex = 0;
             this.MedRec_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MedRec_DataGridView_CellContentClick);
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox9.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources._25694;
-            this.pictureBox9.Location = new System.Drawing.Point(23, 632);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(43, 43);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 41;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
-            // 
-            // MedRec_GobackHomeBtn
-            // 
-            this.MedRec_GobackHomeBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MedRec_GobackHomeBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MedRec_GobackHomeBtn.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.MedRec_GobackHomeBtn.Location = new System.Drawing.Point(20, 628);
-            this.MedRec_GobackHomeBtn.Name = "MedRec_GobackHomeBtn";
-            this.MedRec_GobackHomeBtn.Size = new System.Drawing.Size(177, 50);
-            this.MedRec_GobackHomeBtn.TabIndex = 40;
-            this.MedRec_GobackHomeBtn.Text = "             GO BACK TO             HOME";
-            this.MedRec_GobackHomeBtn.UseVisualStyleBackColor = false;
-            this.MedRec_GobackHomeBtn.Click += new System.EventHandler(this.MedRec_GobackHomeBtn_Click);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Red;
-            this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
-            this.pictureBox10.Location = new System.Drawing.Point(841, 632);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(42, 42);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 39;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
-            // 
-            // MedRec_ExitBtn
-            // 
-            this.MedRec_ExitBtn.BackColor = System.Drawing.Color.Red;
-            this.MedRec_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MedRec_ExitBtn.ForeColor = System.Drawing.Color.White;
-            this.MedRec_ExitBtn.Location = new System.Drawing.Point(838, 628);
-            this.MedRec_ExitBtn.Name = "MedRec_ExitBtn";
-            this.MedRec_ExitBtn.Size = new System.Drawing.Size(177, 50);
-            this.MedRec_ExitBtn.TabIndex = 38;
-            this.MedRec_ExitBtn.Text = "      EXIT";
-            this.MedRec_ExitBtn.UseVisualStyleBackColor = false;
-            this.MedRec_ExitBtn.Click += new System.EventHandler(this.MedRec_ExitBtn_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // MedRec_RecordID
             // 
             this.MedRec_RecordID.DataPropertyName = "record_id";
@@ -547,6 +493,60 @@
             this.MedRec_Notes.HeaderText = "Notes";
             this.MedRec_Notes.MinimumWidth = 6;
             this.MedRec_Notes.Name = "MedRec_Notes";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox9.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources._25694;
+            this.pictureBox9.Location = new System.Drawing.Point(23, 632);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(43, 43);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 41;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // MedRec_GobackHomeBtn
+            // 
+            this.MedRec_GobackHomeBtn.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MedRec_GobackHomeBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MedRec_GobackHomeBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MedRec_GobackHomeBtn.Location = new System.Drawing.Point(20, 628);
+            this.MedRec_GobackHomeBtn.Name = "MedRec_GobackHomeBtn";
+            this.MedRec_GobackHomeBtn.Size = new System.Drawing.Size(177, 50);
+            this.MedRec_GobackHomeBtn.TabIndex = 40;
+            this.MedRec_GobackHomeBtn.Text = "         MAIN MENU";
+            this.MedRec_GobackHomeBtn.UseVisualStyleBackColor = false;
+            this.MedRec_GobackHomeBtn.Click += new System.EventHandler(this.MedRec_GobackHomeBtn_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Red;
+            this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
+            this.pictureBox10.Location = new System.Drawing.Point(841, 632);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(42, 42);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 39;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
+            // MedRec_ExitBtn
+            // 
+            this.MedRec_ExitBtn.BackColor = System.Drawing.Color.Red;
+            this.MedRec_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MedRec_ExitBtn.ForeColor = System.Drawing.Color.White;
+            this.MedRec_ExitBtn.Location = new System.Drawing.Point(838, 628);
+            this.MedRec_ExitBtn.Name = "MedRec_ExitBtn";
+            this.MedRec_ExitBtn.Size = new System.Drawing.Size(177, 50);
+            this.MedRec_ExitBtn.TabIndex = 38;
+            this.MedRec_ExitBtn.Text = "      EXIT";
+            this.MedRec_ExitBtn.UseVisualStyleBackColor = false;
+            this.MedRec_ExitBtn.Click += new System.EventHandler(this.MedRec_ExitBtn_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MedicalRecord
             // 

@@ -321,7 +321,7 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Red;
             this.pictureBox10.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources.login_icon_no_bg;
-            this.pictureBox10.Location = new System.Drawing.Point(834, 626);
+            this.pictureBox10.Location = new System.Drawing.Point(841, 632);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(42, 42);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -331,9 +331,9 @@
             // Home_ExitBtn
             // 
             this.Home_ExitBtn.BackColor = System.Drawing.Color.Red;
-            this.Home_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_ExitBtn.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home_ExitBtn.ForeColor = System.Drawing.Color.White;
-            this.Home_ExitBtn.Location = new System.Drawing.Point(831, 622);
+            this.Home_ExitBtn.Location = new System.Drawing.Point(838, 628);
             this.Home_ExitBtn.Name = "Home_ExitBtn";
             this.Home_ExitBtn.Size = new System.Drawing.Size(177, 50);
             this.Home_ExitBtn.TabIndex = 26;
