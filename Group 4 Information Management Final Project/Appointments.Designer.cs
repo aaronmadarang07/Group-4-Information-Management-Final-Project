@@ -30,15 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.AppDoctorID_ComboBox = new System.Windows.Forms.ComboBox();
+            this.AppPatientID_ComboBox = new System.Windows.Forms.ComboBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.TimeLabel = new System.Windows.Forms.Label();
             this.DateLabel = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.AppStatus_ComboBox = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.AppRemarks_TextBox = new System.Windows.Forms.TextBox();
-            this.AppStartTime_ComboBox = new System.Windows.Forms.ComboBox();
+            this.AppAppointmentTime_ComboBox = new System.Windows.Forms.ComboBox();
             this.AppDate_DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,9 +45,6 @@
             this.Appointment_UpdateBtn = new System.Windows.Forms.Button();
             this.Appointment_ClearBtn = new System.Windows.Forms.Button();
             this.Appointment_AddBtn = new System.Windows.Forms.Button();
-            this.AppSchedule_ComboBox = new System.Windows.Forms.ComboBox();
-            this.AppDoctorID_TextBox = new System.Windows.Forms.TextBox();
-            this.AppPatientName_TextBox = new System.Windows.Forms.TextBox();
             this.AppID_TextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -69,7 +65,6 @@
             this.App_DoctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.App_AppointmentDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.App_AppointmentTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.App_Schedule = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.App_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.App_Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -91,15 +86,14 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Controls.Add(this.AppDoctorID_ComboBox);
+            this.groupBox1.Controls.Add(this.AppPatientID_ComboBox);
             this.groupBox1.Controls.Add(this.pictureBox12);
             this.groupBox1.Controls.Add(this.TimeLabel);
             this.groupBox1.Controls.Add(this.DateLabel);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.AppStatus_ComboBox);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.AppRemarks_TextBox);
-            this.groupBox1.Controls.Add(this.AppStartTime_ComboBox);
+            this.groupBox1.Controls.Add(this.AppAppointmentTime_ComboBox);
             this.groupBox1.Controls.Add(this.AppDate_DateTimePicker);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label8);
@@ -107,9 +101,6 @@
             this.groupBox1.Controls.Add(this.Appointment_UpdateBtn);
             this.groupBox1.Controls.Add(this.Appointment_ClearBtn);
             this.groupBox1.Controls.Add(this.Appointment_AddBtn);
-            this.groupBox1.Controls.Add(this.AppSchedule_ComboBox);
-            this.groupBox1.Controls.Add(this.AppDoctorID_TextBox);
-            this.groupBox1.Controls.Add(this.AppPatientName_TextBox);
             this.groupBox1.Controls.Add(this.AppID_TextBox);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -125,6 +116,228 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // AppDoctorID_ComboBox
+            // 
+            this.AppDoctorID_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AppDoctorID_ComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AppDoctorID_ComboBox.FormattingEnabled = true;
+            this.AppDoctorID_ComboBox.Items.AddRange(new object[] {
+            "D001",
+            "",
+            "D002",
+            "",
+            "D003",
+            "",
+            "D004",
+            "",
+            "D005",
+            "",
+            "D006",
+            "",
+            "D007",
+            "",
+            "D008",
+            "",
+            "D009",
+            "",
+            "D010",
+            "",
+            "D011",
+            "",
+            "D012",
+            "",
+            "D013",
+            "",
+            "D014",
+            "",
+            "D015",
+            "",
+            "D016",
+            "",
+            "D017",
+            "",
+            "D018",
+            "",
+            "D019",
+            "",
+            "D020",
+            "",
+            "D021",
+            "",
+            "D022",
+            "",
+            "D023",
+            "",
+            "D024",
+            "",
+            "D025",
+            "",
+            "D026",
+            "",
+            "D027",
+            "",
+            "D028",
+            "",
+            "D029",
+            "",
+            "D030",
+            "",
+            "D031",
+            "",
+            "D032",
+            "",
+            "D033",
+            "",
+            "D034",
+            "",
+            "D035",
+            "",
+            "D036",
+            "",
+            "D037",
+            "",
+            "D038",
+            "",
+            "D039",
+            "",
+            "D040",
+            "",
+            "D041",
+            "",
+            "D042",
+            "",
+            "D043",
+            "",
+            "D044",
+            "",
+            "D045",
+            "",
+            "D046",
+            "",
+            "D047",
+            "",
+            "D048",
+            "",
+            "D049",
+            "",
+            "D050"});
+            this.AppDoctorID_ComboBox.Location = new System.Drawing.Point(194, 145);
+            this.AppDoctorID_ComboBox.Name = "AppDoctorID_ComboBox";
+            this.AppDoctorID_ComboBox.Size = new System.Drawing.Size(238, 28);
+            this.AppDoctorID_ComboBox.TabIndex = 60;
+            this.AppDoctorID_ComboBox.SelectedIndexChanged += new System.EventHandler(this.AppDoctorID_ComboBox_SelectedIndexChanged);
+            // 
+            // AppPatientID_ComboBox
+            // 
+            this.AppPatientID_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AppPatientID_ComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AppPatientID_ComboBox.FormattingEnabled = true;
+            this.AppPatientID_ComboBox.Items.AddRange(new object[] {
+            "P001",
+            "",
+            "P002",
+            "",
+            "P003",
+            "",
+            "P004",
+            "",
+            "P005",
+            "",
+            "P006",
+            "",
+            "P007",
+            "",
+            "P008",
+            "",
+            "P009",
+            "",
+            "P010",
+            "",
+            "P011",
+            "",
+            "P012",
+            "",
+            "P013",
+            "",
+            "P014",
+            "",
+            "P015",
+            "",
+            "P016",
+            "",
+            "P017",
+            "",
+            "P018",
+            "",
+            "P019",
+            "",
+            "P020",
+            "",
+            "P021",
+            "",
+            "P022",
+            "",
+            "P023",
+            "",
+            "P024",
+            "",
+            "P025",
+            "",
+            "P026",
+            "",
+            "P027",
+            "",
+            "P028",
+            "",
+            "P029",
+            "",
+            "P030",
+            "",
+            "P031",
+            "",
+            "P032",
+            "",
+            "P033",
+            "",
+            "P034",
+            "",
+            "P035",
+            "",
+            "P036",
+            "",
+            "P037",
+            "",
+            "P038",
+            "",
+            "P039",
+            "",
+            "P040",
+            "",
+            "P041",
+            "",
+            "P042",
+            "",
+            "P043",
+            "",
+            "P044",
+            "",
+            "P045",
+            "",
+            "P046",
+            "",
+            "P047",
+            "",
+            "P048",
+            "",
+            "P049",
+            "",
+            "P050"});
+            this.AppPatientID_ComboBox.Location = new System.Drawing.Point(194, 102);
+            this.AppPatientID_ComboBox.Name = "AppPatientID_ComboBox";
+            this.AppPatientID_ComboBox.Size = new System.Drawing.Size(238, 28);
+            this.AppPatientID_ComboBox.TabIndex = 59;
+            this.AppPatientID_ComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // pictureBox12
             // 
@@ -161,29 +374,6 @@
             this.DateLabel.TabIndex = 56;
             this.DateLabel.Text = "Date";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(16, 156);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(157, 13);
-            this.label13.TabIndex = 51;
-            this.label13.Text = "(Doctor ID and Doctor Name)";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(16, 113);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(157, 13);
-            this.label11.TabIndex = 50;
-            this.label11.Text = "(Patient ID and Patient Name)";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
             // AppStatus_ComboBox
             // 
             this.AppStatus_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -195,37 +385,26 @@
             "Cancelled",
             "Ongoing",
             "Postponed"});
-            this.AppStatus_ComboBox.Location = new System.Drawing.Point(536, 52);
+            this.AppStatus_ComboBox.Location = new System.Drawing.Point(194, 270);
             this.AppStatus_ComboBox.Name = "AppStatus_ComboBox";
             this.AppStatus_ComboBox.Size = new System.Drawing.Size(238, 28);
             this.AppStatus_ComboBox.TabIndex = 47;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(454, 59);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 21);
-            this.label9.TabIndex = 46;
-            this.label9.Text = "Status:";
-            // 
             // AppRemarks_TextBox
             // 
             this.AppRemarks_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppRemarks_TextBox.Location = new System.Drawing.Point(536, 99);
+            this.AppRemarks_TextBox.Location = new System.Drawing.Point(536, 57);
             this.AppRemarks_TextBox.Multiline = true;
             this.AppRemarks_TextBox.Name = "AppRemarks_TextBox";
-            this.AppRemarks_TextBox.Size = new System.Drawing.Size(238, 138);
+            this.AppRemarks_TextBox.Size = new System.Drawing.Size(238, 180);
             this.AppRemarks_TextBox.TabIndex = 45;
             // 
-            // AppStartTime_ComboBox
+            // AppAppointmentTime_ComboBox
             // 
-            this.AppStartTime_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AppStartTime_ComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppStartTime_ComboBox.FormattingEnabled = true;
-            this.AppStartTime_ComboBox.Items.AddRange(new object[] {
+            this.AppAppointmentTime_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AppAppointmentTime_ComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AppAppointmentTime_ComboBox.FormattingEnabled = true;
+            this.AppAppointmentTime_ComboBox.Items.AddRange(new object[] {
             "6:00 AM",
             "7:00 AM",
             "8:00 AM",
@@ -241,10 +420,11 @@
             "6:00 PM",
             "7:00 PM",
             "8:00 PM"});
-            this.AppStartTime_ComboBox.Location = new System.Drawing.Point(194, 227);
-            this.AppStartTime_ComboBox.Name = "AppStartTime_ComboBox";
-            this.AppStartTime_ComboBox.Size = new System.Drawing.Size(238, 28);
-            this.AppStartTime_ComboBox.TabIndex = 44;
+            this.AppAppointmentTime_ComboBox.Location = new System.Drawing.Point(194, 227);
+            this.AppAppointmentTime_ComboBox.Name = "AppAppointmentTime_ComboBox";
+            this.AppAppointmentTime_ComboBox.Size = new System.Drawing.Size(238, 28);
+            this.AppAppointmentTime_ComboBox.TabIndex = 44;
+            this.AppAppointmentTime_ComboBox.SelectedIndexChanged += new System.EventHandler(this.AppAppointmentTime_ComboBox_SelectedIndexChanged);
             // 
             // AppDate_DateTimePicker
             // 
@@ -269,7 +449,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(454, 100);
+            this.label8.Location = new System.Drawing.Point(454, 59);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 21);
             this.label8.TabIndex = 38;
@@ -327,97 +507,6 @@
             this.Appointment_AddBtn.UseVisualStyleBackColor = false;
             this.Appointment_AddBtn.Click += new System.EventHandler(this.Appointment_AddBtn_Click);
             // 
-            // AppSchedule_ComboBox
-            // 
-            this.AppSchedule_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AppSchedule_ComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppSchedule_ComboBox.FormattingEnabled = true;
-            this.AppSchedule_ComboBox.Items.AddRange(new object[] {
-            "Mon to Fri",
-            "Mon to Sat",
-            "Mon - Wed - Fri",
-            "Tue - Thurs - Sat",
-            "Mon",
-            "Tue",
-            "Wed",
-            "Thurs",
-            "Fri",
-            "Sat",
-            "Mon & Tue",
-            "Mon & Wed",
-            "Mon & Thurs",
-            "Mon & Fri",
-            "Mon & Sat",
-            "Mon to Wed",
-            "Mon, Tue, & Thurs",
-            "Mon, Tue, & Fri",
-            "Mon, Tue, & Sat",
-            "Mon, Wed, & Thurs",
-            "Mon, Wed, & Sat",
-            "Mon, Thurs, & Fri",
-            "Mon, Thurs, & Sat",
-            "Mon, Fri, & Sat",
-            "Mon to Thurs",
-            "Mon to Wed, & Fri",
-            "Mon to Wed, & Sat",
-            "Mon to Thurs, & Sat",
-            "Mon, Tue, Thurs, Fri",
-            "Mon, Tue, Thurs, Sat",
-            "Mon, Tue, Fri, Sat",
-            "Mon, Wed, Thurs, Fri",
-            "Mon, Wed, Thurs, Sat",
-            "Mon, Wed, Fri, Sat",
-            "Mon, Tue, Wed, Fri, Sat",
-            "Mon, Tue, Thurs, Fri, Sat",
-            "Mon, Wed, Thurs, Fri, Sat",
-            "Tue & Wed",
-            "Tue & Thurs",
-            "Tue & Fri",
-            "Tue & Sat",
-            "Tue to Thurs",
-            "Tue to Fri",
-            "Tue to Sat",
-            "Tue, Wed, & Fri",
-            "Tue, Wed, & Sat",
-            "Tue, Thurs, & Fri",
-            "Tue, Fri, & Sat",
-            "Tue, Wed, Thurs, Sat",
-            "Tue, Wed, Fri, Sat",
-            "Tue, Thurs, Fri, Sat",
-            "Tue, Wed, Thurs, Fri, Sat",
-            "Wed & Thurs",
-            "Wed & Fri",
-            "Wed & Sat",
-            "Wed to Fri",
-            "Wed to Sat",
-            "Wed, Thurs, & Sat",
-            "Wed, Fri, Sat",
-            "Wed, Thurs, Fri, Sat",
-            "Thurs & Fri",
-            "Thurs & Sat",
-            "Thurs to Sat",
-            "Fri & Sat"});
-            this.AppSchedule_ComboBox.Location = new System.Drawing.Point(194, 266);
-            this.AppSchedule_ComboBox.Name = "AppSchedule_ComboBox";
-            this.AppSchedule_ComboBox.Size = new System.Drawing.Size(238, 28);
-            this.AppSchedule_ComboBox.TabIndex = 33;
-            // 
-            // AppDoctorID_TextBox
-            // 
-            this.AppDoctorID_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppDoctorID_TextBox.Location = new System.Drawing.Point(194, 142);
-            this.AppDoctorID_TextBox.Name = "AppDoctorID_TextBox";
-            this.AppDoctorID_TextBox.Size = new System.Drawing.Size(238, 27);
-            this.AppDoctorID_TextBox.TabIndex = 29;
-            // 
-            // AppPatientName_TextBox
-            // 
-            this.AppPatientName_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppPatientName_TextBox.Location = new System.Drawing.Point(194, 99);
-            this.AppPatientName_TextBox.Name = "AppPatientName_TextBox";
-            this.AppPatientName_TextBox.Size = new System.Drawing.Size(238, 27);
-            this.AppPatientName_TextBox.TabIndex = 28;
-            // 
             // AppID_TextBox
             // 
             this.AppID_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -433,9 +522,9 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(15, 270);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 21);
+            this.label7.Size = new System.Drawing.Size(59, 21);
             this.label7.TabIndex = 26;
-            this.label7.Text = "Schedule:";
+            this.label7.Text = "Status:";
             // 
             // label6
             // 
@@ -453,22 +542,22 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(15, 96);
+            this.label5.Location = new System.Drawing.Point(15, 102);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 21);
+            this.label5.Size = new System.Drawing.Size(85, 21);
             this.label5.TabIndex = 24;
-            this.label5.Text = "Patient Name:";
+            this.label5.Text = "Patient ID:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(15, 139);
+            this.label4.Location = new System.Drawing.Point(15, 145);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 21);
+            this.label4.Size = new System.Drawing.Size(85, 21);
             this.label4.TabIndex = 23;
-            this.label4.Text = "Doctor Name:";
+            this.label4.Text = "Doctor ID:";
             // 
             // label2
             // 
@@ -581,7 +670,6 @@
             this.App_DoctorName,
             this.App_AppointmentDate,
             this.App_AppointmentTime,
-            this.App_Schedule,
             this.App_Status,
             this.App_Remarks});
             this.AppointmentList_DataGridView.Location = new System.Drawing.Point(18, 38);
@@ -628,13 +716,6 @@
             this.App_AppointmentTime.MinimumWidth = 6;
             this.App_AppointmentTime.Name = "App_AppointmentTime";
             // 
-            // App_Schedule
-            // 
-            this.App_Schedule.DataPropertyName = "schedule";
-            this.App_Schedule.HeaderText = "Schedule";
-            this.App_Schedule.MinimumWidth = 6;
-            this.App_Schedule.Name = "App_Schedule";
-            // 
             // App_Status
             // 
             this.App_Status.DataPropertyName = "status";
@@ -659,7 +740,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 37;
             this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            this.pictureBox9.Click += new System.EventHandler(this.Appointments_GobackHomeBtn_Click);
             // 
             // Appointments_GobackHomeBtn
             // 
@@ -743,9 +824,6 @@
         private System.Windows.Forms.Button Appointment_UpdateBtn;
         private System.Windows.Forms.Button Appointment_ClearBtn;
         private System.Windows.Forms.Button Appointment_AddBtn;
-        private System.Windows.Forms.ComboBox AppSchedule_ComboBox;
-        private System.Windows.Forms.TextBox AppDoctorID_TextBox;
-        private System.Windows.Forms.TextBox AppPatientName_TextBox;
         private System.Windows.Forms.TextBox AppID_TextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -756,9 +834,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.DateTimePicker AppDate_DateTimePicker;
-        private System.Windows.Forms.ComboBox AppStartTime_ComboBox;
+        private System.Windows.Forms.ComboBox AppAppointmentTime_ComboBox;
         private System.Windows.Forms.ComboBox AppStatus_ComboBox;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox AppRemarks_TextBox;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label12;
@@ -766,8 +843,6 @@
         private System.Windows.Forms.TextBox AppointmentSearch_TextBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView AppointmentList_DataGridView;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button Appointments_GobackHomeBtn;
         private System.Windows.Forms.PictureBox pictureBox10;
@@ -776,12 +851,13 @@
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ComboBox AppPatientID_ComboBox;
+        private System.Windows.Forms.ComboBox AppDoctorID_ComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn App_AppointmentID;
         private System.Windows.Forms.DataGridViewTextBoxColumn App_PatientName;
         private System.Windows.Forms.DataGridViewTextBoxColumn App_DoctorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn App_AppointmentDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn App_AppointmentTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn App_Schedule;
         private System.Windows.Forms.DataGridViewTextBoxColumn App_Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn App_Remarks;
     }

@@ -121,6 +121,9 @@
   <data name="Copilot_20260603_230927-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Copilot_20260603_230927-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="light-blue-background-gradient-wall-design-vector6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\light-blue-background-gradient-wall-design-vector6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Copilot_20260607_181622" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Copilot_20260607_181622.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,6 +160,9 @@
   <data name="light-blue-background-gradient-wall-design-vector3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\light-blue-background-gradient-wall-design-vector3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ChatGPT Image Jun 14, 2026, 08_32_18 PM1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChatGPT Image Jun 14, 2026, 08_32_18 PM1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="25694" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\25694.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -168,6 +174,9 @@
   </data>
   <data name="ChatGPT Image Jun 7, 2026, 06_00_31 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChatGPT Image Jun 7, 2026, 06_00_31 PM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="light-blue-background-gradient-wall-design-vector7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\light-blue-background-gradient-wall-design-vector7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Copilot_20260607_181140" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Copilot_20260607_181140.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,6 +202,9 @@
   <data name="Copilot_20260517_204733" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Copilot_20260517_204733.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ChatGPT Image Jun 14, 2026, 08_32_18 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChatGPT Image Jun 14, 2026, 08_32_18 PM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Screenshot 2026-06-09 135505" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2026-06-09 135505.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,7 +223,7 @@
   <data name="396636547_1042801063577423_9100228502300343992_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\396636547_1042801063577423_9100228502300343992_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="light-blue-background-gradient-wall-design-vector6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\light-blue-background-gradient-wall-design-vector6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ChatGPT Image Jun 14, 2026, 09_52_41 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ChatGPT Image Jun 14, 2026, 09_52_41 PM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

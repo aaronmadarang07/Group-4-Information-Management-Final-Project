@@ -85,5 +85,10 @@ namespace Group_4_Information_Management_Final_Project
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

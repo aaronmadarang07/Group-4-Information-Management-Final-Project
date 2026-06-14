@@ -24,10 +24,10 @@ namespace Group_4_Information_Management_Final_Project
         {
             TodApp_DataGridView.AutoGenerateColumns = false;
 
-            TA_Time.DataPropertyName = "time";
-            TA_Patient.DataPropertyName = "patient";
-            TA_Doctor.DataPropertyName = "doctor";
-            TA_Status.DataPropertyName = "status";
+            TA_Time.DataPropertyName = "Time";
+            TA_Patient.DataPropertyName = "Patient";
+            TA_Doctor.DataPropertyName = "Doctor";
+            TA_Status.DataPropertyName = "Status";
 
             LoadAppointmentsChart();
             LoadDashboardStats();
@@ -97,12 +97,17 @@ namespace Group_4_Information_Management_Final_Project
                     conn.Open();
 
                     string sql = @"
-                    SELECT 
-                    appointment_time AS Time,
-                    patient_name AS Patient,
-                    doctor_name AS Doctor,
-                    status AS Status
-                    FROM appointments";
+                        SELECT 
+                            a.appointment_time AS Time,
+                            CONCAT(p.first_name, ' ', p.last_name) AS Patient,
+                            CONCAT(d.first_name, ' ', d.last_name) AS Doctor,
+                            a.status AS Status
+                        FROM appointments a
+                        JOIN patients p
+                            ON a.patient_id = p.patient_id
+                        JOIN doctors d
+                            ON a.doctor_id = d.doctor_id
+                        ORDER BY a.appointment_date, a.appointment_time";
 
                     using (var adapter = new MySqlDataAdapter(sql, conn))
                     {

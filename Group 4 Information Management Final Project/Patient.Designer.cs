@@ -612,6 +612,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 33;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.Patient_GobackHomeBtn_Click);
             // 
             // Patient_GobackHomeBtn
             // 

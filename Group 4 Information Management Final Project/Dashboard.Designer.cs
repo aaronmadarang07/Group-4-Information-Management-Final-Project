@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -338,16 +338,16 @@
             // AppointmentsChart
             // 
             this.AppointmentsChart.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            chartArea4.Name = "ChartArea1";
-            this.AppointmentsChart.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.AppointmentsChart.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            this.AppointmentsChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.AppointmentsChart.Legends.Add(legend1);
             this.AppointmentsChart.Location = new System.Drawing.Point(1, 49);
             this.AppointmentsChart.Name = "AppointmentsChart";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.AppointmentsChart.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.AppointmentsChart.Series.Add(series1);
             this.AppointmentsChart.Size = new System.Drawing.Size(489, 227);
             this.AppointmentsChart.TabIndex = 0;
             this.AppointmentsChart.Text = "Appointments";
@@ -481,6 +481,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 16;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.DashBoard_GoToPatientsBtn_Click);
             // 
             // pictureBox6
             // 
@@ -492,6 +493,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 17;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.DashBoard_GoToDoctorsBtn_Click);
             // 
             // pictureBox7
             // 
@@ -503,6 +505,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 18;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.DashBoard_GoToAppointmentsBtn_Click);
             // 
             // pictureBox8
             // 
@@ -514,6 +517,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 19;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.DashBoard_GoToMedRecordsBtn_Click);
             // 
             // tabPage2
             // 
@@ -534,6 +538,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 21;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.DashBoard_GobackHomeBtn_Click);
             // 
             // DashBoard_GobackHomeBtn
             // 

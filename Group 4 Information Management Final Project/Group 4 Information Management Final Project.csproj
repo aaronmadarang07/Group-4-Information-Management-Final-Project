@@ -282,5 +282,14 @@
   <ItemGroup>
     <None Include="Resources\light-blue-background-gradient-wall-design-vector6.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-blue-background-gradient-wall-design-vector7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Jun 14, 2026, 08_32_18 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Jun 14, 2026, 08_32_18 PM1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -231,6 +231,5 @@ namespace Group_4_Information_Management_Final_Project
 
         private void label9_Click(object sender, EventArgs e) { }
         private void pictureBox10_Click(object sender, EventArgs e) { }
-        private void pictureBox9_Click(object sender, EventArgs e) { }
     }
 }

@@ -202,5 +202,15 @@ namespace Group_4_Information_Management_Final_Project
         {
 
         }
+
+        private void Prescription_UpdateBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Prescription_DeleteBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

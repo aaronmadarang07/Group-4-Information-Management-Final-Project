@@ -24,7 +24,7 @@ namespace Group_4_Information_Management_Final_Project
             App_DoctorName.DataPropertyName = "doctor_name";
             App_AppointmentDate.DataPropertyName = "appointment_date";
             App_AppointmentTime.DataPropertyName = "appointment_time";
-            App_Schedule.DataPropertyName = "schedule";
+            //App_Schedule.DataPropertyName = "schedule";
             App_Status.DataPropertyName = "status";
             App_Remarks.DataPropertyName = "remarks";
 
@@ -74,10 +74,9 @@ namespace Group_4_Information_Management_Final_Project
         private void Appointment_AddBtn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(AppID_TextBox.Text) ||
-                string.IsNullOrWhiteSpace(AppPatientName_TextBox.Text) ||
-                string.IsNullOrWhiteSpace(AppDoctorID_TextBox.Text) ||
-                string.IsNullOrWhiteSpace(AppStartTime_ComboBox.Text) ||
-                string.IsNullOrWhiteSpace(AppSchedule_ComboBox.Text) ||
+                string.IsNullOrWhiteSpace(AppPatientID_ComboBox.Text) ||
+                string.IsNullOrWhiteSpace(AppDoctorID_ComboBox.Text) ||
+                string.IsNullOrWhiteSpace(AppAppointmentTime_ComboBox.Text) ||
                 string.IsNullOrWhiteSpace(AppStatus_ComboBox.Text) ||
                 string.IsNullOrWhiteSpace(AppRemarks_TextBox.Text))
             {
@@ -99,11 +98,10 @@ namespace Group_4_Information_Management_Final_Project
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.AddWithValue("p_appointment_id", AppID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_patient_id", AppPatientName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_doctor_id", AppDoctorID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_patient_id", AppPatientID_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_doctor_id", AppDoctorID_ComboBox.Text);
                         cmd.Parameters.AddWithValue("p_appointment_date", AppDate_DateTimePicker.Value.Date);
-                        cmd.Parameters.AddWithValue("p_appointment_time", AppStartTime_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("p_schedule", AppSchedule_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_appointment_time", AppAppointmentTime_ComboBox.Text);
                         cmd.Parameters.AddWithValue("p_status", AppStatus_ComboBox.Text);
                         cmd.Parameters.AddWithValue("p_remarks", AppRemarks_TextBox.Text);
 
@@ -166,11 +164,10 @@ namespace Group_4_Information_Management_Final_Project
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("p_appointment_id", AppID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_patient_id", AppPatientName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_doctor_id", AppDoctorID_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_patient_id", AppPatientID_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_doctor_id", AppDoctorID_ComboBox.Text);
                         cmd.Parameters.AddWithValue("p_appointment_date", AppDate_DateTimePicker.Value.Date);
-                        cmd.Parameters.AddWithValue("p_appointment_time", AppStartTime_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("p_schedule", AppSchedule_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_appointment_time", AppAppointmentTime_ComboBox.Text);
                         cmd.Parameters.AddWithValue("p_status", AppStatus_ComboBox.Text);
                         cmd.Parameters.AddWithValue("p_remarks", AppRemarks_TextBox.Text);
                         cmd.ExecuteNonQuery();
@@ -190,12 +187,11 @@ namespace Group_4_Information_Management_Final_Project
         private void ClearFields()
         {
             AppID_TextBox.Text = "";
-            AppPatientName_TextBox.Text = "";
-            AppDoctorID_TextBox.Text = "";
+            AppPatientID_ComboBox.Text = "";
+            AppDoctorID_ComboBox.Text = "";
             AppRemarks_TextBox.Text = "";
             AppDate_DateTimePicker.Value = DateTime.Now;
-            AppStartTime_ComboBox.SelectedIndex = -1;
-            AppSchedule_ComboBox.SelectedIndex = -1;
+            AppAppointmentTime_ComboBox.SelectedIndex = -1;
             AppStatus_ComboBox.SelectedIndex = -1;
         }
 
@@ -206,14 +202,13 @@ namespace Group_4_Information_Management_Final_Project
                 DataGridViewRow row = AppointmentList_DataGridView.Rows[e.RowIndex];
 
                 AppID_TextBox.Text = row.Cells["App_AppointmentID"].Value?.ToString();
-                AppPatientName_TextBox.Text = row.Cells["App_PatientName"].Value?.ToString();
-                AppDoctorID_TextBox.Text = row.Cells["App_DoctorName"].Value?.ToString();
+                AppPatientID_ComboBox.Text = row.Cells["App_PatientID"].Value?.ToString();
+                AppDoctorID_ComboBox.Text = row.Cells["App_DoctorID"].Value?.ToString();
 
                 if (DateTime.TryParse(row.Cells["App_AppointmentDate"].Value?.ToString(), out DateTime date))
                     AppDate_DateTimePicker.Value = date;
 
-                AppStartTime_ComboBox.Text = row.Cells["App_AppointmentTime"].Value?.ToString();
-                AppSchedule_ComboBox.Text = row.Cells["App_Schedule"].Value?.ToString();
+                AppAppointmentTime_ComboBox.Text = row.Cells["App_AppointmentTime"].Value?.ToString();
                 AppStatus_ComboBox.Text = row.Cells["App_Status"].Value?.ToString();
                 AppRemarks_TextBox.Text = row.Cells["App_Remarks"].Value?.ToString();
             }
@@ -250,6 +245,21 @@ namespace Group_4_Information_Management_Final_Project
         private void AppointmentList_DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AppAppointmentTime_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AppDoctorID_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -750,7 +750,7 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Honeydew;
+            this.pictureBox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox9.Image = global::Group_4_Information_Management_Final_Project.Properties.Resources._25694;
             this.pictureBox9.Location = new System.Drawing.Point(23, 632);
             this.pictureBox9.Name = "pictureBox9";
@@ -758,7 +758,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 41;
             this.pictureBox9.TabStop = false;
-            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            this.pictureBox9.Click += new System.EventHandler(this.Appointments_GobackHomeBtn_Click);
             // 
             // Doctor_GobackHomeBtn
             // 

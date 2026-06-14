@@ -167,31 +167,33 @@
             this.Prescription_DeleteBtn.BackColor = System.Drawing.Color.OrangeRed;
             this.Prescription_DeleteBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_DeleteBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Prescription_DeleteBtn.Location = new System.Drawing.Point(591, 258);
+            this.Prescription_DeleteBtn.Location = new System.Drawing.Point(152, 260);
             this.Prescription_DeleteBtn.Name = "Prescription_DeleteBtn";
             this.Prescription_DeleteBtn.Size = new System.Drawing.Size(120, 36);
             this.Prescription_DeleteBtn.TabIndex = 37;
             this.Prescription_DeleteBtn.Text = "DELETE";
             this.Prescription_DeleteBtn.UseVisualStyleBackColor = false;
+            this.Prescription_DeleteBtn.Click += new System.EventHandler(this.Prescription_DeleteBtn_Click_1);
             // 
             // Prescription_UpdateBtn
             // 
             this.Prescription_UpdateBtn.BackColor = System.Drawing.Color.SeaGreen;
             this.Prescription_UpdateBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_UpdateBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Prescription_UpdateBtn.Location = new System.Drawing.Point(723, 258);
+            this.Prescription_UpdateBtn.Location = new System.Drawing.Point(284, 260);
             this.Prescription_UpdateBtn.Name = "Prescription_UpdateBtn";
             this.Prescription_UpdateBtn.Size = new System.Drawing.Size(120, 36);
             this.Prescription_UpdateBtn.TabIndex = 36;
             this.Prescription_UpdateBtn.Text = "UPDATE";
             this.Prescription_UpdateBtn.UseVisualStyleBackColor = false;
+            this.Prescription_UpdateBtn.Click += new System.EventHandler(this.Prescription_UpdateBtn_Click_1);
             // 
             // Prescription_ClearBtn
             // 
             this.Prescription_ClearBtn.BackColor = System.Drawing.Color.Goldenrod;
             this.Prescription_ClearBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_ClearBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Prescription_ClearBtn.Location = new System.Drawing.Point(857, 258);
+            this.Prescription_ClearBtn.Location = new System.Drawing.Point(418, 260);
             this.Prescription_ClearBtn.Name = "Prescription_ClearBtn";
             this.Prescription_ClearBtn.Size = new System.Drawing.Size(120, 36);
             this.Prescription_ClearBtn.TabIndex = 35;
@@ -204,7 +206,7 @@
             this.Prescription_AddBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.Prescription_AddBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_AddBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Prescription_AddBtn.Location = new System.Drawing.Point(458, 258);
+            this.Prescription_AddBtn.Location = new System.Drawing.Point(19, 260);
             this.Prescription_AddBtn.Name = "Prescription_AddBtn";
             this.Prescription_AddBtn.Size = new System.Drawing.Size(120, 36);
             this.Prescription_AddBtn.TabIndex = 34;
@@ -452,6 +454,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 45;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.Prescription_GobackHomeBtn_Click);
             // 
             // Prescription_GobackHomeBtn
             // 
@@ -558,11 +561,11 @@
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_PrescriptionID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_MedicineName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_Dosage;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_Frequency;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_Duration;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

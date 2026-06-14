@@ -103,6 +103,36 @@ namespace Group_4_Information_Management_Final_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_Jun_14__2026__08_32_18_PM {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image Jun 14, 2026, 08_32_18 PM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_Jun_14__2026__08_32_18_PM1 {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image Jun 14, 2026, 08_32_18 PM1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_Jun_14__2026__09_52_41_PM {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image Jun 14, 2026, 09_52_41 PM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChatGPT_Image_Jun_7__2026__05_35_52_PM {
             get {
                 object obj = ResourceManager.GetObject("ChatGPT Image Jun 7, 2026, 05_35_52 PM", resourceCulture);
@@ -316,6 +346,16 @@ namespace Group_4_Information_Management_Final_Project.Properties {
         internal static System.Drawing.Bitmap light_blue_background_gradient_wall_design_vector6 {
             get {
                 object obj = ResourceManager.GetObject("light-blue-background-gradient-wall-design-vector6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap light_blue_background_gradient_wall_design_vector7 {
+            get {
+                object obj = ResourceManager.GetObject("light-blue-background-gradient-wall-design-vector7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
