@@ -247,6 +247,7 @@
             // 
             // PresDosage_TextBox
             // 
+            this.PresDosage_TextBox.BackColor = System.Drawing.SystemColors.Window;
             this.PresDosage_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PresDosage_TextBox.Location = new System.Drawing.Point(194, 142);
             this.PresDosage_TextBox.Name = "PresDosage_TextBox";
