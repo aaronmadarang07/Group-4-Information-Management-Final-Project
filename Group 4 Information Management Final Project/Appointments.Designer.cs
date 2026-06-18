@@ -514,6 +514,7 @@
             this.AppID_TextBox.Name = "AppID_TextBox";
             this.AppID_TextBox.Size = new System.Drawing.Size(238, 27);
             this.AppID_TextBox.TabIndex = 27;
+            this.AppID_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AppID_TextBox_KeyPress);
             // 
             // label7
             // 
@@ -679,8 +680,7 @@
             this.AppointmentList_DataGridView.RowHeadersWidth = 51;
             this.AppointmentList_DataGridView.Size = new System.Drawing.Size(959, 197);
             this.AppointmentList_DataGridView.TabIndex = 0;
-            this.AppointmentList_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AppointmentList_DataGridView_CellContentClick);
-            // 
+            this.AppointmentList_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AppointmentList_DataGridView_CellClick);            // 
             // App_AppointmentID
             // 
             this.App_AppointmentID.DataPropertyName = "appointment_id";

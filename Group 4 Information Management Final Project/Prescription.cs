@@ -25,11 +25,6 @@ namespace Group_4_Information_Management_Final_Project
             Prescription_Duration.DataPropertyName = "duration";
 
             LoadPrescriptions();
-
-            Prescription_UpdateBtn.Click += Prescription_UpdateBtn_Click;
-            Prescription_DeleteBtn.Click += Prescription_DeleteBtn_Click;
-            Prescription_ClearBtn.Click += Prescription_ClearBtn_Click;
-            PrescriptionList_DataGridView.CellClick += Prescription_DataGridView_CellClick;
         }
 
         private void LoadPrescriptions()
@@ -39,9 +34,11 @@ namespace Group_4_Information_Management_Final_Project
                 using (var conn = DBHelper.GetConnection())
                 {
                     conn.Open();
+
                     using (MySqlCommand cmd = new MySqlCommand("GetPrescriptions", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
+
                         using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
                         {
                             DataTable table = new DataTable();
@@ -51,7 +48,10 @@ namespace Group_4_Information_Management_Final_Project
                     }
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Prescription_AddBtn_Click(object sender, EventArgs e)
@@ -66,27 +66,33 @@ namespace Group_4_Information_Management_Final_Project
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
             try
             {
                 using (var conn = DBHelper.GetConnection())
                 {
                     conn.Open();
+
                     using (MySqlCommand cmd = new MySqlCommand("AddPrescription", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("p_prescription_id", PresPrescriptionID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_medicine_name", PresMedicineName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_dosage", PresDosage_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_frequency", PresFrequency_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("p_duration", PresDuration_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_prescription_id", PresPrescriptionID_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_medicine_name", PresMedicineName_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_dosage", PresDosage_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_frequency", PresFrequency_ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_duration", PresDuration_TextBox.Text.Trim());
                         cmd.ExecuteNonQuery();
                     }
                 }
+
                 MessageBox.Show("Prescription Added Successfully!");
                 LoadPrescriptions();
                 ClearFields();
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Prescription_UpdateBtn_Click(object sender, EventArgs e)
@@ -96,27 +102,33 @@ namespace Group_4_Information_Management_Final_Project
                 MessageBox.Show("Please select a prescription to update.");
                 return;
             }
+
             try
             {
                 using (var conn = DBHelper.GetConnection())
                 {
                     conn.Open();
+
                     using (MySqlCommand cmd = new MySqlCommand("UpdatePrescription", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("p_prescription_id", PresPrescriptionID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_medicine_name", PresMedicineName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_dosage", PresDosage_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_frequency", PresFrequency_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("p_duration", PresDuration_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_prescription_id", PresPrescriptionID_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_medicine_name", PresMedicineName_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_dosage", PresDosage_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_frequency", PresFrequency_ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_duration", PresDuration_TextBox.Text.Trim());
                         cmd.ExecuteNonQuery();
                     }
                 }
+
                 MessageBox.Show("Prescription Updated Successfully!");
                 LoadPrescriptions();
                 ClearFields();
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Prescription_DeleteBtn_Click(object sender, EventArgs e)
@@ -126,6 +138,7 @@ namespace Group_4_Information_Management_Final_Project
                 MessageBox.Show("Please select a prescription to delete.");
                 return;
             }
+
             if (MessageBox.Show("Are you sure?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
@@ -133,18 +146,23 @@ namespace Group_4_Information_Management_Final_Project
                     using (var conn = DBHelper.GetConnection())
                     {
                         conn.Open();
+
                         using (MySqlCommand cmd = new MySqlCommand("DeletePrescription", conn))
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("p_prescription_id", PresPrescriptionID_TextBox.Text);
+                            cmd.Parameters.AddWithValue("p_prescription_id", PresPrescriptionID_TextBox.Text.Trim());
                             cmd.ExecuteNonQuery();
                         }
                     }
+
                     MessageBox.Show("Prescription Deleted Successfully!");
                     LoadPrescriptions();
                     ClearFields();
                 }
-                catch (Exception ex) { MessageBox.Show(ex.Message); }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
@@ -159,7 +177,46 @@ namespace Group_4_Information_Management_Final_Project
             PresMedicineName_TextBox.Clear();
             PresDosage_TextBox.Clear();
             PresFrequency_ComboBox.SelectedIndex = -1;
+            PresFrequency_ComboBox.Text = "";
             PresDuration_TextBox.Clear();
+        }
+
+        private void PresPrescriptionID_TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string currentText = PresPrescriptionID_TextBox.Text;
+
+            if (e.KeyChar == (char)Keys.Back)
+                return;
+
+            if (currentText.Length == 0)
+            {
+                if (char.ToUpper(e.KeyChar) == 'R')
+                {
+                    e.Handled = true;
+                    PresPrescriptionID_TextBox.Text = "R";
+                    PresPrescriptionID_TextBox.SelectionStart = PresPrescriptionID_TextBox.Text.Length;
+                }
+                else
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Invalid input. Prescription ID must start with letter R.",
+                        "Validation Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+                return;
+            }
+
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+
+            if (currentText.Length >= 4)
+            {
+                e.Handled = true;
+            }
         }
 
         private void Prescription_DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -168,11 +225,11 @@ namespace Group_4_Information_Management_Final_Project
             {
                 DataGridViewRow row = PrescriptionList_DataGridView.Rows[e.RowIndex];
 
-                PresPrescriptionID_TextBox.Text = row.Cells["Prescription_PrescriptionID"].Value.ToString();
-                PresMedicineName_TextBox.Text = row.Cells["Prescription_MedicineName"].Value.ToString();
-                PresDosage_TextBox.Text = row.Cells["Prescription_Dosage"].Value.ToString();
-                PresFrequency_ComboBox.Text = row.Cells["Prescription_Frequency"].Value.ToString();
-                PresDuration_TextBox.Text = row.Cells["Prescription_Duration"].Value.ToString();
+                PresPrescriptionID_TextBox.Text = row.Cells["Prescription_PrescriptionID"].Value?.ToString();
+                PresMedicineName_TextBox.Text = row.Cells["Prescription_MedicineName"].Value?.ToString();
+                PresDosage_TextBox.Text = row.Cells["Prescription_Dosage"].Value?.ToString();
+                PresFrequency_ComboBox.Text = row.Cells["Prescription_Frequency"].Value?.ToString();
+                PresDuration_TextBox.Text = row.Cells["Prescription_Duration"].Value?.ToString();
             }
         }
 
@@ -195,22 +252,6 @@ namespace Group_4_Information_Management_Final_Project
         }
 
         private void groupBox1_Enter(object sender, EventArgs e) { }
-
         private void PresFrequency_ComboBox_SelectedIndexChanged(object sender, EventArgs e) { }
-
-        private void Prescription_ClearBtn_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Prescription_UpdateBtn_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Prescription_DeleteBtn_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

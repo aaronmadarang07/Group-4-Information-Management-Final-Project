@@ -26,12 +26,6 @@ namespace Group_4_Information_Management_Final_Project
             MedRec_Notes.DataPropertyName = "notes";
 
             LoadMedicalRecords();
-
-            MedRec_AddBtn.Click += MedRec_AddBtn_Click;
-            MedRec_UpdateBtn.Click += MedRec_UpdateBtn_Click;
-            MedRec_DeleteBtn.Click += MedRec_DeleteBtn_Click;
-            MedRec_ClearBtn.Click += MedRec_ClearBtn_Click;
-            MedRec_DataGridView.CellClick += MedRec_DataGridView_CellClick;
         }
 
         private void LoadMedicalRecords()
@@ -86,18 +80,17 @@ namespace Group_4_Information_Management_Final_Project
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_appointment", MedRecAppointment_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_doctor", MedRecDoctor_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_appointment", MedRecAppointment_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_doctor", MedRecDoctor_TextBox.Text.Trim());
                         cmd.Parameters.AddWithValue("p_visit_date", MedRecVisitDate_DateTimePicker.Value.Date);
-                        cmd.Parameters.AddWithValue("p_diagnosis", MedRecDiagnosis_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_notes", MedRecNotes_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_diagnosis", MedRecDiagnosis_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_notes", MedRecNotes_TextBox.Text.Trim());
 
                         cmd.ExecuteNonQuery();
                     }
 
                     MessageBox.Show("Medical Record Added Successfully!");
-
                     LoadMedicalRecords();
                     ClearFields();
                 }
@@ -115,28 +108,36 @@ namespace Group_4_Information_Management_Final_Project
                 MessageBox.Show("Please select a record to update.");
                 return;
             }
+
             try
             {
                 using (MySqlConnection conn = DBHelper.GetConnection())
                 {
                     conn.Open();
+
                     using (MySqlCommand cmd = new MySqlCommand("UpdateMedicalRecord", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_appointment", MedRecAppointment_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_doctor", MedRecDoctor_TextBox.Text);
+
+                        cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_appointment", MedRecAppointment_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_doctor", MedRecDoctor_TextBox.Text.Trim());
                         cmd.Parameters.AddWithValue("p_visit_date", MedRecVisitDate_DateTimePicker.Value.Date);
-                        cmd.Parameters.AddWithValue("p_diagnosis", MedRecDiagnosis_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_notes", MedRecNotes_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_diagnosis", MedRecDiagnosis_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_notes", MedRecNotes_TextBox.Text.Trim());
+
                         cmd.ExecuteNonQuery();
                     }
                 }
+
                 MessageBox.Show("Medical Record Updated Successfully!");
                 LoadMedicalRecords();
                 ClearFields();
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void MedRec_DeleteBtn_Click(object sender, EventArgs e)
@@ -146,6 +147,7 @@ namespace Group_4_Information_Management_Final_Project
                 MessageBox.Show("Please select a record to delete.");
                 return;
             }
+
             if (MessageBox.Show("Are you sure?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
@@ -153,18 +155,23 @@ namespace Group_4_Information_Management_Final_Project
                     using (MySqlConnection conn = DBHelper.GetConnection())
                     {
                         conn.Open();
+
                         using (MySqlCommand cmd = new MySqlCommand("DeleteMedicalRecord", conn))
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text);
+                            cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text.Trim());
                             cmd.ExecuteNonQuery();
                         }
                     }
+
                     MessageBox.Show("Medical Record Deleted Successfully!");
                     LoadMedicalRecords();
                     ClearFields();
                 }
-                catch (Exception ex) { MessageBox.Show(ex.Message); }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
@@ -181,6 +188,44 @@ namespace Group_4_Information_Management_Final_Project
             MedRecDiagnosis_TextBox.Clear();
             MedRecNotes_TextBox.Clear();
             MedRecVisitDate_DateTimePicker.Value = DateTime.Now;
+        }
+
+        private void MedRecRecordID_TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string currentText = MedRecRecordID_TextBox.Text;
+
+            if (e.KeyChar == (char)Keys.Back)
+                return;
+
+            if (currentText.Length == 0)
+            {
+                if (char.ToUpper(e.KeyChar) == 'M')
+                {
+                    e.Handled = true;
+                    MedRecRecordID_TextBox.Text = "M";
+                    MedRecRecordID_TextBox.SelectionStart = MedRecRecordID_TextBox.Text.Length;
+                }
+                else
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Invalid input. Medical Record ID must start with letter M.",
+                        "Validation Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+                return;
+            }
+
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+
+            if (currentText.Length >= 4)
+            {
+                e.Handled = true;
+            }
         }
 
         private void MedRec_DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -226,27 +271,10 @@ namespace Group_4_Information_Management_Final_Project
         private void MedRecAppointment_TextBox_TextChanged(object sender, EventArgs e) { }
         private void pictureBox9_Click(object sender, EventArgs e) { }
         private void pictureBox10_Click(object sender, EventArgs e) { }
-
+        private void MedRec_DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
         private void MedRec_AddBtn_Click_1(object sender, EventArgs e) { }
-
-        private void MedRec_DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void MedRec_DeleteBtn_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MedRec_UpdateBtn_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MedRec_ClearBtn_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        private void MedRec_DeleteBtn_Click_1(object sender, EventArgs e) { }
+        private void MedRec_UpdateBtn_Click_1(object sender, EventArgs e) { }
+        private void MedRec_ClearBtn_Click_1(object sender, EventArgs e) { }
     }
 }

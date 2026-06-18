@@ -373,6 +373,9 @@
             this.ContactNumber_TextBox.Name = "ContactNumber_TextBox";
             this.ContactNumber_TextBox.Size = new System.Drawing.Size(238, 27);
             this.ContactNumber_TextBox.TabIndex = 31;
+            this.ContactNumber_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ContactNumber_TextBox_KeyPress);
+            this.ContactNumber_TextBox.TextChanged += new System.EventHandler(this.ContactNumber_TextBox_TextChanged);
+            this.ContactNumber_TextBox.Leave += new System.EventHandler(this.ContactNumber_TextBox_Leave);
             // 
             // DoctorSpecialty_ComboBox
             // 
@@ -532,6 +535,7 @@
             this.DoctorID_TextBox.Name = "DoctorID_TextBox";
             this.DoctorID_TextBox.Size = new System.Drawing.Size(238, 27);
             this.DoctorID_TextBox.TabIndex = 27;
+            this.DoctorID_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DoctorID_TextBox_KeyPress);
             // 
             // label7
             // 

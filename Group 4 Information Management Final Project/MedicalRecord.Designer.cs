@@ -232,7 +232,7 @@
             this.MedRec_DeleteBtn.TabIndex = 37;
             this.MedRec_DeleteBtn.Text = "DELETE";
             this.MedRec_DeleteBtn.UseVisualStyleBackColor = false;
-            this.MedRec_DeleteBtn.Click += new System.EventHandler(this.MedRec_DeleteBtn_Click_1);
+            this.MedRec_DeleteBtn.Click += new System.EventHandler(this.MedRec_DeleteBtn_Click);
             // 
             // MedRec_UpdateBtn
             // 
@@ -245,8 +245,7 @@
             this.MedRec_UpdateBtn.TabIndex = 36;
             this.MedRec_UpdateBtn.Text = "UPDATE";
             this.MedRec_UpdateBtn.UseVisualStyleBackColor = false;
-            this.MedRec_UpdateBtn.Click += new System.EventHandler(this.MedRec_UpdateBtn_Click_1);
-            // 
+            this.MedRec_UpdateBtn.Click += new System.EventHandler(this.MedRec_UpdateBtn_Click);            // 
             // MedRec_ClearBtn
             // 
             this.MedRec_ClearBtn.BackColor = System.Drawing.Color.Goldenrod;
@@ -258,7 +257,7 @@
             this.MedRec_ClearBtn.TabIndex = 35;
             this.MedRec_ClearBtn.Text = "CLEAR";
             this.MedRec_ClearBtn.UseVisualStyleBackColor = false;
-            this.MedRec_ClearBtn.Click += new System.EventHandler(this.MedRec_ClearBtn_Click_1);
+            this.MedRec_ClearBtn.Click += new System.EventHandler(this.MedRec_ClearBtn_Click);
             // 
             // MedRec_AddBtn
             // 
@@ -271,7 +270,7 @@
             this.MedRec_AddBtn.TabIndex = 34;
             this.MedRec_AddBtn.Text = "ADD";
             this.MedRec_AddBtn.UseVisualStyleBackColor = false;
-            this.MedRec_AddBtn.Click += new System.EventHandler(this.MedRec_AddBtn_Click_1);
+            this.MedRec_AddBtn.Click += new System.EventHandler(this.MedRec_AddBtn_Click);
             // 
             // MedRecDoctor_TextBox
             // 
@@ -297,6 +296,8 @@
             this.MedRecRecordID_TextBox.Name = "MedRecRecordID_TextBox";
             this.MedRecRecordID_TextBox.Size = new System.Drawing.Size(238, 27);
             this.MedRecRecordID_TextBox.TabIndex = 27;
+            this.MedRecRecordID_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MedRecRecordID_TextBox_KeyPress);
+
             // 
             // label6
             // 
@@ -450,8 +451,7 @@
             this.MedRec_DataGridView.RowHeadersWidth = 51;
             this.MedRec_DataGridView.Size = new System.Drawing.Size(959, 197);
             this.MedRec_DataGridView.TabIndex = 0;
-            this.MedRec_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MedRec_DataGridView_CellContentClick);
-            // 
+            this.MedRec_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MedRec_DataGridView_CellClick);            // 
             // MedRec_RecordID
             // 
             this.MedRec_RecordID.DataPropertyName = "record_id";

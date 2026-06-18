@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Linq;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
@@ -69,6 +70,108 @@ namespace Group_4_Information_Management_Final_Project
             PatientAddress_TextBox.Clear();
             PatientBloodType_ComboBox.SelectedIndex = -1;
         }
+
+            private void PatientID_TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string currentText = PatientID_TextBox.Text;
+
+            if (e.KeyChar == (char)Keys.Back)
+                return;
+
+            if (currentText.Length == 0)
+            {
+                if (char.ToUpper(e.KeyChar) == 'P')
+                {
+                    e.Handled = true;
+                    PatientID_TextBox.Text = "P";
+                    PatientID_TextBox.SelectionStart = PatientID_TextBox.Text.Length;
+                }
+                else
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Invalid input. Patient ID must start with letter P.",
+                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                return;
+            }
+
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+
+            if (currentText.Length >= 4)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PatientDOB_DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            if (PatientDOB_DateTimePicker1.Value.Date > DateTime.Now.Date)
+            {
+                MessageBox.Show("Invalid date. Date of birth cannot be in the future.",
+                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                PatientDOB_DateTimePicker1.Value = DateTime.Now.Date;
+            }
+        }
+        private bool isFormatting = false;
+
+        private void PatientContactNumber_TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                return;
+
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Invalid field type. Please input your phone number.",
+                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string digitsOnly = new string(PatientContactNumber_TextBox.Text.Where(char.IsDigit).ToArray());
+
+            if (digitsOnly.Length >= 11)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void PatientContactNumber_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (isFormatting) return;
+            isFormatting = true;
+
+            string digits = new string(PatientContactNumber_TextBox.Text.Where(char.IsDigit).ToArray());
+
+            if (digits.Length > 11)
+                digits = digits.Substring(0, 11);
+
+            string formatted = digits;
+            if (digits.Length > 4 && digits.Length <= 7)
+                formatted = digits.Substring(0, 4) + "-" + digits.Substring(4);
+            else if (digits.Length > 7)
+                formatted = digits.Substring(0, 4) + "-" + digits.Substring(4, 3) + "-" + digits.Substring(7);
+
+            PatientContactNumber_TextBox.Text = formatted;
+            PatientContactNumber_TextBox.SelectionStart = PatientContactNumber_TextBox.Text.Length;
+
+            isFormatting = false;
+        }
+
+        private void PatientContactNumber_TextBox_Leave(object sender, EventArgs e)
+        {
+            string digits = new string(PatientContactNumber_TextBox.Text.Where(char.IsDigit).ToArray());
+
+            if (digits.Length > 0 && (digits.Length != 11 || !digits.StartsWith("09")))
+            {
+                MessageBox.Show("Contact number must start with '09' and be exactly 11 digits.",
+                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void PatientsForm_ClearBtn_Click(object sender, EventArgs e)
         {
             ClearFields();
@@ -126,41 +229,46 @@ namespace Group_4_Information_Management_Final_Project
 
         private void PatientsForm_UpdateBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(PatientID_TextBox.Text) ||
-            string.IsNullOrWhiteSpace(PatientLastName_TextBox.Text) ||
-            string.IsNullOrWhiteSpace(PatientFirstName_TextBox.Text) ||
-            string.IsNullOrWhiteSpace(PatientGender_ComboBox.Text) ||
-            string.IsNullOrWhiteSpace(PatientContactNumber_TextBox.Text) ||
-            string.IsNullOrWhiteSpace(PatientAddress_TextBox.Text) ||
-            string.IsNullOrWhiteSpace(PatientBloodType_ComboBox.Text))
+            if (string.IsNullOrWhiteSpace(PatientID_TextBox.Text))
             {
-                MessageBox.Show("Please complete all required fields.");
+                MessageBox.Show("Please select a patient to update.",
+                    "Validation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 return;
             }
+
             try
             {
                 using (var conn = DBHelper.GetConnection())
                 {
                     conn.Open();
+
                     using (MySqlCommand cmd = new MySqlCommand("UpdatePatient", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("p_patient_id", PatientID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_last_name", PatientLastName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_first_name", PatientFirstName_TextBox.Text);
+
+                        cmd.Parameters.AddWithValue("p_patient_id", PatientID_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_last_name", PatientLastName_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_first_name", PatientFirstName_TextBox.Text.Trim());
                         cmd.Parameters.AddWithValue("p_date_of_birth", PatientDOB_DateTimePicker1.Value.Date);
-                        cmd.Parameters.AddWithValue("p_gender", PatientGender_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("p_contact_number", PatientContactNumber_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_address", PatientAddress_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_blood_type", PatientBloodType_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_gender", PatientGender_ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_contact_number", PatientContactNumber_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_address", PatientAddress_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_blood_type", PatientBloodType_ComboBox.Text.Trim());
+
                         cmd.ExecuteNonQuery();
                     }
                 }
+
                 MessageBox.Show("Patient Updated Successfully!");
                 LoadPatients();
                 ClearFields();
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void PatientsForm_DeleteBtn_Click(object sender, EventArgs e)
