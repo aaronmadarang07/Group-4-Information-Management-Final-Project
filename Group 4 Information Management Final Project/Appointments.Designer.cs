@@ -416,6 +416,7 @@
             this.AppID_TextBox.Name = "AppID_TextBox";
             this.AppID_TextBox.Size = new System.Drawing.Size(238, 27);
             this.AppID_TextBox.TabIndex = 27;
+            this.AppID_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AppID_TextBox_KeyPress);
             // 
             // label7
             // 
@@ -581,7 +582,59 @@
             this.AppointmentList_DataGridView.RowHeadersWidth = 51;
             this.AppointmentList_DataGridView.Size = new System.Drawing.Size(959, 197);
             this.AppointmentList_DataGridView.TabIndex = 0;
+<<<<<<< HEAD
             this.AppointmentList_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AppointmentList_DataGridView_CellContentClick);
+=======
+            this.AppointmentList_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AppointmentList_DataGridView_CellClick);            // 
+            // App_AppointmentID
+            // 
+            this.App_AppointmentID.DataPropertyName = "appointment_id";
+            this.App_AppointmentID.HeaderText = "Appointment ID";
+            this.App_AppointmentID.MinimumWidth = 6;
+            this.App_AppointmentID.Name = "App_AppointmentID";
+            // 
+            // App_PatientName
+            // 
+            this.App_PatientName.DataPropertyName = "patient_name";
+            this.App_PatientName.HeaderText = "Patient Name";
+            this.App_PatientName.MinimumWidth = 6;
+            this.App_PatientName.Name = "App_PatientName";
+            // 
+            // App_DoctorName
+            // 
+            this.App_DoctorName.DataPropertyName = "doctor_name";
+            this.App_DoctorName.HeaderText = "Doctor Name";
+            this.App_DoctorName.MinimumWidth = 6;
+            this.App_DoctorName.Name = "App_DoctorName";
+            // 
+            // App_AppointmentDate
+            // 
+            this.App_AppointmentDate.DataPropertyName = "appointment_date";
+            this.App_AppointmentDate.HeaderText = "Appointment Date";
+            this.App_AppointmentDate.MinimumWidth = 6;
+            this.App_AppointmentDate.Name = "App_AppointmentDate";
+            // 
+            // App_AppointmentTime
+            // 
+            this.App_AppointmentTime.DataPropertyName = "appointment_time";
+            this.App_AppointmentTime.HeaderText = "Appointment Time";
+            this.App_AppointmentTime.MinimumWidth = 6;
+            this.App_AppointmentTime.Name = "App_AppointmentTime";
+            // 
+            // App_Status
+            // 
+            this.App_Status.DataPropertyName = "status";
+            this.App_Status.HeaderText = "Status";
+            this.App_Status.MinimumWidth = 6;
+            this.App_Status.Name = "App_Status";
+            // 
+            // App_Remarks
+            // 
+            this.App_Remarks.DataPropertyName = "remarks";
+            this.App_Remarks.HeaderText = "Remarks";
+            this.App_Remarks.MinimumWidth = 6;
+            this.App_Remarks.Name = "App_Remarks";
+>>>>>>> f8542983a89a9257ba5e0a049d73f1cc78fb1f14
             // 
             // pictureBox9
             // 

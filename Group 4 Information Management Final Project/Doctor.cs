@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -57,16 +58,21 @@ namespace Group_4_Information_Management_Final_Project
             }
         }
 
+        private bool HasEmptyFields()
+        {
+            return string.IsNullOrWhiteSpace(DoctorID_TextBox.Text) ||
+                   string.IsNullOrWhiteSpace(DoctorLastName_TextBox.Text) ||
+                   string.IsNullOrWhiteSpace(DoctorFirstName_TextBox.Text) ||
+                   string.IsNullOrWhiteSpace(DoctorSpecialty_ComboBox.Text) ||
+                   string.IsNullOrWhiteSpace(ContactNumber_TextBox.Text) ||
+                   string.IsNullOrWhiteSpace(Schedule_ComboBox.Text) ||
+                   string.IsNullOrWhiteSpace(StartTime_ComboBox.Text) ||
+                   string.IsNullOrWhiteSpace(EndTime_ComboBox.Text);
+        }
+
         private void DoctorsForm_AddBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(DoctorID_TextBox.Text) ||
-                string.IsNullOrWhiteSpace(DoctorLastName_TextBox.Text) ||
-                string.IsNullOrWhiteSpace(DoctorFirstName_TextBox.Text) ||
-                string.IsNullOrWhiteSpace(DoctorSpecialty_ComboBox.Text) ||
-                string.IsNullOrWhiteSpace(ContactNumber_TextBox.Text) ||
-                string.IsNullOrWhiteSpace(Schedule_ComboBox.Text) ||
-                string.IsNullOrWhiteSpace(StartTime_ComboBox.Text) ||
-                string.IsNullOrWhiteSpace(EndTime_ComboBox.Text))
+            if (HasEmptyFields())
             {
                 MessageBox.Show("Please fill up all fields!",
                     "Validation Error",
@@ -110,42 +116,46 @@ namespace Group_4_Information_Management_Final_Project
 
         private void DoctorsForm_UpdateBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(DoctorID_TextBox.Text) ||
-                string.IsNullOrWhiteSpace(DoctorLastName_TextBox.Text) ||
-                string.IsNullOrWhiteSpace(DoctorFirstName_TextBox.Text) ||
-                string.IsNullOrWhiteSpace(DoctorSpecialty_ComboBox.Text) ||
-                string.IsNullOrWhiteSpace(ContactNumber_TextBox.Text) ||
-                string.IsNullOrWhiteSpace(Schedule_ComboBox.Text) ||
-                string.IsNullOrWhiteSpace(StartTime_ComboBox.Text) ||
-                string.IsNullOrWhiteSpace(EndTime_ComboBox.Text))
+            if (string.IsNullOrWhiteSpace(DoctorID_TextBox.Text))
             {
-                MessageBox.Show("Please complete all required fields.");
+                MessageBox.Show("Please select a doctor to update.",
+                    "Validation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 return;
             }
+
             try
             {
                 using (var conn = DBHelper.GetConnection())
                 {
                     conn.Open();
+
                     using (MySqlCommand cmd = new MySqlCommand("UpdateDoctor", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("p_doctor_id", DoctorID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_last_name", DoctorLastName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_first_name", DoctorFirstName_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_specialty", DoctorSpecialty_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("p_contact_number", ContactNumber_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_availability", Schedule_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("p_start_time", StartTime_ComboBox.Text);
-                        cmd.Parameters.AddWithValue("p_end_time", EndTime_ComboBox.Text);
+
+                        cmd.Parameters.AddWithValue("p_doctor_id", DoctorID_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_last_name", DoctorLastName_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_first_name", DoctorFirstName_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_specialty", DoctorSpecialty_ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_contact_number", ContactNumber_TextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_availability", Schedule_ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_start_time", StartTime_ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_end_time", EndTime_ComboBox.Text.Trim());
+
                         cmd.ExecuteNonQuery();
                     }
                 }
+
                 MessageBox.Show("Doctor Updated Successfully!");
                 LoadDoctors();
                 ClearFields();
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void DoctorsForm_DeleteBtn_Click(object sender, EventArgs e)
@@ -155,6 +165,7 @@ namespace Group_4_Information_Management_Final_Project
                 MessageBox.Show("Please select a doctor to delete.");
                 return;
             }
+
             if (MessageBox.Show("Are you sure?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
@@ -162,18 +173,23 @@ namespace Group_4_Information_Management_Final_Project
                     using (var conn = DBHelper.GetConnection())
                     {
                         conn.Open();
+
                         using (MySqlCommand cmd = new MySqlCommand("DeleteDoctor", conn))
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("p_doctor_id", DoctorID_TextBox.Text);
+                            cmd.Parameters.AddWithValue("p_doctor_id", DoctorID_TextBox.Text.Trim());
                             cmd.ExecuteNonQuery();
                         }
                     }
+
                     MessageBox.Show("Doctor Deleted Successfully!");
                     LoadDoctors();
                     ClearFields();
                 }
-                catch (Exception ex) { MessageBox.Show(ex.Message); }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
@@ -189,10 +205,109 @@ namespace Group_4_Information_Management_Final_Project
             DoctorFirstName_TextBox.Clear();
             ContactNumber_TextBox.Clear();
             DoctorSpecialty_ComboBox.SelectedIndex = -1;
+            DoctorSpecialty_ComboBox.Text = "";
             Schedule_ComboBox.SelectedIndex = -1;
+            Schedule_ComboBox.Text = "";
             StartTime_ComboBox.SelectedIndex = -1;
+            StartTime_ComboBox.Text = "";
             EndTime_ComboBox.SelectedIndex = -1;
+<<<<<<< HEAD
             DoctorID_TextBox.Focus();
+=======
+            EndTime_ComboBox.Text = "";
+        }
+
+        private void DoctorID_TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string currentText = DoctorID_TextBox.Text;
+
+            if (e.KeyChar == (char)Keys.Back)
+                return;
+
+            if (currentText.Length == 0)
+            {
+                if (char.ToUpper(e.KeyChar) == 'D')
+                {
+                    e.Handled = true;
+                    DoctorID_TextBox.Text = "D";
+                    DoctorID_TextBox.SelectionStart = DoctorID_TextBox.Text.Length;
+                }
+                else
+                {
+                    e.Handled = true;
+                    MessageBox.Show("Invalid input. Doctor ID must start with letter D.",
+                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                return;
+            }
+
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+
+            if (currentText.Length >= 4)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private bool isDoctorFormatting = false;
+
+        private void ContactNumber_TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                return;
+
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Invalid field type. Please input your phone number.",
+                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string digitsOnly = new string(ContactNumber_TextBox.Text.Where(char.IsDigit).ToArray());
+
+            if (digitsOnly.Length >= 11)
+                e.Handled = true;
+        }
+
+        private void ContactNumber_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (isDoctorFormatting) return;
+
+            isDoctorFormatting = true;
+
+            string digits = new string(ContactNumber_TextBox.Text.Where(char.IsDigit).ToArray());
+
+            if (digits.Length > 11)
+                digits = digits.Substring(0, 11);
+
+            string formatted = digits;
+
+            if (digits.Length > 4 && digits.Length <= 7)
+                formatted = digits.Substring(0, 4) + "-" + digits.Substring(4);
+            else if (digits.Length > 7)
+                formatted = digits.Substring(0, 4) + "-" + digits.Substring(4, 3) + "-" + digits.Substring(7);
+
+            ContactNumber_TextBox.Text = formatted;
+            ContactNumber_TextBox.SelectionStart = ContactNumber_TextBox.Text.Length;
+
+            isDoctorFormatting = false;
+        }
+
+        private void ContactNumber_TextBox_Leave(object sender, EventArgs e)
+        {
+            string digits = new string(ContactNumber_TextBox.Text.Where(char.IsDigit).ToArray());
+
+            if (digits.Length > 0 && (digits.Length != 11 || !digits.StartsWith("09")))
+            {
+                MessageBox.Show("Contact number must start with '09' and be exactly 11 digits.",
+                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+>>>>>>> f8542983a89a9257ba5e0a049d73f1cc78fb1f14
         }
 
         private void DoctorsList_DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)

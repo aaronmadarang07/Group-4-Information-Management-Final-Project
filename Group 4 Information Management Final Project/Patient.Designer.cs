@@ -315,6 +315,9 @@
             this.PatientContactNumber_TextBox.Name = "PatientContactNumber_TextBox";
             this.PatientContactNumber_TextBox.Size = new System.Drawing.Size(238, 27);
             this.PatientContactNumber_TextBox.TabIndex = 27;
+            this.PatientContactNumber_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PatientContactNumber_TextBox_KeyPress);
+            this.PatientContactNumber_TextBox.TextChanged += new System.EventHandler(this.PatientContactNumber_TextBox_TextChanged);
+            this.PatientContactNumber_TextBox.Leave += new System.EventHandler(this.PatientContactNumber_TextBox_Leave);
             // 
             // label7
             // 
@@ -334,7 +337,7 @@
             this.PatientDOB_DateTimePicker1.Name = "PatientDOB_DateTimePicker1";
             this.PatientDOB_DateTimePicker1.Size = new System.Drawing.Size(238, 27);
             this.PatientDOB_DateTimePicker1.TabIndex = 25;
-            // 
+            this.PatientDOB_DateTimePicker1.ValueChanged += new System.EventHandler(this.PatientDOB_DateTimePicker1_ValueChanged);            // 
             // PatientGender_ComboBox
             // 
             this.PatientGender_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -371,6 +374,7 @@
             this.PatientID_TextBox.Name = "PatientID_TextBox";
             this.PatientID_TextBox.Size = new System.Drawing.Size(238, 27);
             this.PatientID_TextBox.TabIndex = 21;
+            this.PatientID_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PatientID_TextBox_KeyPress);
             // 
             // label6
             // 

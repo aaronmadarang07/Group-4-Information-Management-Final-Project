@@ -173,8 +173,7 @@
             this.Prescription_DeleteBtn.TabIndex = 37;
             this.Prescription_DeleteBtn.Text = "DELETE";
             this.Prescription_DeleteBtn.UseVisualStyleBackColor = false;
-            this.Prescription_DeleteBtn.Click += new System.EventHandler(this.Prescription_DeleteBtn_Click_1);
-            // 
+            this.Prescription_DeleteBtn.Click += new System.EventHandler(this.Prescription_DeleteBtn_Click);            // 
             // Prescription_UpdateBtn
             // 
             this.Prescription_UpdateBtn.BackColor = System.Drawing.Color.SeaGreen;
@@ -186,8 +185,11 @@
             this.Prescription_UpdateBtn.TabIndex = 36;
             this.Prescription_UpdateBtn.Text = "UPDATE";
             this.Prescription_UpdateBtn.UseVisualStyleBackColor = false;
-            this.Prescription_UpdateBtn.Click += new System.EventHandler(this.Prescription_UpdateBtn_Click_1);
-            // 
+            this.Prescription_DeleteBtn.Click += new System.EventHandler(this.Prescription_DeleteBtn_Click);
+
+
+
+            this.Prescription_UpdateBtn.Click += new System.EventHandler(this.Prescription_UpdateBtn_Click);            // 
             // Prescription_ClearBtn
             // 
             this.Prescription_ClearBtn.BackColor = System.Drawing.Color.Goldenrod;
@@ -199,8 +201,7 @@
             this.Prescription_ClearBtn.TabIndex = 35;
             this.Prescription_ClearBtn.Text = "CLEAR";
             this.Prescription_ClearBtn.UseVisualStyleBackColor = false;
-            this.Prescription_ClearBtn.Click += new System.EventHandler(this.Prescription_ClearBtn_Click_1);
-            // 
+            this.Prescription_ClearBtn.Click += new System.EventHandler(this.Prescription_ClearBtn_Click);            // 
             // Prescription_AddBtn
             // 
             this.Prescription_AddBtn.BackColor = System.Drawing.Color.RoyalBlue;
@@ -269,6 +270,7 @@
             this.PresPrescriptionID_TextBox.Name = "PresPrescriptionID_TextBox";
             this.PresPrescriptionID_TextBox.Size = new System.Drawing.Size(238, 27);
             this.PresPrescriptionID_TextBox.TabIndex = 27;
+            this.PresPrescriptionID_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PresPrescriptionID_TextBox_KeyPress);
             // 
             // label6
             // 
@@ -409,10 +411,10 @@
             this.PrescriptionList_DataGridView.RowHeadersWidth = 51;
             this.PrescriptionList_DataGridView.Size = new System.Drawing.Size(959, 197);
             this.PrescriptionList_DataGridView.TabIndex = 0;
-            // 
+            this.PrescriptionList_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Prescription_DataGridView_CellClick);            // 
             // Prescription_PrescriptionID
             // 
-            this.Prescription_PrescriptionID.DataPropertyName = "prescription _id";
+            this.Prescription_PrescriptionID.DataPropertyName = "prescription_id";
             this.Prescription_PrescriptionID.HeaderText = "Prescription ID";
             this.Prescription_PrescriptionID.MinimumWidth = 6;
             this.Prescription_PrescriptionID.Name = "Prescription_PrescriptionID";
