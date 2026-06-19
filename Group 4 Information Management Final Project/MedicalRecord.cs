@@ -49,7 +49,7 @@ namespace Group_4_Information_Management_Final_Project
                     using (MySqlCommand cmd = new MySqlCommand("GetMedicalRecords", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-
+                        
                         using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
                         {
                             DataTable dt = new DataTable();
@@ -275,16 +275,16 @@ namespace Group_4_Information_Management_Final_Project
 
             if (currentText.Length == 0)
             {
-                if (char.ToUpper(e.KeyChar) == 'M')
+                if (char.ToUpper(e.KeyChar) == 'R')
                 {
                     e.Handled = true;
-                    MedRecRecordID_TextBox.Text = "M";
+                    MedRecRecordID_TextBox.Text = "R";
                     MedRecRecordID_TextBox.SelectionStart = MedRecRecordID_TextBox.Text.Length;
                 }
                 else
                 {
                     e.Handled = true;
-                    MessageBox.Show("Invalid input. Medical Record ID must start with letter M.",
+                    MessageBox.Show("Invalid input. Medical Record ID must start with letter R.",
                         "Validation Error",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
@@ -311,8 +311,8 @@ namespace Group_4_Information_Management_Final_Project
                 DataGridViewRow row = MedRec_DataGridView.Rows[e.RowIndex];
 
                 MedRecRecordID_TextBox.Text = row.Cells["MedRec_RecordID"].Value?.ToString();
-                MedRecAppointmentID_ComboBox.SelectedItem = row.Cells["MedRec_AppointmentID"].Value?.ToString();
-                MedRecDoctorID_ComboBox.SelectedItem = row.Cells["MedRec_DoctorName"].Value?.ToString();
+                MedRecAppointmentID_ComboBox.Text = row.Cells["MedRec_AppointmentID"].Value?.ToString();
+                MedRecDoctorID_ComboBox.Text = row.Cells["MedRec_DoctorName"].Value?.ToString();
 
                 if (DateTime.TryParse(row.Cells["MedRec_VisitDate"].Value?.ToString(), out DateTime visitDate))
                 {
@@ -321,6 +321,30 @@ namespace Group_4_Information_Management_Final_Project
 
                 MedRecDiagnosis_TextBox.Text = row.Cells["MedRec_Diagnosis"].Value?.ToString();
                 MedRecNotes_TextBox.Text = row.Cells["MedRec_Notes"].Value?.ToString();
+            }
+        }
+
+        private void MedRecSearch_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var conn = DBHelper.GetConnection())
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand("SearchMedicalRecords", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("p_search", MedRecSearch_TextBox.Text);
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable table = new DataTable();
+                            adapter.Fill(table);
+                            MedRec_DataGridView.DataSource = table;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); 
             }
         }
 
@@ -344,7 +368,6 @@ namespace Group_4_Information_Management_Final_Project
 
         private void groupBox1_Enter(object sender, EventArgs e) { }
         private void label7_Click(object sender, EventArgs e) { }
-        private void MedRecAppointment_TextBox_TextChanged(object sender, EventArgs e) { }
         private void pictureBox9_Click(object sender, EventArgs e) { }
         private void pictureBox10_Click(object sender, EventArgs e) { }
         private void MedRec_DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) { }

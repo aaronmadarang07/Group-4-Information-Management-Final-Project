@@ -301,6 +301,8 @@ namespace Group_4_Information_Management_Final_Project
             }
         }
 
+
+
         private void PatientsList_DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -365,6 +367,11 @@ namespace Group_4_Information_Management_Final_Project
         private void DateLabel_Click(object sender, EventArgs e) { }
 
         private void PatientsList_DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
         {
 
         }

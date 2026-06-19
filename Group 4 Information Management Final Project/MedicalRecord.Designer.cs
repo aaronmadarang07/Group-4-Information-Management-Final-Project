@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.MedRecDoctorID_ComboBox = new System.Windows.Forms.ComboBox();
+            this.MedRecAppointmentID_ComboBox = new System.Windows.Forms.ComboBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.TimeLabel = new System.Windows.Forms.Label();
             this.DateLabel = new System.Windows.Forms.Label();
@@ -56,19 +59,22 @@
             this.MedRecSearch_TextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.MedRec_DataGridView = new System.Windows.Forms.DataGridView();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.MedRec_GobackHomeBtn = new System.Windows.Forms.Button();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.MedRec_ExitBtn = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip5 = new System.Windows.Forms.ToolTip(this.components);
             this.MedRec_RecordID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_AppointmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_DoctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_VisitDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_Diagnosis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MedRec_Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.MedRec_GobackHomeBtn = new System.Windows.Forms.Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.MedRec_ExitBtn = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.MedRecAppointmentID_ComboBox = new System.Windows.Forms.ComboBox();
-            this.MedRecDoctorID_ComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,6 +89,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.MedRecDoctorID_ComboBox);
             this.groupBox1.Controls.Add(this.MedRecAppointmentID_ComboBox);
             this.groupBox1.Controls.Add(this.pictureBox12);
@@ -111,6 +118,188 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(16, 80);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 13);
+            this.label11.TabIndex = 58;
+            this.label11.Text = "ex. RXXX";
+            // 
+            // MedRecDoctorID_ComboBox
+            // 
+            this.MedRecDoctorID_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MedRecDoctorID_ComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MedRecDoctorID_ComboBox.FormattingEnabled = true;
+            this.MedRecDoctorID_ComboBox.Items.AddRange(new object[] {
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D008",
+            "D009",
+            "D010",
+            "D011",
+            "D012",
+            "D013",
+            "D014",
+            "D015",
+            "D016",
+            "D017",
+            "D018",
+            "D019",
+            "D020",
+            "D021",
+            "D022",
+            "D023",
+            "D024",
+            "D025",
+            "D026",
+            "D027",
+            "D028",
+            "D029",
+            "D030",
+            "D031",
+            "D032",
+            "D033",
+            "D034",
+            "D035",
+            "D036",
+            "D037",
+            "D038",
+            "D039",
+            "D040",
+            "D041",
+            "D042",
+            "D043",
+            "D044",
+            "D045",
+            "D046",
+            "D047",
+            "D048",
+            "D049",
+            "D050"});
+            this.MedRecDoctorID_ComboBox.Location = new System.Drawing.Point(194, 142);
+            this.MedRecDoctorID_ComboBox.Name = "MedRecDoctorID_ComboBox";
+            this.MedRecDoctorID_ComboBox.Size = new System.Drawing.Size(238, 28);
+            this.MedRecDoctorID_ComboBox.TabIndex = 57;
+            // 
+            // MedRecAppointmentID_ComboBox
+            // 
+            this.MedRecAppointmentID_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MedRecAppointmentID_ComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MedRecAppointmentID_ComboBox.FormattingEnabled = true;
+            this.MedRecAppointmentID_ComboBox.Items.AddRange(new object[] {
+            "A001",
+            "",
+            "A002",
+            "",
+            "A003",
+            "",
+            "A004",
+            "",
+            "A005",
+            "",
+            "A006",
+            "",
+            "A007",
+            "",
+            "A008",
+            "",
+            "A009",
+            "",
+            "A010",
+            "",
+            "A011",
+            "",
+            "A012",
+            "",
+            "A013",
+            "",
+            "A014",
+            "",
+            "A015",
+            "",
+            "A016",
+            "",
+            "A017",
+            "",
+            "A018",
+            "",
+            "A019",
+            "",
+            "A020",
+            "",
+            "A021",
+            "",
+            "A022",
+            "",
+            "A023",
+            "",
+            "A024",
+            "",
+            "A025",
+            "",
+            "A026",
+            "",
+            "A027",
+            "",
+            "A028",
+            "",
+            "A029",
+            "",
+            "A030",
+            "",
+            "A031",
+            "",
+            "A032",
+            "",
+            "A033",
+            "",
+            "A034",
+            "",
+            "A035",
+            "",
+            "A036",
+            "",
+            "A037",
+            "",
+            "A038",
+            "",
+            "A039",
+            "",
+            "A040",
+            "",
+            "A041",
+            "",
+            "A042",
+            "",
+            "A043",
+            "",
+            "A044",
+            "",
+            "A045",
+            "",
+            "A046",
+            "",
+            "A047",
+            "",
+            "A048",
+            "",
+            "A049",
+            "",
+            "A050"});
+            this.MedRecAppointmentID_ComboBox.Location = new System.Drawing.Point(194, 100);
+            this.MedRecAppointmentID_ComboBox.Name = "MedRecAppointmentID_ComboBox";
+            this.MedRecAppointmentID_ComboBox.Size = new System.Drawing.Size(238, 28);
+            this.MedRecAppointmentID_ComboBox.TabIndex = 56;
             // 
             // pictureBox12
             // 
@@ -204,6 +393,7 @@
             this.MedRec_DeleteBtn.Size = new System.Drawing.Size(120, 36);
             this.MedRec_DeleteBtn.TabIndex = 37;
             this.MedRec_DeleteBtn.Text = "DELETE";
+            this.toolTip3.SetToolTip(this.MedRec_DeleteBtn, "Delete Medical Record");
             this.MedRec_DeleteBtn.UseVisualStyleBackColor = false;
             this.MedRec_DeleteBtn.Click += new System.EventHandler(this.MedRec_DeleteBtn_Click);
             // 
@@ -217,8 +407,10 @@
             this.MedRec_UpdateBtn.Size = new System.Drawing.Size(120, 36);
             this.MedRec_UpdateBtn.TabIndex = 36;
             this.MedRec_UpdateBtn.Text = "UPDATE";
+            this.toolTip4.SetToolTip(this.MedRec_UpdateBtn, "Update Changes");
             this.MedRec_UpdateBtn.UseVisualStyleBackColor = false;
-            this.MedRec_UpdateBtn.Click += new System.EventHandler(this.MedRec_UpdateBtn_Click);            // 
+            this.MedRec_UpdateBtn.Click += new System.EventHandler(this.MedRec_UpdateBtn_Click);
+            // 
             // MedRec_ClearBtn
             // 
             this.MedRec_ClearBtn.BackColor = System.Drawing.Color.Goldenrod;
@@ -229,6 +421,7 @@
             this.MedRec_ClearBtn.Size = new System.Drawing.Size(120, 36);
             this.MedRec_ClearBtn.TabIndex = 35;
             this.MedRec_ClearBtn.Text = "CLEAR";
+            this.toolTip5.SetToolTip(this.MedRec_ClearBtn, "Clear Fields");
             this.MedRec_ClearBtn.UseVisualStyleBackColor = false;
             this.MedRec_ClearBtn.Click += new System.EventHandler(this.MedRec_ClearBtn_Click);
             // 
@@ -242,6 +435,7 @@
             this.MedRec_AddBtn.Size = new System.Drawing.Size(120, 36);
             this.MedRec_AddBtn.TabIndex = 34;
             this.MedRec_AddBtn.Text = "ADD";
+            this.toolTip2.SetToolTip(this.MedRec_AddBtn, "Add Medical Record");
             this.MedRec_AddBtn.UseVisualStyleBackColor = false;
             this.MedRec_AddBtn.Click += new System.EventHandler(this.MedRec_AddBtn_Click);
             // 
@@ -252,8 +446,8 @@
             this.MedRecRecordID_TextBox.Name = "MedRecRecordID_TextBox";
             this.MedRecRecordID_TextBox.Size = new System.Drawing.Size(238, 27);
             this.MedRecRecordID_TextBox.TabIndex = 27;
+            this.toolTip1.SetToolTip(this.MedRecRecordID_TextBox, "See the last Record ID number to enter the next Record ID number numerically");
             this.MedRecRecordID_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MedRecRecordID_TextBox_KeyPress);
-
             // 
             // label6
             // 
@@ -375,6 +569,7 @@
             this.MedRecSearch_TextBox.Name = "MedRecSearch_TextBox";
             this.MedRecSearch_TextBox.Size = new System.Drawing.Size(163, 25);
             this.MedRecSearch_TextBox.TabIndex = 31;
+            this.MedRecSearch_TextBox.TextChanged += new System.EventHandler(this.MedRecSearch_TextBox_TextChanged);
             // 
             // label10
             // 
@@ -407,48 +602,7 @@
             this.MedRec_DataGridView.RowHeadersWidth = 51;
             this.MedRec_DataGridView.Size = new System.Drawing.Size(959, 197);
             this.MedRec_DataGridView.TabIndex = 0;
-            this.MedRec_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MedRec_DataGridView_CellClick);            // 
-            // MedRec_RecordID
-            // 
-            this.MedRec_RecordID.DataPropertyName = "record_id";
-            this.MedRec_RecordID.HeaderText = "Record ID";
-            this.MedRec_RecordID.MinimumWidth = 6;
-            this.MedRec_RecordID.Name = "MedRec_RecordID";
-            // 
-            // MedRec_AppointmentID
-            // 
-            this.MedRec_AppointmentID.DataPropertyName = "appointment_id";
-            this.MedRec_AppointmentID.HeaderText = "Appointment ID";
-            this.MedRec_AppointmentID.MinimumWidth = 6;
-            this.MedRec_AppointmentID.Name = "MedRec_AppointmentID";
-            // 
-            // MedRec_DoctorName
-            // 
-            this.MedRec_DoctorName.DataPropertyName = "doctor_name";
-            this.MedRec_DoctorName.HeaderText = "Doctor";
-            this.MedRec_DoctorName.MinimumWidth = 6;
-            this.MedRec_DoctorName.Name = "MedRec_DoctorName";
-            // 
-            // MedRec_VisitDate
-            // 
-            this.MedRec_VisitDate.DataPropertyName = "visit_date";
-            this.MedRec_VisitDate.HeaderText = "Visit Date";
-            this.MedRec_VisitDate.MinimumWidth = 6;
-            this.MedRec_VisitDate.Name = "MedRec_VisitDate";
-            // 
-            // MedRec_Diagnosis
-            // 
-            this.MedRec_Diagnosis.DataPropertyName = "diagnosis";
-            this.MedRec_Diagnosis.HeaderText = "Diagnosis";
-            this.MedRec_Diagnosis.MinimumWidth = 6;
-            this.MedRec_Diagnosis.Name = "MedRec_Diagnosis";
-            // 
-            // MedRec_Notes
-            // 
-            this.MedRec_Notes.DataPropertyName = "notes";
-            this.MedRec_Notes.HeaderText = "Notes";
-            this.MedRec_Notes.MinimumWidth = 6;
-            this.MedRec_Notes.Name = "MedRec_Notes";
+            this.MedRec_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MedRec_DataGridView_CellClick);
             // 
             // pictureBox9
             // 
@@ -504,176 +658,47 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // MedRecAppointmentID_ComboBox
+            // MedRec_RecordID
             // 
-            this.MedRecAppointmentID_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.MedRecAppointmentID_ComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MedRecAppointmentID_ComboBox.FormattingEnabled = true;
-            this.MedRecAppointmentID_ComboBox.Items.AddRange(new object[] {
-            "A001",
-            "",
-            "A002",
-            "",
-            "A003",
-            "",
-            "A004",
-            "",
-            "A005",
-            "",
-            "A006",
-            "",
-            "A007",
-            "",
-            "A008",
-            "",
-            "A009",
-            "",
-            "A010",
-            "",
-            "A011",
-            "",
-            "A012",
-            "",
-            "A013",
-            "",
-            "A014",
-            "",
-            "A015",
-            "",
-            "A016",
-            "",
-            "A017",
-            "",
-            "A018",
-            "",
-            "A019",
-            "",
-            "A020",
-            "",
-            "A021",
-            "",
-            "A022",
-            "",
-            "A023",
-            "",
-            "A024",
-            "",
-            "A025",
-            "",
-            "A026",
-            "",
-            "A027",
-            "",
-            "A028",
-            "",
-            "A029",
-            "",
-            "A030",
-            "",
-            "A031",
-            "",
-            "A032",
-            "",
-            "A033",
-            "",
-            "A034",
-            "",
-            "A035",
-            "",
-            "A036",
-            "",
-            "A037",
-            "",
-            "A038",
-            "",
-            "A039",
-            "",
-            "A040",
-            "",
-            "A041",
-            "",
-            "A042",
-            "",
-            "A043",
-            "",
-            "A044",
-            "",
-            "A045",
-            "",
-            "A046",
-            "",
-            "A047",
-            "",
-            "A048",
-            "",
-            "A049",
-            "",
-            "A050"});
-            this.MedRecAppointmentID_ComboBox.Location = new System.Drawing.Point(194, 100);
-            this.MedRecAppointmentID_ComboBox.Name = "MedRecAppointmentID_ComboBox";
-            this.MedRecAppointmentID_ComboBox.Size = new System.Drawing.Size(238, 28);
-            this.MedRecAppointmentID_ComboBox.TabIndex = 56;
+            this.MedRec_RecordID.DataPropertyName = "record_id";
+            this.MedRec_RecordID.HeaderText = "Record ID";
+            this.MedRec_RecordID.MinimumWidth = 6;
+            this.MedRec_RecordID.Name = "MedRec_RecordID";
             // 
-            // MedRecDoctorID_ComboBox
+            // MedRec_AppointmentID
             // 
-            this.MedRecDoctorID_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.MedRecDoctorID_ComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MedRecDoctorID_ComboBox.FormattingEnabled = true;
-            this.MedRecDoctorID_ComboBox.Items.AddRange(new object[] {
-            "D001",
-            "D002",
-            "D003",
-            "D004",
-            "D005",
-            "D006",
-            "D007",
-            "D008",
-            "D009",
-            "D010",
-            "D011",
-            "D012",
-            "D013",
-            "D014",
-            "D015",
-            "D016",
-            "D017",
-            "D018",
-            "D019",
-            "D020",
-            "D021",
-            "D022",
-            "D023",
-            "D024",
-            "D025",
-            "D026",
-            "D027",
-            "D028",
-            "D029",
-            "D030",
-            "D031",
-            "D032",
-            "D033",
-            "D034",
-            "D035",
-            "D036",
-            "D037",
-            "D038",
-            "D039",
-            "D040",
-            "D041",
-            "D042",
-            "D043",
-            "D044",
-            "D045",
-            "D046",
-            "D047",
-            "D048",
-            "D049",
-            "D050"});
-            this.MedRecDoctorID_ComboBox.Location = new System.Drawing.Point(194, 142);
-            this.MedRecDoctorID_ComboBox.Name = "MedRecDoctorID_ComboBox";
-            this.MedRecDoctorID_ComboBox.Size = new System.Drawing.Size(238, 28);
-            this.MedRecDoctorID_ComboBox.TabIndex = 57;
+            this.MedRec_AppointmentID.DataPropertyName = "appointment_id";
+            this.MedRec_AppointmentID.HeaderText = "Appointment ID";
+            this.MedRec_AppointmentID.MinimumWidth = 6;
+            this.MedRec_AppointmentID.Name = "MedRec_AppointmentID";
+            // 
+            // MedRec_DoctorName
+            // 
+            this.MedRec_DoctorName.DataPropertyName = "doctor_name";
+            this.MedRec_DoctorName.HeaderText = "Doctor";
+            this.MedRec_DoctorName.MinimumWidth = 6;
+            this.MedRec_DoctorName.Name = "MedRec_DoctorName";
+            // 
+            // MedRec_VisitDate
+            // 
+            this.MedRec_VisitDate.DataPropertyName = "visit_date";
+            this.MedRec_VisitDate.HeaderText = "Visit Date";
+            this.MedRec_VisitDate.MinimumWidth = 6;
+            this.MedRec_VisitDate.Name = "MedRec_VisitDate";
+            // 
+            // MedRec_Diagnosis
+            // 
+            this.MedRec_Diagnosis.DataPropertyName = "diagnosis";
+            this.MedRec_Diagnosis.HeaderText = "Diagnosis";
+            this.MedRec_Diagnosis.MinimumWidth = 6;
+            this.MedRec_Diagnosis.Name = "MedRec_Diagnosis";
+            // 
+            // MedRec_Notes
+            // 
+            this.MedRec_Notes.DataPropertyName = "notes";
+            this.MedRec_Notes.HeaderText = "Notes";
+            this.MedRec_Notes.MinimumWidth = 6;
+            this.MedRec_Notes.Name = "MedRec_Notes";
             // 
             // MedicalRecord
             // 
@@ -740,13 +765,19 @@
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ComboBox MedRecDoctorID_ComboBox;
+        private System.Windows.Forms.ComboBox MedRecAppointmentID_ComboBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip4;
+        private System.Windows.Forms.ToolTip toolTip5;
         private System.Windows.Forms.DataGridViewTextBoxColumn MedRec_RecordID;
         private System.Windows.Forms.DataGridViewTextBoxColumn MedRec_AppointmentID;
         private System.Windows.Forms.DataGridViewTextBoxColumn MedRec_DoctorName;
         private System.Windows.Forms.DataGridViewTextBoxColumn MedRec_VisitDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn MedRec_Diagnosis;
         private System.Windows.Forms.DataGridViewTextBoxColumn MedRec_Notes;
-        private System.Windows.Forms.ComboBox MedRecDoctorID_ComboBox;
-        private System.Windows.Forms.ComboBox MedRecAppointmentID_ComboBox;
     }
 }

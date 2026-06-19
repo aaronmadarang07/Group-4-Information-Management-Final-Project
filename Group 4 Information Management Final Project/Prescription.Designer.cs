@@ -66,6 +66,12 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.Prescription_ExitBtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip5 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -80,6 +86,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.pictureBox12);
             this.groupBox1.Controls.Add(this.TimeLabel);
@@ -167,51 +174,54 @@
             this.Prescription_DeleteBtn.BackColor = System.Drawing.Color.OrangeRed;
             this.Prescription_DeleteBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_DeleteBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Prescription_DeleteBtn.Location = new System.Drawing.Point(152, 260);
+            this.Prescription_DeleteBtn.Location = new System.Drawing.Point(590, 257);
             this.Prescription_DeleteBtn.Name = "Prescription_DeleteBtn";
             this.Prescription_DeleteBtn.Size = new System.Drawing.Size(120, 36);
             this.Prescription_DeleteBtn.TabIndex = 37;
             this.Prescription_DeleteBtn.Text = "DELETE";
+            this.toolTip3.SetToolTip(this.Prescription_DeleteBtn, "Delete Prescription Record");
             this.Prescription_DeleteBtn.UseVisualStyleBackColor = false;
-            this.Prescription_DeleteBtn.Click += new System.EventHandler(this.Prescription_DeleteBtn_Click);            // 
+            this.Prescription_DeleteBtn.Click += new System.EventHandler(this.Prescription_DeleteBtn_Click);
+            // 
             // Prescription_UpdateBtn
             // 
             this.Prescription_UpdateBtn.BackColor = System.Drawing.Color.SeaGreen;
             this.Prescription_UpdateBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_UpdateBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Prescription_UpdateBtn.Location = new System.Drawing.Point(284, 260);
+            this.Prescription_UpdateBtn.Location = new System.Drawing.Point(722, 257);
             this.Prescription_UpdateBtn.Name = "Prescription_UpdateBtn";
             this.Prescription_UpdateBtn.Size = new System.Drawing.Size(120, 36);
             this.Prescription_UpdateBtn.TabIndex = 36;
             this.Prescription_UpdateBtn.Text = "UPDATE";
+            this.toolTip4.SetToolTip(this.Prescription_UpdateBtn, "Update Changes");
             this.Prescription_UpdateBtn.UseVisualStyleBackColor = false;
-            this.Prescription_DeleteBtn.Click += new System.EventHandler(this.Prescription_DeleteBtn_Click);
-
-
-
-            this.Prescription_UpdateBtn.Click += new System.EventHandler(this.Prescription_UpdateBtn_Click);            // 
+            this.Prescription_UpdateBtn.Click += new System.EventHandler(this.Prescription_UpdateBtn_Click);
+            // 
             // Prescription_ClearBtn
             // 
             this.Prescription_ClearBtn.BackColor = System.Drawing.Color.Goldenrod;
             this.Prescription_ClearBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_ClearBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Prescription_ClearBtn.Location = new System.Drawing.Point(418, 260);
+            this.Prescription_ClearBtn.Location = new System.Drawing.Point(856, 257);
             this.Prescription_ClearBtn.Name = "Prescription_ClearBtn";
             this.Prescription_ClearBtn.Size = new System.Drawing.Size(120, 36);
             this.Prescription_ClearBtn.TabIndex = 35;
             this.Prescription_ClearBtn.Text = "CLEAR";
+            this.toolTip5.SetToolTip(this.Prescription_ClearBtn, "Clear Fields");
             this.Prescription_ClearBtn.UseVisualStyleBackColor = false;
-            this.Prescription_ClearBtn.Click += new System.EventHandler(this.Prescription_ClearBtn_Click);            // 
+            this.Prescription_ClearBtn.Click += new System.EventHandler(this.Prescription_ClearBtn_Click);
+            // 
             // Prescription_AddBtn
             // 
             this.Prescription_AddBtn.BackColor = System.Drawing.Color.RoyalBlue;
             this.Prescription_AddBtn.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Prescription_AddBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Prescription_AddBtn.Location = new System.Drawing.Point(19, 260);
+            this.Prescription_AddBtn.Location = new System.Drawing.Point(457, 257);
             this.Prescription_AddBtn.Name = "Prescription_AddBtn";
             this.Prescription_AddBtn.Size = new System.Drawing.Size(120, 36);
             this.Prescription_AddBtn.TabIndex = 34;
             this.Prescription_AddBtn.Text = "ADD";
+            this.toolTip2.SetToolTip(this.Prescription_AddBtn, "Add Prescription");
             this.Prescription_AddBtn.UseVisualStyleBackColor = false;
             this.Prescription_AddBtn.Click += new System.EventHandler(this.Prescription_AddBtn_Click);
             // 
@@ -270,6 +280,8 @@
             this.PresPrescriptionID_TextBox.Name = "PresPrescriptionID_TextBox";
             this.PresPrescriptionID_TextBox.Size = new System.Drawing.Size(238, 27);
             this.PresPrescriptionID_TextBox.TabIndex = 27;
+            this.toolTip1.SetToolTip(this.PresPrescriptionID_TextBox, "See the last Prescription ID number to enter the next Prescription ID number nume" +
+        "rically");
             this.PresPrescriptionID_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PresPrescriptionID_TextBox_KeyPress);
             // 
             // label6
@@ -381,6 +393,7 @@
             this.PrescriptionSearch_TextBox.Name = "PrescriptionSearch_TextBox";
             this.PrescriptionSearch_TextBox.Size = new System.Drawing.Size(163, 25);
             this.PrescriptionSearch_TextBox.TabIndex = 31;
+            this.PrescriptionSearch_TextBox.TextChanged += new System.EventHandler(this.PrescriptionSearch_TextBox_TextChanged);
             // 
             // label10
             // 
@@ -411,7 +424,8 @@
             this.PrescriptionList_DataGridView.RowHeadersWidth = 51;
             this.PrescriptionList_DataGridView.Size = new System.Drawing.Size(959, 197);
             this.PrescriptionList_DataGridView.TabIndex = 0;
-            this.PrescriptionList_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Prescription_DataGridView_CellClick);            // 
+            this.PrescriptionList_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Prescription_DataGridView_CellClick);
+            // 
             // Prescription_PrescriptionID
             // 
             this.Prescription_PrescriptionID.DataPropertyName = "prescription_id";
@@ -500,6 +514,17 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(16, 80);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 13);
+            this.label11.TabIndex = 63;
+            this.label11.Text = "ex. PRXXX";
+            // 
             // Prescription
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -570,5 +595,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_Frequency;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prescription_Duration;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip4;
+        private System.Windows.Forms.ToolTip toolTip5;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

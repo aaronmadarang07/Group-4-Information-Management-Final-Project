@@ -191,16 +191,16 @@ namespace Group_4_Information_Management_Final_Project
 
             if (currentText.Length == 0)
             {
-                if (char.ToUpper(e.KeyChar) == 'R')
+                if (char.ToUpper(e.KeyChar) == 'P')
                 {
                     e.Handled = true;
-                    PresPrescriptionID_TextBox.Text = "R";
+                    PresPrescriptionID_TextBox.Text = "PR";
                     PresPrescriptionID_TextBox.SelectionStart = PresPrescriptionID_TextBox.Text.Length;
                 }
                 else
                 {
                     e.Handled = true;
-                    MessageBox.Show("Invalid input. Prescription ID must start with letter R.",
+                    MessageBox.Show("Invalid input. Prescription ID must start with letter PR.",
                         "Validation Error",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
@@ -214,7 +214,7 @@ namespace Group_4_Information_Management_Final_Project
                 return;
             }
 
-            if (currentText.Length >= 4)
+            if (currentText.Length >= 5)
             {
                 e.Handled = true;
             }
@@ -232,6 +232,29 @@ namespace Group_4_Information_Management_Final_Project
                 PresFrequency_ComboBox.Text = row.Cells["Prescription_Frequency"].Value?.ToString();
                 PresDuration_TextBox.Text = row.Cells["Prescription_Duration"].Value?.ToString();
             }
+        }
+
+        private void PrescriptionSearch_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var conn = DBHelper.GetConnection())
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand("SearchPrescriptions", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("p_search", PrescriptionSearch_TextBox.Text);
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable table = new DataTable();
+                            adapter.Fill(table);
+                            PrescriptionList_DataGridView.DataSource = table;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void Prescription_ExitBtn_Click(object sender, EventArgs e)

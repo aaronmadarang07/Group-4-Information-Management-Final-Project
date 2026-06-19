@@ -201,11 +201,10 @@ namespace Group_4_Information_Management_Final_Project
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.AddWithValue("p_appointment_id", AppID_TextBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("p_patient_name", GetPatientDisplay(AppPatientID_ComboBox.Text.Trim()));
-                        cmd.Parameters.AddWithValue("p_doctor_name", GetDoctorDisplay(AppDoctorID_ComboBox.Text.Trim()));
+                        cmd.Parameters.AddWithValue("p_patient_id", AppPatientID_ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_doctor_id", AppDoctorID_ComboBox.Text.Trim());
                         cmd.Parameters.AddWithValue("p_appointment_date", AppDate_DateTimePicker.Value.Date);
                         cmd.Parameters.AddWithValue("p_appointment_time", AppAppointmentTime_ComboBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("p_schedule", AppAppointmentTime_ComboBox.Text.Trim());
                         cmd.Parameters.AddWithValue("p_status", AppStatus_ComboBox.Text.Trim());
                         cmd.Parameters.AddWithValue("p_remarks", AppRemarks_TextBox.Text.Trim());
 
@@ -242,8 +241,8 @@ namespace Group_4_Information_Management_Final_Project
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.AddWithValue("p_appointment_id", AppID_TextBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("p_patient_name", GetPatientDisplay(AppPatientID_ComboBox.Text.Trim()));
-                        cmd.Parameters.AddWithValue("p_doctor_name", GetDoctorDisplay(AppDoctorID_ComboBox.Text.Trim()));
+                        cmd.Parameters.AddWithValue("p_patient_id", AppPatientID_ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("p_doctor_id", AppDoctorID_ComboBox.Text.Trim());
                         cmd.Parameters.AddWithValue("p_appointment_date", AppDate_DateTimePicker.Value.Date);
                         cmd.Parameters.AddWithValue("p_appointment_time", AppAppointmentTime_ComboBox.Text.Trim());
                         cmd.Parameters.AddWithValue("p_schedule", AppAppointmentTime_ComboBox.Text.Trim());
@@ -404,11 +403,14 @@ namespace Group_4_Information_Management_Final_Project
             this.Hide();
         }
 
+        private void AppointmentList_DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) 
+        {
+
+        }
         private void label11_Click(object sender, EventArgs e) { }
         private void pictureBox10_Click(object sender, EventArgs e) { }
         private void pictureBox9_Click(object sender, EventArgs e) { }
         private void groupBox1_Enter(object sender, EventArgs e) { }
-        private void AppointmentList_DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) { }
         private void AppAppointmentTime_ComboBox_SelectedIndexChanged(object sender, EventArgs e) { }
         private void AppDoctorID_ComboBox_SelectedIndexChanged(object sender, EventArgs e) { }

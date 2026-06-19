@@ -75,6 +75,12 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.Patient_GobackHomeBtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip5 = new System.Windows.Forms.ToolTip(this.components);
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +95,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.pictureBox12);
             this.groupBox1.Controls.Add(this.TimeLabel);
             this.groupBox1.Controls.Add(this.DateLabel);
@@ -179,6 +186,7 @@
             this.PatientsForm_ClearBtn.Size = new System.Drawing.Size(132, 36);
             this.PatientsForm_ClearBtn.TabIndex = 34;
             this.PatientsForm_ClearBtn.Text = "CLEAR";
+            this.toolTip5.SetToolTip(this.PatientsForm_ClearBtn, "Clear Fields");
             this.PatientsForm_ClearBtn.UseVisualStyleBackColor = false;
             this.PatientsForm_ClearBtn.Click += new System.EventHandler(this.PatientsForm_ClearBtn_Click);
             // 
@@ -192,6 +200,7 @@
             this.PatientsForm_DeleteBtn.Size = new System.Drawing.Size(132, 36);
             this.PatientsForm_DeleteBtn.TabIndex = 33;
             this.PatientsForm_DeleteBtn.Text = "DELETE";
+            this.toolTip4.SetToolTip(this.PatientsForm_DeleteBtn, "Delete Patient Record");
             this.PatientsForm_DeleteBtn.UseVisualStyleBackColor = false;
             this.PatientsForm_DeleteBtn.Click += new System.EventHandler(this.PatientsForm_DeleteBtn_Click);
             // 
@@ -205,6 +214,7 @@
             this.PatientsForm_UpdateBtn.Size = new System.Drawing.Size(132, 36);
             this.PatientsForm_UpdateBtn.TabIndex = 32;
             this.PatientsForm_UpdateBtn.Text = "UPDATE";
+            this.toolTip3.SetToolTip(this.PatientsForm_UpdateBtn, "Update Changes");
             this.PatientsForm_UpdateBtn.UseVisualStyleBackColor = false;
             this.PatientsForm_UpdateBtn.Click += new System.EventHandler(this.PatientsForm_UpdateBtn_Click);
             // 
@@ -218,6 +228,7 @@
             this.PatientsForm_AddBtn.Size = new System.Drawing.Size(132, 36);
             this.PatientsForm_AddBtn.TabIndex = 31;
             this.PatientsForm_AddBtn.Text = "ADD";
+            this.toolTip2.SetToolTip(this.PatientsForm_AddBtn, "Add Patient");
             this.PatientsForm_AddBtn.UseVisualStyleBackColor = false;
             this.PatientsForm_AddBtn.Click += new System.EventHandler(this.PatientsForm_AddBtn_Click);
             // 
@@ -315,8 +326,8 @@
             this.PatientContactNumber_TextBox.Name = "PatientContactNumber_TextBox";
             this.PatientContactNumber_TextBox.Size = new System.Drawing.Size(238, 27);
             this.PatientContactNumber_TextBox.TabIndex = 27;
-            this.PatientContactNumber_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PatientContactNumber_TextBox_KeyPress);
             this.PatientContactNumber_TextBox.TextChanged += new System.EventHandler(this.PatientContactNumber_TextBox_TextChanged);
+            this.PatientContactNumber_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PatientContactNumber_TextBox_KeyPress);
             this.PatientContactNumber_TextBox.Leave += new System.EventHandler(this.PatientContactNumber_TextBox_Leave);
             // 
             // label7
@@ -337,7 +348,8 @@
             this.PatientDOB_DateTimePicker1.Name = "PatientDOB_DateTimePicker1";
             this.PatientDOB_DateTimePicker1.Size = new System.Drawing.Size(238, 27);
             this.PatientDOB_DateTimePicker1.TabIndex = 25;
-            this.PatientDOB_DateTimePicker1.ValueChanged += new System.EventHandler(this.PatientDOB_DateTimePicker1_ValueChanged);            // 
+            this.PatientDOB_DateTimePicker1.ValueChanged += new System.EventHandler(this.PatientDOB_DateTimePicker1_ValueChanged);
+            // 
             // PatientGender_ComboBox
             // 
             this.PatientGender_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -374,6 +386,7 @@
             this.PatientID_TextBox.Name = "PatientID_TextBox";
             this.PatientID_TextBox.Size = new System.Drawing.Size(238, 27);
             this.PatientID_TextBox.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.PatientID_TextBox, "See the last Patient ID number to enter the next Patient ID number numerically");
             this.PatientID_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PatientID_TextBox_KeyPress);
             // 
             // label6
@@ -635,6 +648,18 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(16, 81);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 13);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "ex. PXXX";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
             // Patient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -714,5 +739,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PL_ContactNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn PL_BloodType;
         private System.Windows.Forms.DataGridViewTextBoxColumn PL_Address;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip4;
+        private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip5;
+        private System.Windows.Forms.Label label11;
     }
 }

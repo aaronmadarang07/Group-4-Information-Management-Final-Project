@@ -55,10 +55,8 @@ namespace Group_4_Information_Management_Final_Project
             AppointmentsChart.Series.Add(series);
         }
 
-        private void AppointmentsChart_Click(object sender, EventArgs e)
-        {
-           
-        }
+        private void AppointmentsChart_Click(object sender, EventArgs e) { }
+
 
 
         private void LoadDashboardStats()
@@ -96,30 +94,23 @@ namespace Group_4_Information_Management_Final_Project
                 {
                     conn.Open();
 
-                    string sql = @"
-                        SELECT 
-                            a.appointment_time AS Time,
-                            CONCAT(p.first_name, ' ', p.last_name) AS Patient,
-                            CONCAT(d.first_name, ' ', d.last_name) AS Doctor,
-                            a.status AS Status
-                        FROM appointments a
-                        JOIN patients p
-                            ON a.patient_id = p.patient_id
-                        JOIN doctors d
-                            ON a.doctor_id = d.doctor_id
-                        ORDER BY a.appointment_date, a.appointment_time";
-
-                    using (var adapter = new MySqlDataAdapter(sql, conn))
+                    using (MySqlCommand cmd = new MySqlCommand("GetTodaysAppointments", conn))
                     {
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
-                        TodApp_DataGridView.DataSource = table;
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
+
+                            TodApp_DataGridView.DataSource = dt;
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("DB Error: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
         private void DashBoard_GoToAppointmentsBtn_Click(object sender, EventArgs e)

@@ -31,24 +31,32 @@ namespace Group_4_Information_Management_Final_Project
             LoadDoctors();
         }
 
-        private void LoadDoctors()
+        private void LoadDoctors(string search = "")
         {
             try
             {
-                using (var conn = DBHelper.GetConnection())
+                using (MySqlConnection conn = DBHelper.GetConnection())
                 {
                     conn.Open();
 
-                    using (MySqlCommand cmd = new MySqlCommand("GetDoctors", conn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
+                    string query = @"
+                SELECT doctor_id, first_name, last_name, contact_number, specialty, 
+                       availability, start_time, end_time
+                FROM doctors
+                WHERE doctor_id LIKE @search
+                   OR first_name LIKE @search
+                   OR last_name LIKE @search
+                   OR specialty LIKE @search";
 
-                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
-                        {
-                            DataTable table = new DataTable();
-                            adapter.Fill(table);
-                            DoctorsList_DataGridView.DataSource = table;
-                        }
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@search", "%" + search + "%");
+
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+
+                        DoctorsList_DataGridView.DataSource = dt;
                     }
                 }
             }
@@ -56,6 +64,11 @@ namespace Group_4_Information_Management_Final_Project
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void DoctorSearch_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            LoadDoctors(DoctorSearch_TextBox.Text);
         }
 
         private bool HasEmptyFields()

@@ -75,6 +75,12 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.Doctor_ExitBtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip5 = new System.Windows.Forms.ToolTip(this.components);
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +95,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.pictureBox12);
             this.groupBox1.Controls.Add(this.TimeLabel);
             this.groupBox1.Controls.Add(this.DateLabel);
@@ -250,6 +257,7 @@
             this.DoctorsForm_DeleteBtn.Size = new System.Drawing.Size(120, 36);
             this.DoctorsForm_DeleteBtn.TabIndex = 37;
             this.DoctorsForm_DeleteBtn.Text = "DELETE";
+            this.toolTip3.SetToolTip(this.DoctorsForm_DeleteBtn, "Delete Doctor Record");
             this.DoctorsForm_DeleteBtn.UseVisualStyleBackColor = false;
             this.DoctorsForm_DeleteBtn.Click += new System.EventHandler(this.DoctorsForm_DeleteBtn_Click);
             // 
@@ -263,6 +271,7 @@
             this.DoctorsForm_UpdateBtn.Size = new System.Drawing.Size(120, 36);
             this.DoctorsForm_UpdateBtn.TabIndex = 36;
             this.DoctorsForm_UpdateBtn.Text = "UPDATE";
+            this.toolTip4.SetToolTip(this.DoctorsForm_UpdateBtn, "Update Changes");
             this.DoctorsForm_UpdateBtn.UseVisualStyleBackColor = false;
             this.DoctorsForm_UpdateBtn.Click += new System.EventHandler(this.DoctorsForm_UpdateBtn_Click);
             // 
@@ -276,6 +285,7 @@
             this.DoctorsForm_ClearBtn.Size = new System.Drawing.Size(120, 36);
             this.DoctorsForm_ClearBtn.TabIndex = 35;
             this.DoctorsForm_ClearBtn.Text = "CLEAR";
+            this.toolTip5.SetToolTip(this.DoctorsForm_ClearBtn, "Clear Fields");
             this.DoctorsForm_ClearBtn.UseVisualStyleBackColor = false;
             this.DoctorsForm_ClearBtn.Click += new System.EventHandler(this.DoctorsForm_ClearBtn_Click);
             // 
@@ -289,6 +299,7 @@
             this.DoctorsForm_AddBtn.Size = new System.Drawing.Size(120, 36);
             this.DoctorsForm_AddBtn.TabIndex = 34;
             this.DoctorsForm_AddBtn.Text = "ADD";
+            this.toolTip2.SetToolTip(this.DoctorsForm_AddBtn, "Add Doctor");
             this.DoctorsForm_AddBtn.UseVisualStyleBackColor = false;
             this.DoctorsForm_AddBtn.Click += new System.EventHandler(this.DoctorsForm_AddBtn_Click);
             // 
@@ -374,8 +385,8 @@
             this.ContactNumber_TextBox.Name = "ContactNumber_TextBox";
             this.ContactNumber_TextBox.Size = new System.Drawing.Size(238, 27);
             this.ContactNumber_TextBox.TabIndex = 31;
-            this.ContactNumber_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ContactNumber_TextBox_KeyPress);
             this.ContactNumber_TextBox.TextChanged += new System.EventHandler(this.ContactNumber_TextBox_TextChanged);
+            this.ContactNumber_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ContactNumber_TextBox_KeyPress);
             this.ContactNumber_TextBox.Leave += new System.EventHandler(this.ContactNumber_TextBox_Leave);
             // 
             // DoctorSpecialty_ComboBox
@@ -536,6 +547,7 @@
             this.DoctorID_TextBox.Name = "DoctorID_TextBox";
             this.DoctorID_TextBox.Size = new System.Drawing.Size(238, 27);
             this.DoctorID_TextBox.TabIndex = 27;
+            this.toolTip1.SetToolTip(this.DoctorID_TextBox, "See the last Doctor ID number to enter the next Doctor ID number numerically");
             this.DoctorID_TextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DoctorID_TextBox_KeyPress);
             // 
             // label7
@@ -669,6 +681,7 @@
             this.DoctorSearch_TextBox.Name = "DoctorSearch_TextBox";
             this.DoctorSearch_TextBox.Size = new System.Drawing.Size(163, 25);
             this.DoctorSearch_TextBox.TabIndex = 31;
+            this.DoctorSearch_TextBox.TextChanged += new System.EventHandler(this.DoctorSearch_TextBox_TextChanged);
             // 
             // label10
             // 
@@ -807,6 +820,17 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(16, 80);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(54, 13);
+            this.label11.TabIndex = 46;
+            this.label11.Text = "ex. DXXX";
+            // 
             // Doctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -886,5 +910,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DL_Availability;
         private System.Windows.Forms.DataGridViewTextBoxColumn DL_StartTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn DL_EndTime;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip4;
+        private System.Windows.Forms.ToolTip toolTip5;
+        private System.Windows.Forms.Label label11;
     }
 }
