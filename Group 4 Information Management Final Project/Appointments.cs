@@ -75,7 +75,6 @@ namespace Group_4_Information_Management_Final_Project
             }
         }
 
-// HEAD
         private void LoadPatientIDs()
         {
             try
@@ -141,7 +140,6 @@ namespace Group_4_Information_Management_Final_Project
                 MessageBox.Show(ex.Message);
             }
         }
-//>>>>>>> f8542983a89a9257ba5e0a049d73f1cc78fb1f14
         private string GetPatientDisplay(string patientId)
         {
             using (var conn = DBHelper.GetConnection())
@@ -314,13 +312,13 @@ namespace Group_4_Information_Management_Final_Project
             AppRemarks_TextBox.Clear();
             AppDate_DateTimePicker.Value = DateTime.Now;
             AppAppointmentTime_ComboBox.SelectedIndex = -1;
-//<<<<<<< HEAD
+
             AppDoctorID_ComboBox.SelectedIndex = -1;
             AppPatientID_ComboBox.SelectedIndex = -1;
             AppRemarks_TextBox.Text = "";
             AppStatus_ComboBox.SelectedIndex = -1;
             AppID_TextBox.Focus();
-//=======
+
             AppAppointmentTime_ComboBox.Text = "";
             AppStatus_ComboBox.SelectedIndex = -1;
             AppStatus_ComboBox.Text = "";

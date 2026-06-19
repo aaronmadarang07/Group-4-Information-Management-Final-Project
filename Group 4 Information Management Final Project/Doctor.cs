@@ -211,9 +211,8 @@ namespace Group_4_Information_Management_Final_Project
             StartTime_ComboBox.SelectedIndex = -1;
             StartTime_ComboBox.Text = "";
             EndTime_ComboBox.SelectedIndex = -1;
-<<<<<<< HEAD
             DoctorID_TextBox.Focus();
-=======
+
             EndTime_ComboBox.Text = "";
         }
 
@@ -307,7 +306,6 @@ namespace Group_4_Information_Management_Final_Project
                 MessageBox.Show("Contact number must start with '09' and be exactly 11 digits.",
                     "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
->>>>>>> f8542983a89a9257ba5e0a049d73f1cc78fb1f14
         }
 
         private void DoctorsList_DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -582,9 +582,9 @@
             this.AppointmentList_DataGridView.RowHeadersWidth = 51;
             this.AppointmentList_DataGridView.Size = new System.Drawing.Size(959, 197);
             this.AppointmentList_DataGridView.TabIndex = 0;
-<<<<<<< HEAD
+
             this.AppointmentList_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AppointmentList_DataGridView_CellContentClick);
-=======
+
             this.AppointmentList_DataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AppointmentList_DataGridView_CellClick);            // 
             // App_AppointmentID
             // 
@@ -634,7 +634,6 @@
             this.App_Remarks.HeaderText = "Remarks";
             this.App_Remarks.MinimumWidth = 6;
             this.App_Remarks.Name = "App_Remarks";
->>>>>>> f8542983a89a9257ba5e0a049d73f1cc78fb1f14
             // 
             // pictureBox9
             // 

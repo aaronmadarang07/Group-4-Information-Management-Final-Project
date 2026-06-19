@@ -26,7 +26,6 @@ namespace Group_4_Information_Management_Final_Project
             MedRec_Notes.DataPropertyName = "notes";
 
             LoadMedicalRecords();
-<<<<<<< HEAD
 
             MedRec_AddBtn.Click += MedRec_AddBtn_Click;
             MedRec_UpdateBtn.Click += MedRec_UpdateBtn_Click;
@@ -36,8 +35,7 @@ namespace Group_4_Information_Management_Final_Project
 
             LoadAppointmentIDs();
             LoadDoctorIDs();
-=======
->>>>>>> f8542983a89a9257ba5e0a049d73f1cc78fb1f14
+
         }
 
         private void LoadMedicalRecords()
@@ -158,15 +156,9 @@ namespace Group_4_Information_Management_Final_Project
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-<<<<<<< HEAD
                         cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text);
                         cmd.Parameters.AddWithValue("p_appointment_id", MedRecAppointmentID_ComboBox.Text);
                         cmd.Parameters.AddWithValue("p_doctor_id", MedRecDoctorID_ComboBox.Text);
-=======
-                        cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("p_appointment", MedRecAppointment_TextBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("p_doctor", MedRecDoctor_TextBox.Text.Trim());
->>>>>>> f8542983a89a9257ba5e0a049d73f1cc78fb1f14
                         cmd.Parameters.AddWithValue("p_visit_date", MedRecVisitDate_DateTimePicker.Value.Date);
                         cmd.Parameters.AddWithValue("p_diagnosis", MedRecDiagnosis_TextBox.Text.Trim());
                         cmd.Parameters.AddWithValue("p_notes", MedRecNotes_TextBox.Text.Trim());
@@ -202,16 +194,9 @@ namespace Group_4_Information_Management_Final_Project
                     using (MySqlCommand cmd = new MySqlCommand("UpdateMedicalRecord", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-<<<<<<< HEAD
                         cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text);
                         cmd.Parameters.AddWithValue("p_appointment_id", MedRecAppointmentID_ComboBox.Text);
                         cmd.Parameters.AddWithValue("p_doctor_id", MedRecDoctorID_ComboBox.Text);
-=======
-
-                        cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("p_appointment", MedRecAppointment_TextBox.Text.Trim());
-                        cmd.Parameters.AddWithValue("p_doctor", MedRecDoctor_TextBox.Text.Trim());
->>>>>>> f8542983a89a9257ba5e0a049d73f1cc78fb1f14
                         cmd.Parameters.AddWithValue("p_visit_date", MedRecVisitDate_DateTimePicker.Value.Date);
                         cmd.Parameters.AddWithValue("p_diagnosis", MedRecDiagnosis_TextBox.Text.Trim());
                         cmd.Parameters.AddWithValue("p_notes", MedRecNotes_TextBox.Text.Trim());
