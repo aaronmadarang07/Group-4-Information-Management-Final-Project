@@ -160,6 +160,7 @@ namespace Group_4_Information_Management_Final_Project
             PresDosage_TextBox.Clear();
             PresFrequency_ComboBox.SelectedIndex = -1;
             PresDuration_TextBox.Clear();
+            PresPrescriptionID_TextBox.Focus();
         }
 
         private void Prescription_DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -60,6 +60,11 @@
             this.AppointmentSearch_TextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.AppointmentList_DataGridView = new System.Windows.Forms.DataGridView();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.Appointments_GobackHomeBtn = new System.Windows.Forms.Button();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.Appointments_ExitBtn = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.App_AppointmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.App_PatientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.App_DoctorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,11 +72,6 @@
             this.App_AppointmentTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.App_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.App_Remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.Appointments_GobackHomeBtn = new System.Windows.Forms.Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.Appointments_ExitBtn = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -124,103 +124,54 @@
             this.AppDoctorID_ComboBox.FormattingEnabled = true;
             this.AppDoctorID_ComboBox.Items.AddRange(new object[] {
             "D001",
-            "",
             "D002",
-            "",
             "D003",
-            "",
             "D004",
-            "",
             "D005",
-            "",
             "D006",
-            "",
             "D007",
-            "",
             "D008",
-            "",
             "D009",
-            "",
             "D010",
-            "",
             "D011",
-            "",
             "D012",
-            "",
             "D013",
-            "",
             "D014",
-            "",
             "D015",
-            "",
             "D016",
-            "",
             "D017",
-            "",
             "D018",
-            "",
             "D019",
-            "",
             "D020",
-            "",
             "D021",
-            "",
             "D022",
-            "",
             "D023",
-            "",
             "D024",
-            "",
             "D025",
-            "",
             "D026",
-            "",
             "D027",
-            "",
             "D028",
-            "",
             "D029",
-            "",
             "D030",
-            "",
             "D031",
-            "",
             "D032",
-            "",
             "D033",
-            "",
             "D034",
-            "",
             "D035",
-            "",
             "D036",
-            "",
             "D037",
-            "",
             "D038",
-            "",
             "D039",
-            "",
             "D040",
-            "",
             "D041",
-            "",
             "D042",
-            "",
             "D043",
-            "",
             "D044",
-            "",
             "D045",
-            "",
             "D046",
-            "",
             "D047",
-            "",
             "D048",
-            "",
             "D049",
-            "",
             "D050"});
             this.AppDoctorID_ComboBox.Location = new System.Drawing.Point(194, 145);
             this.AppDoctorID_ComboBox.Name = "AppDoctorID_ComboBox";
@@ -235,103 +186,54 @@
             this.AppPatientID_ComboBox.FormattingEnabled = true;
             this.AppPatientID_ComboBox.Items.AddRange(new object[] {
             "P001",
-            "",
             "P002",
-            "",
             "P003",
-            "",
             "P004",
-            "",
             "P005",
-            "",
             "P006",
-            "",
             "P007",
-            "",
             "P008",
-            "",
             "P009",
-            "",
             "P010",
-            "",
             "P011",
-            "",
             "P012",
-            "",
             "P013",
-            "",
             "P014",
-            "",
             "P015",
-            "",
             "P016",
-            "",
             "P017",
-            "",
             "P018",
-            "",
             "P019",
-            "",
             "P020",
-            "",
             "P021",
-            "",
             "P022",
-            "",
             "P023",
-            "",
             "P024",
-            "",
             "P025",
-            "",
             "P026",
-            "",
             "P027",
-            "",
             "P028",
-            "",
             "P029",
-            "",
             "P030",
-            "",
             "P031",
-            "",
             "P032",
-            "",
             "P033",
-            "",
             "P034",
-            "",
             "P035",
-            "",
             "P036",
-            "",
             "P037",
-            "",
             "P038",
-            "",
             "P039",
-            "",
             "P040",
-            "",
             "P041",
-            "",
             "P042",
-            "",
             "P043",
-            "",
             "P044",
-            "",
             "P045",
-            "",
             "P046",
-            "",
             "P047",
-            "",
             "P048",
-            "",
             "P049",
-            "",
             "P050"});
             this.AppPatientID_ComboBox.Location = new System.Drawing.Point(194, 102);
             this.AppPatientID_ComboBox.Name = "AppPatientID_ComboBox";
@@ -681,55 +583,6 @@
             this.AppointmentList_DataGridView.TabIndex = 0;
             this.AppointmentList_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AppointmentList_DataGridView_CellContentClick);
             // 
-            // App_AppointmentID
-            // 
-            this.App_AppointmentID.DataPropertyName = "appointment_id";
-            this.App_AppointmentID.HeaderText = "Appointment ID";
-            this.App_AppointmentID.MinimumWidth = 6;
-            this.App_AppointmentID.Name = "App_AppointmentID";
-            // 
-            // App_PatientName
-            // 
-            this.App_PatientName.DataPropertyName = "patient_name";
-            this.App_PatientName.HeaderText = "Patient Name";
-            this.App_PatientName.MinimumWidth = 6;
-            this.App_PatientName.Name = "App_PatientName";
-            // 
-            // App_DoctorName
-            // 
-            this.App_DoctorName.DataPropertyName = "doctor_name";
-            this.App_DoctorName.HeaderText = "Doctor Name";
-            this.App_DoctorName.MinimumWidth = 6;
-            this.App_DoctorName.Name = "App_DoctorName";
-            // 
-            // App_AppointmentDate
-            // 
-            this.App_AppointmentDate.DataPropertyName = "appointment_date";
-            this.App_AppointmentDate.HeaderText = "Appointment Date";
-            this.App_AppointmentDate.MinimumWidth = 6;
-            this.App_AppointmentDate.Name = "App_AppointmentDate";
-            // 
-            // App_AppointmentTime
-            // 
-            this.App_AppointmentTime.DataPropertyName = "appointment_time";
-            this.App_AppointmentTime.HeaderText = "Appointment Time";
-            this.App_AppointmentTime.MinimumWidth = 6;
-            this.App_AppointmentTime.Name = "App_AppointmentTime";
-            // 
-            // App_Status
-            // 
-            this.App_Status.DataPropertyName = "status";
-            this.App_Status.HeaderText = "Status";
-            this.App_Status.MinimumWidth = 6;
-            this.App_Status.Name = "App_Status";
-            // 
-            // App_Remarks
-            // 
-            this.App_Remarks.DataPropertyName = "remarks";
-            this.App_Remarks.HeaderText = "Remarks";
-            this.App_Remarks.MinimumWidth = 6;
-            this.App_Remarks.Name = "App_Remarks";
-            // 
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -783,6 +636,55 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // App_AppointmentID
+            // 
+            this.App_AppointmentID.DataPropertyName = "appointment_id";
+            this.App_AppointmentID.HeaderText = "Appointment ID";
+            this.App_AppointmentID.MinimumWidth = 6;
+            this.App_AppointmentID.Name = "App_AppointmentID";
+            // 
+            // App_PatientName
+            // 
+            this.App_PatientName.DataPropertyName = "patient_name";
+            this.App_PatientName.HeaderText = "Patient Name";
+            this.App_PatientName.MinimumWidth = 6;
+            this.App_PatientName.Name = "App_PatientName";
+            // 
+            // App_DoctorName
+            // 
+            this.App_DoctorName.DataPropertyName = "doctor_name";
+            this.App_DoctorName.HeaderText = "Doctor Name";
+            this.App_DoctorName.MinimumWidth = 6;
+            this.App_DoctorName.Name = "App_DoctorName";
+            // 
+            // App_AppointmentDate
+            // 
+            this.App_AppointmentDate.DataPropertyName = "appointment_date";
+            this.App_AppointmentDate.HeaderText = "Appointment Date";
+            this.App_AppointmentDate.MinimumWidth = 6;
+            this.App_AppointmentDate.Name = "App_AppointmentDate";
+            // 
+            // App_AppointmentTime
+            // 
+            this.App_AppointmentTime.DataPropertyName = "appointment_time";
+            this.App_AppointmentTime.HeaderText = "Appointment Time";
+            this.App_AppointmentTime.MinimumWidth = 6;
+            this.App_AppointmentTime.Name = "App_AppointmentTime";
+            // 
+            // App_Status
+            // 
+            this.App_Status.DataPropertyName = "status";
+            this.App_Status.HeaderText = "Status";
+            this.App_Status.MinimumWidth = 6;
+            this.App_Status.Name = "App_Status";
+            // 
+            // App_Remarks
+            // 
+            this.App_Remarks.DataPropertyName = "remarks";
+            this.App_Remarks.HeaderText = "Remarks";
+            this.App_Remarks.MinimumWidth = 6;
+            this.App_Remarks.Name = "App_Remarks";
             // 
             // Appointments
             // 

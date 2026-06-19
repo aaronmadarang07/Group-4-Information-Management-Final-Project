@@ -19,8 +19,8 @@ namespace Group_4_Information_Management_Final_Project
             MedRec_DataGridView.AutoGenerateColumns = false;
 
             MedRec_RecordID.DataPropertyName = "record_id";
-            MedRec_AppointmentID.DataPropertyName = "appointment";
-            MedRec_DoctorName.DataPropertyName = "doctor";
+            MedRec_AppointmentID.DataPropertyName = "appointment_id";
+            MedRec_DoctorName.DataPropertyName = "doctor_name";
             MedRec_VisitDate.DataPropertyName = "visit_date";
             MedRec_Diagnosis.DataPropertyName = "diagnosis";
             MedRec_Notes.DataPropertyName = "notes";
@@ -32,6 +32,9 @@ namespace Group_4_Information_Management_Final_Project
             MedRec_DeleteBtn.Click += MedRec_DeleteBtn_Click;
             MedRec_ClearBtn.Click += MedRec_ClearBtn_Click;
             MedRec_DataGridView.CellClick += MedRec_DataGridView_CellClick;
+
+            LoadAppointmentIDs();
+            LoadDoctorIDs();
         }
 
         private void LoadMedicalRecords()
@@ -61,11 +64,77 @@ namespace Group_4_Information_Management_Final_Project
             }
         }
 
+        private void LoadAppointmentIDs()
+        {
+            try
+            {
+                using (MySqlConnection conn = DBHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string query =
+                        "SELECT appointment_id FROM appointments";
+
+                    MySqlDataAdapter da =
+                        new MySqlDataAdapter(query, conn);
+
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+
+                    MedRecAppointmentID_ComboBox.DataSource = dt;
+
+                    MedRecAppointmentID_ComboBox.DisplayMember =
+                        "appointment_id";
+
+                    MedRecAppointmentID_ComboBox.ValueMember =
+                        "appointment_id";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LoadDoctorIDs()
+        {
+            try
+            {
+                using (MySqlConnection conn = DBHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string query =
+                        "SELECT doctor_id FROM doctors";
+
+                    MySqlDataAdapter da =
+                        new MySqlDataAdapter(query, conn);
+
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+
+                    MedRecDoctorID_ComboBox.DataSource = dt;
+
+                    MedRecDoctorID_ComboBox.DisplayMember =
+                        "doctor_id";
+
+                    MedRecDoctorID_ComboBox.ValueMember =
+                        "doctor_id";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void MedRec_AddBtn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(MedRecRecordID_TextBox.Text) ||
-                string.IsNullOrWhiteSpace(MedRecAppointment_TextBox.Text) ||
-                string.IsNullOrWhiteSpace(MedRecDoctor_TextBox.Text) ||
+                string.IsNullOrWhiteSpace(MedRecAppointmentID_ComboBox.Text) ||
+                string.IsNullOrWhiteSpace(MedRecDoctorID_ComboBox.Text) ||
                 string.IsNullOrWhiteSpace(MedRecDiagnosis_TextBox.Text) ||
                 string.IsNullOrWhiteSpace(MedRecNotes_TextBox.Text))
             {
@@ -87,8 +156,8 @@ namespace Group_4_Information_Management_Final_Project
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_appointment", MedRecAppointment_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_doctor", MedRecDoctor_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_appointment_id", MedRecAppointmentID_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_doctor_id", MedRecDoctorID_ComboBox.Text);
                         cmd.Parameters.AddWithValue("p_visit_date", MedRecVisitDate_DateTimePicker.Value.Date);
                         cmd.Parameters.AddWithValue("p_diagnosis", MedRecDiagnosis_TextBox.Text);
                         cmd.Parameters.AddWithValue("p_notes", MedRecNotes_TextBox.Text);
@@ -124,8 +193,8 @@ namespace Group_4_Information_Management_Final_Project
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("p_record_id", MedRecRecordID_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_appointment", MedRecAppointment_TextBox.Text);
-                        cmd.Parameters.AddWithValue("p_doctor", MedRecDoctor_TextBox.Text);
+                        cmd.Parameters.AddWithValue("p_appointment_id", MedRecAppointmentID_ComboBox.Text);
+                        cmd.Parameters.AddWithValue("p_doctor_id", MedRecDoctorID_ComboBox.Text);
                         cmd.Parameters.AddWithValue("p_visit_date", MedRecVisitDate_DateTimePicker.Value.Date);
                         cmd.Parameters.AddWithValue("p_diagnosis", MedRecDiagnosis_TextBox.Text);
                         cmd.Parameters.AddWithValue("p_notes", MedRecNotes_TextBox.Text);
@@ -176,11 +245,12 @@ namespace Group_4_Information_Management_Final_Project
         private void ClearFields()
         {
             MedRecRecordID_TextBox.Clear();
-            MedRecAppointment_TextBox.Clear();
-            MedRecDoctor_TextBox.Clear();
+            MedRecAppointmentID_ComboBox.SelectedIndex = -1;
+            MedRecDoctorID_ComboBox.SelectedIndex = -1;
             MedRecDiagnosis_TextBox.Clear();
             MedRecNotes_TextBox.Clear();
             MedRecVisitDate_DateTimePicker.Value = DateTime.Now;
+            MedRecRecordID_TextBox.Focus();
         }
 
         private void MedRec_DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -190,8 +260,8 @@ namespace Group_4_Information_Management_Final_Project
                 DataGridViewRow row = MedRec_DataGridView.Rows[e.RowIndex];
 
                 MedRecRecordID_TextBox.Text = row.Cells["MedRec_RecordID"].Value?.ToString();
-                MedRecAppointment_TextBox.Text = row.Cells["MedRec_AppointmentID"].Value?.ToString();
-                MedRecDoctor_TextBox.Text = row.Cells["MedRec_DoctorName"].Value?.ToString();
+                MedRecAppointmentID_ComboBox.SelectedItem = row.Cells["MedRec_AppointmentID"].Value?.ToString();
+                MedRecDoctorID_ComboBox.SelectedItem = row.Cells["MedRec_DoctorName"].Value?.ToString();
 
                 if (DateTime.TryParse(row.Cells["MedRec_VisitDate"].Value?.ToString(), out DateTime visitDate))
                 {

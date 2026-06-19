@@ -28,6 +28,9 @@ namespace Group_4_Information_Management_Final_Project
             App_Status.DataPropertyName = "status";
             App_Remarks.DataPropertyName = "remarks";
 
+            LoadDoctorIDs();
+            LoadPatientIDs();
+
             LoadAppointments();
         }
 
@@ -68,6 +71,72 @@ namespace Group_4_Information_Management_Final_Project
             catch (Exception ex)
             {
                 MessageBox.Show("DB Error: " + ex.Message);
+            }
+        }
+
+        private void LoadPatientIDs()
+        {
+            try
+            {
+                using (MySqlConnection conn = DBHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string query =
+                        "SELECT patient_id FROM patients";
+
+                    MySqlDataAdapter da =
+                        new MySqlDataAdapter(query, conn);
+
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+
+                    AppPatientID_ComboBox.DataSource = dt;
+
+                    AppPatientID_ComboBox.DisplayMember =
+                        "patient_id";
+
+                    AppPatientID_ComboBox.ValueMember =
+                        "patient_id";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LoadDoctorIDs()
+        {
+            try
+            {
+                using (MySqlConnection conn = DBHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string query =
+                        "SELECT doctor_id FROM doctors";
+
+                    MySqlDataAdapter da =
+                        new MySqlDataAdapter(query, conn);
+
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+
+                    AppDoctorID_ComboBox.DataSource = dt;
+
+                    AppDoctorID_ComboBox.DisplayMember =
+                        "doctor_id";
+
+                    AppDoctorID_ComboBox.ValueMember =
+                        "doctor_id";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -192,7 +261,11 @@ namespace Group_4_Information_Management_Final_Project
             AppRemarks_TextBox.Text = "";
             AppDate_DateTimePicker.Value = DateTime.Now;
             AppAppointmentTime_ComboBox.SelectedIndex = -1;
+            AppDoctorID_ComboBox.SelectedIndex = -1;
+            AppPatientID_ComboBox.SelectedIndex = -1;
+            AppRemarks_TextBox.Text = "";
             AppStatus_ComboBox.SelectedIndex = -1;
+            AppID_TextBox.Focus();
         }
 
         private void AppointmentList_DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -202,8 +275,8 @@ namespace Group_4_Information_Management_Final_Project
                 DataGridViewRow row = AppointmentList_DataGridView.Rows[e.RowIndex];
 
                 AppID_TextBox.Text = row.Cells["App_AppointmentID"].Value?.ToString();
-                AppPatientID_ComboBox.Text = row.Cells["App_PatientID"].Value?.ToString();
-                AppDoctorID_ComboBox.Text = row.Cells["App_DoctorID"].Value?.ToString();
+                AppPatientID_ComboBox.Text = row.Cells["App_PatientName"].Value?.ToString();
+                AppDoctorID_ComboBox.Text = row.Cells["App_DoctorName"].Value?.ToString();
 
                 if (DateTime.TryParse(row.Cells["App_AppointmentDate"].Value?.ToString(), out DateTime date))
                     AppDate_DateTimePicker.Value = date;

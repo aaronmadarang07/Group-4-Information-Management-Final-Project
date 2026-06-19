@@ -192,6 +192,7 @@ namespace Group_4_Information_Management_Final_Project
             Schedule_ComboBox.SelectedIndex = -1;
             StartTime_ComboBox.SelectedIndex = -1;
             EndTime_ComboBox.SelectedIndex = -1;
+            DoctorID_TextBox.Focus();
         }
 
         private void DoctorsList_DataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -231,5 +232,10 @@ namespace Group_4_Information_Management_Final_Project
 
         private void label9_Click(object sender, EventArgs e) { }
         private void pictureBox10_Click(object sender, EventArgs e) { }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

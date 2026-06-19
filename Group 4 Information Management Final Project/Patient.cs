@@ -68,6 +68,7 @@ namespace Group_4_Information_Management_Final_Project
             PatientContactNumber_TextBox.Clear();
             PatientAddress_TextBox.Clear();
             PatientBloodType_ComboBox.SelectedIndex = -1;
+            PatientID_TextBox.Focus();
         }
         private void PatientsForm_ClearBtn_Click(object sender, EventArgs e)
         {
